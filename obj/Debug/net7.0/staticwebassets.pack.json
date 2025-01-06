@@ -1,0 +1,997 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\kernel.bundle.scp.css",
+      "PackagePath": "staticwebassets\\kernel.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\all.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap-icons.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\boxicons.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\boxicons.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\assets\\css\\daterangepicker.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\assets\\css\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\assets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\jquery.fancybox.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\jquery.fancybox.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\assets\\css\\nice-select.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\select2.css",
+      "PackagePath": "staticwebassets\\assets\\css\\select2.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\style.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\style.scss"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\css\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\fonts\\boxicons.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\boxicons.woff2"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\footer-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\footer-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\about-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\about-img.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\banner2-card-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\banner2-card-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\banner2-card-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\banner2-card-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\banner2-card-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\banner2-card-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\banner2-card-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\banner2-card-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\banner3-vector1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\banner3-vector1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\banner3-vector2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\banner3-vector2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\blog-card-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\blog-card-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\blog-card-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\blog-card-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\blog-card-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\blog-card-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\blog-card-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\blog-card-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\bungee-jump-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\bungee-jump-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\bungee-jump-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\bungee-jump-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\customer-img-grp.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\customer-img-grp.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\destination-banner-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\destination-banner-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\destination-card-img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\destination-card-img1.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\destination-card-img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\destination-card-img2.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\destination-card-img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\destination-card-img3.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\destination-card-img4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\destination-card-img4.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\destination-card-img5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\destination-card-img5.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\facility-content-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\facility-content-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\facility-img.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\facility-img.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\feature-card-bg1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\feature-card-bg1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\feature-card-bg2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\feature-card-bg2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\feature-card-bg3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\feature-card-bg3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\home1-banner-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\home1-banner-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\home1-banner-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\home1-banner-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\home1-banner-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\home1-banner-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\home1-banner-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\home1-banner-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\facebook-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\facebook-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\facebook-text-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\facebook-text-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\google-icon.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\google-icon.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\google-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\google-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\google-text-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\google-text-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\paypal-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\paypal-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\skrill-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\skrill-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\stripe-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\stripe-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\tripadvisor-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\tripadvisor-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\tripadvisor-logo2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\tripadvisor-logo2.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\tripadvisor-logo3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\tripadvisor-logo3.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\tripadvisor-text-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\tripadvisor-text-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\visa-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\visa-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\icon\\woo-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\icon\\woo-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\login-modal-header-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\login-modal-header-img.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\newsletter-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\newsletter-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img5.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img6.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img7.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img7.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img8.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img8.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-img9.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-img9.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-nav-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-nav-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card-tab-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card-tab-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card2-content-bg1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card2-content-bg1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card2-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card2-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card2-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card2-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card2-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card2-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card2-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card2-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\package-card2-img5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\package-card2-img5.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\paragliding-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\paragliding-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\paragliding-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\paragliding-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\rafting-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\rafting-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\rafting-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\rafting-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\rating-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\rating-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\rating-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\rating-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\rating-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\rating-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\section-vector1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\section-vector1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\section-vector2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\section-vector2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\section-vector3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\section-vector3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\section-vector4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\section-vector4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\section-vector5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\section-vector5.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\section-vector6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\section-vector6.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\ski-touring-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\ski-touring-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\ski-touring-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\ski-touring-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\surfing-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\surfing-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\surfing-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\surfing-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\testi-author-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\testi-author-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\testi-author-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\testi-author-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\testi-author-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\testi-author-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\about-img-bg-vector.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\about-img-bg-vector.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\activities-content-tag.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\activities-content-tag.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\banner2-content-bg1.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\banner2-content-bg1.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\banner2-content-bg2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\banner2-content-bg2.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\banner2-content-bg3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\banner2-content-bg3.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\banner2-content-bg4.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\banner2-content-bg4.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\destination-banner-batch-bg.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\destination-banner-batch-bg.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\destination-tag.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\destination-tag.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\package-card2-tag.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\package-card2-tag.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\section-bg-vector1.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\section-bg-vector1.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\vector\\section-bg-vector2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\vector\\section-bg-vector2.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\zip-landing-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\zip-landing-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home1\\zip-landing-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\home1\\zip-landing-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\activities-content-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\activities-content-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\activities-slider-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\activities-slider-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\activities-slider-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\activities-slider-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\banner4-card-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\banner4-card-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\banner4-card-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\banner4-card-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\banner4-card-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\banner4-card-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\blog-card-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\blog-card-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\blog-card-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\blog-card-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\destination-card-sidebar-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\destination-card-sidebar-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\destination-card-sidebar-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\destination-card-sidebar-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\destination-card-sidebar-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\destination-card-sidebar-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\destination-card-sidebar-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\destination-card-sidebar-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\home2-about-img-bg-vector.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\home2-about-img-bg-vector.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\home2-about-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\home2-about-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\icon\\facility-card-icon1.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\icon\\facility-card-icon1.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\icon\\facility-card-icon2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\icon\\facility-card-icon2.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\icon\\facility-card-icon3.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\icon\\facility-card-icon3.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\icon\\tripadvisor-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\icon\\tripadvisor-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\icon\\tripadvisor-star.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\icon\\tripadvisor-star.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\package-card3-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\package-card3-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\package-card3-img5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\package-card3-img5.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\package-card3-img6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\package-card3-img6.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-img1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-img1.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-img2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-img2.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-img3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-img4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-img4.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-img5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-img5.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-img6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-img6.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\teams-card-img7.png",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\teams-card-img7.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\vector\\home2-about-bg-vector.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\vector\\home2-about-bg-vector.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\vector\\package-card3-img-tag.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\vector\\package-card3-img-tag.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\vector\\plane-vector.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\vector\\plane-vector.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\home2\\vector\\section-title-tag.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\home2\\vector\\section-title-tag.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\icon\\arrow.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\icon\\arrow.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\ifel-tower.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\ifel-tower.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\inner-banner-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\inner-banner-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\kashmir.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\kashmir.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\mount-averest.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\mount-averest.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\picturesque-costal-town.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\picturesque-costal-town.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\prince-edward-iceland.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\prince-edward-iceland.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\room-img-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\room-img-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\room-img-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\room-img-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\room-img-03.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\room-img-03.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\room-img-04.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\room-img-04.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\room-img-05.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\room-img-05.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\room-img-06.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\room-img-06.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\innerpage\\sajhek.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\innerpage\\sajhek.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\logo2.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo2.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\sidebar-bg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\sidebar-bg.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\sm-logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\sm-logo.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\daterangepicker.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\daterangepicker.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\jquery.fancybox.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.fancybox.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\jquery.marquee.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.marquee.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\moment.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\select2.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\slick.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.kernel.props",
+      "PackagePath": "build\\kernel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.kernel.props",
+      "PackagePath": "buildMultiTargeting\\kernel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.kernel.props",
+      "PackagePath": "buildTransitive\\kernel.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.kernel.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
