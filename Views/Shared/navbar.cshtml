@@ -29,7 +29,7 @@
 <div class="right-sidebar-menu">
     <div class="sidebar-logo-area d-flex justify-content-between align-items-center">
         <div class="sidebar-logo-wrap">
-            <a href="index.html"><img alt="image" src="~/assets/user-img/logo.svg"></a>
+            <a href="index.html"><img alt="image" src="~/assets/img/logo.svg"></a>
         </div>
         <div class="right-sidebar-close-btn">
             <i class="bi bi-x"></i>
@@ -290,11 +290,11 @@
         </div>
     </div>
 </div>
-<!-- Login Modal -->
+<!-- Login Modal Start -->
 <div class="modal login-modal" id="user-login" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-clode-btn" data-bs-dismiss="modal"></div>
+            <div class="modal-close-btn" data-bs-dismiss="modal"></div>
             <div class="modal-header">
                 <img src="~/assets/user-img/home1/login-modal-header-img.jpg" alt="">
             </div>
@@ -306,17 +306,21 @@
                     </div>
                     <form>
                         <div class="form-inner mb-20">
-                            <input type="text" placeholder="User name or Email *">
+                            <input type="email" placeholder="User name or Email *">
+                        </div>
+                        <div class="form-inner mb-20">
+                            <input type="password" placeholder="Password *">
                         </div>
                         <a href="#" class="login-btn mb-25">Sign In</a>
                         <div class="divider">
                             <span>or</span>
                         </div>
-                        <a href="#" class="google-login-btn">
+                        <a data-bs-toggle="modal"
+                           data-bs-target="#user-signup" class="google-login-btn">
                             <div class="icon">
                                 <img src="~/assets/user-img/home1/icon/google-icon.svg" alt="">
                             </div>
-                            Sign in with Google
+                            Create an account
                         </a>
                     </form>
                 </div>
@@ -324,6 +328,53 @@
         </div>
     </div>
 </div>
+<!-- Login Modal End -->
+
+<!-- Signup Modal Start -->
+<div class="modal login-modal" id="user-signup" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-close-btn" data-bs-dismiss="modal"></div>
+            <div class="modal-header">
+                <img src="~/assets/user-img/home1/login-modal-header-img.jpg" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="login-registration-form">
+                    <div class="form-title">
+                        <h2>Sign up to continue</h2>
+                        <p>Enter your details to create an account.</p>
+                    </div>
+                    <form>
+                        <div class="form-inner mb-20">
+                            <input type="text" placeholder="User name">
+                        </div>
+                        <div class="form-inner mb-20">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="form-inner mb-20">
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <a href="#" class="login-btn mb-25">Sign Up</a>
+                        <div class="divider">
+                            <span>or</span>
+                        </div>
+                        <a data-bs-toggle="modal"
+                           data-bs-target="#user-login" class="google-login-btn">
+                            <div class="icon">
+                                <img src="~/assets/user-img/home1/icon/google-icon.svg" alt="">
+                            </div>
+                            Already have an account.
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Signup Modal End -->
+
+
+
 
 <div class="top-bar style-2">
     <div class="topbar-left two">
