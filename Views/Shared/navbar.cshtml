@@ -290,88 +290,9 @@
         </div>
     </div>
 </div>
-<!-- Login Modal Start -->
-<div class="modal login-modal" id="user-login" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-close-btn" data-bs-dismiss="modal"></div>
-            <div class="modal-header">
-                <img src="~/assets/user-img/home1/login-modal-header-img.jpg" alt="">
-            </div>
-            <div class="modal-body">
-                <div class="login-registration-form">
-                    <div class="form-title">
-                        <h2>Sign in to continue</h2>
-                        <p>Enter your email address for Login.</p>
-                    </div>
-                    <form>
-                        <div class="form-inner mb-20">
-                            <input type="email" placeholder="User name or Email *">
-                        </div>
-                        <div class="form-inner mb-20">
-                            <input type="password" placeholder="Password *">
-                        </div>
-                        <a href="#" class="login-btn mb-25">Sign In</a>
-                        <div class="divider">
-                            <span>or</span>
-                        </div>
-                        <a data-bs-toggle="modal"
-                           data-bs-target="#user-signup" class="google-login-btn">
-                            <div class="icon">
-                                <img src="~/assets/user-img/home1/icon/google-icon.svg" alt="">
-                            </div>
-                            Create an account
-                        </a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Login Modal End -->
 
-<!-- Signup Modal Start -->
-<div class="modal login-modal" id="user-signup" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-close-btn" data-bs-dismiss="modal"></div>
-            <div class="modal-header">
-                <img src="~/assets/user-img/home1/login-modal-header-img.jpg" alt="">
-            </div>
-            <div class="modal-body">
-                <div class="login-registration-form">
-                    <div class="form-title">
-                        <h2>Sign up to continue</h2>
-                        <p>Enter your details to create an account.</p>
-                    </div>
-                    <form>
-                        <div class="form-inner mb-20">
-                            <input type="text" placeholder="User name">
-                        </div>
-                        <div class="form-inner mb-20">
-                            <input type="email" placeholder="Email">
-                        </div>
-                        <div class="form-inner mb-20">
-                            <input type="password" placeholder="Password">
-                        </div>
-                        <a href="#" class="login-btn mb-25">Sign Up</a>
-                        <div class="divider">
-                            <span>or</span>
-                        </div>
-                        <a data-bs-toggle="modal"
-                           data-bs-target="#user-login" class="google-login-btn">
-                            <div class="icon">
-                                <img src="~/assets/user-img/home1/icon/google-icon.svg" alt="">
-                            </div>
-                            Already have an account.
-                        </a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Signup Modal End -->
+
+
 
 
 
@@ -465,17 +386,16 @@
             </li>
 
         </ul>
-        <div class="topbar-right d-lg-none d-block">
-            <button type="button" class="modal-btn header-cart-btn" data-bs-toggle="modal"
-                    data-bs-target="#user-login">
-                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M14.4311 12.759C15.417 11.4291 16 9.78265 16 8C16 3.58169 12.4182 0 8 0C3.58169 0 0 3.58169 0 8C0 12.4182 3.58169 16 8 16C10.3181 16 12.4058 15.0141 13.867 13.4387C14.0673 13.2226 14.2556 12.9957 14.4311 12.759ZM13.9875 12C14.7533 10.8559 15.1999 9.48009 15.1999 8C15.1999 4.02355 11.9764 0.799983 7.99991 0.799983C4.02355 0.799983 0.799983 4.02355 0.799983 8C0.799983 9.48017 1.24658 10.8559 2.01245 12C2.97866 10.5566 4.45301 9.48194 6.17961 9.03214C5.34594 8.45444 4.79998 7.49102 4.79998 6.39995C4.79998 4.63266 6.23271 3.19993 8 3.19993C9.76729 3.19993 11.2 4.63266 11.2 6.39995C11.2 7.49093 10.654 8.45444 9.82039 9.03206C11.5469 9.48194 13.0213 10.5565 13.9875 12ZM13.4722 12.6793C12.3495 10.8331 10.3188 9.59997 8.00008 9.59997C5.68126 9.59997 3.65049 10.8331 2.52776 12.6794C3.84829 14.2222 5.80992 15.2 8 15.2C10.1901 15.2 12.1517 14.2222 13.4722 12.6793ZM8 8.79998C9.32551 8.79998 10.4 7.72554 10.4 6.39995C10.4 5.07444 9.32559 3.99992 8 3.99992C6.6744 3.99992 5.59997 5.07452 5.59997 6.40003C5.59997 7.72554 6.67449 8.79998 8 8.79998Z">
-                    </path>
-                </svg>
-                REGISTER/ LOGIN
-            </button>
-        </div>
+            <a class="modal-btn header-cart-btn">
+                <div class="topbar-right d-lg-none d-block">
+                        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M14.4311 12.759C15.417 11.4291 16 9.78265 16 8C16 3.58169 12.4182 0 8 0C3.58169 0 0 3.58169 0 8C0 12.4182 3.58169 16 8 16C10.3181 16 12.4058 15.0141 13.867 13.4387C14.0673 13.2226 14.2556 12.9957 14.4311 12.759ZM13.9875 12C14.7533 10.8559 15.1999 9.48009 15.1999 8C15.1999 4.02355 11.9764 0.799983 7.99991 0.799983C4.02355 0.799983 0.799983 4.02355 0.799983 8C0.799983 9.48017 1.24658 10.8559 2.01245 12C2.97866 10.5566 4.45301 9.48194 6.17961 9.03214C5.34594 8.45444 4.79998 7.49102 4.79998 6.39995C4.79998 4.63266 6.23271 3.19993 8 3.19993C9.76729 3.19993 11.2 4.63266 11.2 6.39995C11.2 7.49093 10.654 8.45444 9.82039 9.03206C11.5469 9.48194 13.0213 10.5565 13.9875 12ZM13.4722 12.6793C12.3495 10.8331 10.3188 9.59997 8.00008 9.59997C5.68126 9.59997 3.65049 10.8331 2.52776 12.6794C3.84829 14.2222 5.80992 15.2 8 15.2C10.1901 15.2 12.1517 14.2222 13.4722 12.6793ZM8 8.79998C9.32551 8.79998 10.4 7.72554 10.4 6.39995C10.4 5.07444 9.32559 3.99992 8 3.99992C6.6744 3.99992 5.59997 5.07452 5.59997 6.40003C5.59997 7.72554 6.67449 8.79998 8 8.79998Z">
+                            </path>
+                        </svg>
+                        REGISTER/ LOGIN
+                </div>
+            </a>
         <div class="hotline-area d-lg-none d-flex">
             <div class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
@@ -493,17 +413,32 @@
     <div class="nav-right d-flex jsutify-content-end align-items-center">
         <ul class="icon-list">
             <li class="d-lg-flex d-none">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#user-login">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
-                        <path d="M26 13.5C26 20.4036 20.4035 26 13.5 26C6.59632 26 1 20.4036 1 13.5C1 6.59632 6.59632 1 13.5 1C20.4035 1 26 6.59632 26 13.5Z"
-                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M18.5001 11.8333C18.5001 14.5947 16.2616 16.8333 13.5001 16.8333C10.7384 16.8333 8.5 14.5947 8.5 11.8333C8.5 9.07189 10.7384 6.8333 13.5001 6.8333C16.2616 6.8333 18.5001 9.07189 18.5001 11.8333Z"
-                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M6.04297 23.5324C6.44287 19.7667 9.62917 16.8333 13.5008 16.8333C17.3725 16.8333 20.5588 19.7669 20.9585 23.5325"
-                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </a>
+                @if (Context.Request.Cookies["username"] != null && Context.Request.Cookies["email"] != null)
+                {
+                    <!-- If user is logged in, show dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            @Context.Request.Cookies["username"]
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item">Email: @Context.Request.Cookies["email"]</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("SignOut", "Home")">Logout</a></li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    <!-- If user is not logged in, show the normal signin link -->
+                    <a asp-controller="Home" asp-action="signin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+                            <path d="M26 13.5C26 20.4036 20.4035 26 13.5 26C6.59632 26 1 20.4036 1 13.5C1 6.59632 6.59632 1 13.5 1C20.4035 1 26 6.59632 26 13.5Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18.5001 11.8333C18.5001 14.5947 16.2616 16.8333 13.5001 16.8333C10.7384 16.8333 8.5 14.5947 8.5 11.8333C8.5 9.07189 10.7384 6.8333 13.5001 6.8333C16.2616 6.8333 18.5001 9.07189 18.5001 11.8333Z" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M6.04297 23.5324C6.44287 19.7667 9.62917 16.8333 13.5008 16.8333C17.3725 16.8333 20.5588 19.7669 20.9585 23.5325" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                }
             </li>
+
             <li class="right-sidebar-button">
                 <svg class="sidebar-toggle-button" width="25" height="25" viewBox="0 0 18 18"
                      xmlns="http://www.w3.org/2000/svg">

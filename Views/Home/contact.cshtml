@@ -1,4 +1,16 @@
-﻿@Html.Partial("navbar")
+﻿@model Contact
+
+
+@Html.Partial("navbar")
+
+
+@if (TempData.ContainsKey("contact"))
+{
+    <div class="alert alert-success alert-dismissible" id="contactAlert">
+        @TempData["contact"]
+    </div>
+}
+
 
 <div class="breadcrumb-section" style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url('@Url.Content("~/assets/img/innerpage/inner-banner-bg.png")');">
     <div class="container">
@@ -47,8 +59,8 @@
                         </svg>
                     </div>
                     <div class="content">
-                        <h6><a href="/cdn-cgi/l/email-protection#6c05020a032c09140d011c0009420f0301"><span class="__cf_email__" data-cfemail="88e1e6eee7c8edf0e9e5f8e4eda6ebe7e5">[email&#160;protected]</span></a></h6>
-                        <h6><a href="/cdn-cgi/l/email-protection#1f7a677e726f737a5f7a677e726f737a317c7072"><span class="__cf_email__" data-cfemail="33564b525e435f5673564b525e435f561d505c5e">[email&#160;protected]</span></a></h6>
+                        <h6><a href="/cdn-cgi/l/email-protection#6c05020a032c09140d011c0009420f0301"><span class="__cf_email__" data-cfemail="88e1e6eee7c8edf0e9e5f8e4eda6ebe7e5">karneltravels@gmail.com</span></a></h6>
+                        <h6><a href="/cdn-cgi/l/email-protection#1f7a677e726f737a5f7a677e726f737a317c7072"><span class="__cf_email__" data-cfemail="33564b525e435f5673564b525e435f561d505c5e">help@kernaltravels.com</span></a></h6>
                     </div>
                 </div>
                 <div class="single-contact mb-40">
@@ -102,37 +114,51 @@
             <div class="col-lg-7">
                 <div class="contact-form-area">
                     <h3>Reach Us Anytime</h3>
-                    <form>
+                    <form method="post">
                         <div class="row">
                             <div class="col-lg-12 mb-20">
                                 <div class="form-inner">
                                     <label>Name*</label>
-                                    <input type="text" placeholder="Daniel Scoot">
+                                    <input type="text" placeholder="Daniel Scoot" asp-for="name"/>
+                                    <span asp-validation-for="name" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-20">
                                 <div class="form-inner">
                                     <label>Phone</label>
-                                    <input type="text" placeholder="Phone Number...">
+                                    <input type="text" placeholder="Phone Number..." asp-for="phone" />
+                                    <span asp-validation-for="phone" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-lg-6 mb-20">
                                 <div class="form-inner">
                                     <label>Email</label>
-                                    <input type="email" placeholder="Email Us....">
+                                    <input type="email" placeholder="Email Us...." asp-for="email" />
+                                    <span asp-validation-for="email" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-lg-12 mb-30">
                                 <div class="form-inner">
                                     <label>Write Your Massage*</label>
-                                    <textarea placeholder="What’s on your mind"></textarea>
+                                    <textarea placeholder="What’s on your mind" asp-for="message"></textarea>
+                                    <span asp-validation-for="message" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-lg-12">
                                 <div class="form-inner">
+                                    @if (Context.Request.Cookies["username"] != null && Context.Request.Cookies["email"] != null)
+                                    {    
                                     <button class="primary-btn1 btn-hover" type="submit">
                                         Submit Now
                                     </button>
+                                    }
+                                    else
+                                    {
+                                        <a asp-controller="Home" asp-action="signin" class="primary-btn1 btn-hover" type="submit">
+                                            <svg width="20px" height="20px" class="mx-1" viewBox="-3 0 262 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4" /><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853" /><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05" /><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335" /></svg>
+                                            Sign in now!
+                                        </a>
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -145,30 +171,19 @@
 <!-- End Contect section -->
 <div class="contact-map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5647631857846!2d90.36311167605992!3d23.83407118555764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c8682a473%3A0xa6c74743d52adb88!2sEgens%20Lab!5e0!3m2!1sen!2sbd!4v1700138349574!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <div class="banner3-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="banner3-content">
-                        <h2>Join The Newsletter</h2>
-                        <p>To receive our best monthly deals</p>
-                        <form>
-                            <div class="from-inner">
-                                <input type="email" placeholder="Enter Your Gmail...">
-                                <button type="submit" class="from-arrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17">
-                                        <path d="M7 1L16 8.5M16 8.5L7 16M16 8.5H0.5" stroke-width="1.5" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
-                        <img src="~/assets/img/home1/banner3-vector1.png" alt="" class="vector1">
-                        <img src="~/assets/img/home1/banner3-vector2.png" alt="" class="vector2">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 
 @Html.Partial("footer")
+
+
+
+<script>
+    // Auto-hide alerts after 5 seconds
+    setTimeout(function () {
+        var contactAlert = document.getElementById("contactAlert");
+
+        if (contactAlert) {
+            contactAlert.style.display = "none";
+        }
+    }, 5000); // 5000ms = 5 seconds
+</script>

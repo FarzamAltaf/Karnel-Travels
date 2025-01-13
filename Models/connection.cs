@@ -10,5 +10,7 @@ namespace kernel.Models
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseSqlServer("Server=DESKTOP-GQ8EFUN\\SQLEXPRESS;Database=Karnel-Travel;Integrated Security=True;TrustServerCertificate=True;");
         }
+        public DbSet<Users> users { get; set; }
+        public DbSet<Contact> contact { get; set; }
     }
 }
