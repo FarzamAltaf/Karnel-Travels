@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "F:\\Projects\\Travel-agency\\kernel\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\models\\packages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:models\\packages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\home\\signin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 89,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +46,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAABQGAAAAAAAAAAAuwCUGAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T13:12:50.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "connection.cs",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Models\\connection.cs",
+              "RelativeDocumentMoniker": "Models\\connection.cs",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Models\\connection.cs",
+              "RelativeToolTip": "Models\\connection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T13:12:15.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Packages.cs",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Models\\Packages.cs",
+              "RelativeDocumentMoniker": "Models\\Packages.cs",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Models\\Packages.cs",
+              "RelativeToolTip": "Models\\Packages.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T13:09:26.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "signin.cshtml",
               "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Home\\signin.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\signin.cshtml",
@@ -46,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Contact.cs",
               "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Models\\Contact.cs",
               "RelativeDocumentMoniker": "Models\\Contact.cs",
@@ -54,21 +104,19 @@
               "RelativeToolTip": "Models\\Contact.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T17:13:50.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T17:13:50.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "contact.cshtml",
               "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Home\\contact.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\contact.cshtml",
               "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Home\\contact.cshtml",
               "RelativeToolTip": "Views\\Home\\contact.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-12T15:52:23.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T15:52:23.549Z"
             },
             {
               "$type": "Document",
@@ -78,7 +126,7 @@
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAuwMwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T10:10:51.221Z",
               "EditorCaption": ""

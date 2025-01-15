@@ -1,4 +1,6 @@
-﻿@Html.Partial("navbar")
+﻿@model IEnumerable<kernel.Models.Packages>
+
+@Html.Partial("navbar")
 
 <!-- Start Banner section -->
 <div class="home1-banner-area">
@@ -1569,6 +1571,8 @@
                         <div class="tab-pane fade show active" id="Tour" role="tabpanel" aria-labelledby="Tour-tab">
                             <div class="row g-4">
                                 <div class="col-lg-4 col-md-6">
+                                    @foreach(var data in Model)
+                                    {
                                     <div class="package-card">
                                         <div class="package-card-img-wrap">
                                             <a href="package-details.html" class="card-img"><img src="~/assets/img/home1/package-card-img1.png" alt=""></a>
@@ -1614,6 +1618,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                   }
                                 </div>
                                 <div class="col-lg-4 col-md-6">
                                     <div class="package-card">

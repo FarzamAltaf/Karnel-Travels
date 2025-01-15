@@ -28,7 +28,8 @@ namespace kernel.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var data = db.packages.ToList();
+            return View(data);
         }
 
         public IActionResult signup()

@@ -12,5 +12,6 @@ namespace kernel.Models
         }
         public DbSet<Users> users { get; set; }
         public DbSet<Contact> contact { get; set; }
+        public DbSet<Packages> packages { get; set; }
     }
 }
