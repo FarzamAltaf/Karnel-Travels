@@ -32,6 +32,33 @@ namespace kernel.Controllers
             return View(data);
         }
 
+
+
+        public IActionResult packagedetails(int id)
+        {
+            var package = db.packages.Find(id);
+            var bookings = db.BookingDates.Where(b => b.packageId == id).ToList();
+            var faqs = db.faq.ToList();
+            var contact = db.contact.FirstOrDefault();
+
+            var viewModel = new PackageViewModel
+            {
+                packages = package,
+                faq = faqs,
+                BookingDates = bookings,
+            };
+
+            var CookieUser = Request.Cookies["email"];
+            if (!string.IsNullOrEmpty(CookieUser))
+            {
+                return View(viewModel);
+            }
+            else
+            {
+                return RedirectToAction("signin");
+            }
+        }
+
         public IActionResult signup()
         {
             var CookieUser = Request.Cookies["email"];
@@ -119,6 +146,7 @@ namespace kernel.Controllers
                 };
 
                 // Store user data in cookies
+                Response.Cookies.Append("id", user.id.ToString(), option);
                 Response.Cookies.Append("username", user.username, option);
                 Response.Cookies.Append("email", user.email, option);
                 Response.Cookies.Append("role", user.role, option);
@@ -202,14 +230,22 @@ namespace kernel.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult contact(string name, string phone, string email, string message)
+        public IActionResult contact(string name, string phone, string email, string message, int userId)
         {
-            Contact data = new Contact(name, phone, email, message);
-            db.contact.Add(data);
-            db.SaveChanges();
+            var id = Request.Cookies["id"];
+            var cookieEmail = Request.Cookies["email"];
 
-            string subject = "Message Received";
-            string body = $@"
+            int uId = 0;
+            if (!string.IsNullOrEmpty(id) && int.TryParse(id, out uId))
+            {
+                // Contact object create karte hain
+                Contact data = new Contact(name, phone, email, message, uId);
+                db.contact.Add(data);
+                db.SaveChanges();
+
+                // Email send karte hain
+                string subject = "Message Received";
+                string body = $@"
                 <html>
                     <body>
                         <h2>Dear {name},</h2>
@@ -222,13 +258,26 @@ namespace kernel.Controllers
                         <p><strong>Karnel Travel Support Team</strong></p>
                     </body>
                 </html>";
-            sendEmail(email, subject, body);
 
-            ModelState.Clear();
-            TempData["contact"] = "Your message is successfully delivered";
+                sendEmail(email, subject, body);
+
+                if (!string.IsNullOrEmpty(cookieEmail))
+                {
+                    sendEmail(cookieEmail, subject, body);
+                }
+
+                ModelState.Clear();
+                TempData["contact"] = "Your message is successfully delivered";
+            }
+            else
+            {
+                // Agar cookies mein userId nahi ho ya invalid ho
+                TempData["contact"] = "Signin to submit your inquiry";
+            }
 
             return View();
         }
+
 
     }
 }

@@ -1570,291 +1570,53 @@
                     <div class="tab-content" id="facilitesTabContent">
                         <div class="tab-pane fade show active" id="Tour" role="tabpanel" aria-labelledby="Tour-tab">
                             <div class="row g-4">
+                            @foreach(var data in Model)
+                            {
                                 <div class="col-lg-4 col-md-6">
-                                    @foreach(var data in Model)
-                                    {
                                     <div class="package-card">
                                         <div class="package-card-img-wrap">
-                                            <a href="package-details.html" class="card-img"><img src="~/assets/img/home1/package-card-img1.png" alt=""></a>
+                                                <a href="package-details.html" class="card-img"><img src="~/package/@data.mainImage" alt=""></a>
                                             <div class="batch">
-                                                <span class="date">3 Days / 4 Night</span>
+                                                <span class="date">@data.duration</span>
                                                 <div class="location">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                                                         <path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
                                                     </svg>
                                                     <ul class="location-list">
-                                                        <li><a href="package-grid.html">Nepal</a></li>
-                                                        <li><a href="package-grid.html">Indonesia Tour</a></li>
+                                                        <li>@data.location</li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="package-card-content">
                                             <div class="card-content-top">
-                                                <h5><a href="package-details.html">the Allure Italy's Rich Culture, History, and Cuisine.</a></h5>
-                                                <div class="location-area">
-                                                    <ul class="location-list scrollTextAni">
-                                                        <li><a href="package-grid.html">Alexandria</a></li>
-                                                        <li><a href="package-grid.html">Sharm El Sheikh</a></li>
-                                                        <li><a href="package-grid.html">Mansoura</a></li>
-                                                        <li><a href="package-grid.html">Karachi</a></li>
-                                                        <li><a href="package-grid.html">Lahore</a></li>
-                                                        <li><a href="package-grid.html">Islamabad</a></li>
-                                                    </ul>
-                                                </div>
+                                                <h5><a href="package-details.html">@data.title</a></h5>
                                             </div>
                                             <div class="card-content-bottom">
                                                 <div class="price-area">
                                                     <h6>Starting Form:</h6>
-                                                    <span>$2,898 <del>$3000</del></span>
+                                                    <span>$ @data.price</span>
                                                     <p>TAXES INCL/PERS</p>
                                                 </div>
-                                                <a href="package-details.html" class="primary-btn2">Book a Trip
+                                                @if (Context.Request.Cookies["username"] != null && Context.Request.Cookies["email"] != null)
+                                                {
+                                                <a asp-controller="Home" asp-action="packagedetails" asp-route-id="@data.id" class="primary-btn2">Book a Trip
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                                                         <path d="M8.15624 10.2261L7.70276 12.3534L5.60722 18L6.85097 17.7928L12.6612 10.1948C13.4812 10.1662 14.2764 10.1222 14.9674 10.054C18.1643 9.73783 17.9985 8.99997 17.9985 8.99997C17.9985 8.99997 18.1643 8.26211 14.9674 7.94594C14.2764 7.87745 13.4811 7.8335 12.6611 7.80518L6.851 0.206972L5.60722 -5.41705e-07L7.70276 5.64663L8.15624 7.77386C7.0917 7.78979 6.37132 7.81403 6.37132 7.81403C6.37132 7.81403 4.90278 7.84793 2.63059 8.35988L0.778036 5.79016L0.000253424 5.79016L0.554115 8.91458C0.454429 8.94514 0.454429 9.05483 0.554115 9.08539L0.000253144 12.2098L0.778036 12.2098L2.63059 9.64035C4.90278 10.1523 6.37132 10.1857 6.37132 10.1857C6.37132 10.1857 7.0917 10.2102 8.15624 10.2261Z"></path>
                                                         <path d="M12.0703 11.9318L12.0703 12.7706L8.97041 12.7706L8.97041 11.9318L12.0703 11.9318ZM12.0703 5.23292L12.0703 6.0714L8.97059 6.0714L8.97059 5.23292L12.0703 5.23292ZM9.97892 14.7465L9.97892 15.585L7.11389 15.585L7.11389 14.7465L9.97892 14.7465ZM9.97892 2.41846L9.97892 3.2572L7.11389 3.2572L7.11389 2.41846L9.97892 2.41846Z"></path>
                                                     </svg>
                                                 </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   }
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="package-card">
-                                        <div class="package-card-img-wrap">
-                                            <a href="package-details.html" class="card-img"><img src="~/assets/img/home1/package-card-img2.png" alt=""></a>
-                                            <div class="batch">
-                                                <span class="date">7 Days / 8 Night</span>
-                                                <div class="location">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                        <path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
-                                                    </svg>
-                                                    <ul class="location-list">
-                                                        <li><a href="package-grid.html">Egypt</a></li>
-                                                        <li><a href="package-grid.html">Turkey Tour</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="package-card-content">
-                                            <div class="card-content-top">
-                                                <h5><a href="package-details.html">Explore Travel NYC's Museums, Diversity, and Energy.</a></h5>
-                                                <div class="location-area">
-                                                    <ul class="location-list scrollTextAni">
-                                                        <li><a href="package-grid.html">Mecca</a></li>
-                                                        <li><a href="package-grid.html">Medina</a></li>
-                                                        <li><a href="package-grid.html">Riyadh</a></li>
-                                                        <li><a href="package-grid.html">Doha</a></li>
-                                                        <li><a href="package-grid.html">Al Wakrah</a></li>
-                                                        <li><a href="package-grid.html">Al Rayyan</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="card-content-bottom">
-                                                <div class="price-area">
-                                                    <h6>Starting Form:</h6>
-                                                    <span>$3,256</span>
-                                                    <p>TAXES INCL/PERS</p>
-                                                </div>
-                                                <a href="package-details.html" class="primary-btn2">Book a Trip
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                        <path d="M8.15624 10.2261L7.70276 12.3534L5.60722 18L6.85097 17.7928L12.6612 10.1948C13.4812 10.1662 14.2764 10.1222 14.9674 10.054C18.1643 9.73783 17.9985 8.99997 17.9985 8.99997C17.9985 8.99997 18.1643 8.26211 14.9674 7.94594C14.2764 7.87745 13.4811 7.8335 12.6611 7.80518L6.851 0.206972L5.60722 -5.41705e-07L7.70276 5.64663L8.15624 7.77386C7.0917 7.78979 6.37132 7.81403 6.37132 7.81403C6.37132 7.81403 4.90278 7.84793 2.63059 8.35988L0.778036 5.79016L0.000253424 5.79016L0.554115 8.91458C0.454429 8.94514 0.454429 9.05483 0.554115 9.08539L0.000253144 12.2098L0.778036 12.2098L2.63059 9.64035C4.90278 10.1523 6.37132 10.1857 6.37132 10.1857C6.37132 10.1857 7.0917 10.2102 8.15624 10.2261Z"></path>
-                                                        <path d="M12.0703 11.9318L12.0703 12.7706L8.97041 12.7706L8.97041 11.9318L12.0703 11.9318ZM12.0703 5.23292L12.0703 6.0714L8.97059 6.0714L8.97059 5.23292L12.0703 5.23292ZM9.97892 14.7465L9.97892 15.585L7.11389 15.585L7.11389 14.7465L9.97892 14.7465ZM9.97892 2.41846L9.97892 3.2572L7.11389 3.2572L7.11389 2.41846L9.97892 2.41846Z"></path>
-                                                    </svg>
-                                                </a>
+                                                }else{
+                                                <a asp-controller="Home" asp-action="signin" class="primary-btn2">
+                                                    <svg width="20px" height="20px" viewBox="-3 0 262 262" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><path d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027" fill="#4285F4" /><path d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1" fill="#34A853" /><path d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782" fill="#FBBC05" /><path d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251" fill="#EB4335" /></svg>
+                                                    Sign in now
+                                                 </a>
+                                                }
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="package-card">
-                                        <div class="package-card-img-wrap">
-                                            <a href="package-details.html" class="card-img"><img src="~/assets/img/home1/package-card-img3.png" alt=""></a>
-                                            <div class="batch">
-                                                <span class="date">5 Days / 6 Night</span>
-                                                <div class="location">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                        <path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
-                                                    </svg>
-                                                    <ul class="location-list">
-                                                        <li><a href="package-grid.html">France</a></li>
-                                                        <li><a href="package-grid.html">Spain Tour</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="package-card-content">
-                                            <div class="card-content-top">
-                                                <h5><a href="package-details.html">Embark Tranquility, Adventure, and Spiritual.</a></h5>
-                                                <div class="location-area">
-                                                    <ul class="location-list scrollTextAni">
-                                                        <li><a href="package-grid.html">Alexandria</a></li>
-                                                        <li><a href="package-grid.html">Sharm El Sheikh</a></li>
-                                                        <li><a href="package-grid.html">Mansoura</a></li>
-                                                        <li><a href="package-grid.html">Karachi</a></li>
-                                                        <li><a href="package-grid.html">Lahore</a></li>
-                                                        <li><a href="package-grid.html">Islamabad</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="card-content-bottom">
-                                                <div class="price-area">
-                                                    <h6>Starting Form:</h6>
-                                                    <span>$1,988 <del>$2500</del></span>
-                                                    <p>TAXES INCL/PERS</p>
-                                                </div>
-                                                <a href="package-details.html" class="primary-btn2">Book a Trip
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                        <path d="M8.15624 10.2261L7.70276 12.3534L5.60722 18L6.85097 17.7928L12.6612 10.1948C13.4812 10.1662 14.2764 10.1222 14.9674 10.054C18.1643 9.73783 17.9985 8.99997 17.9985 8.99997C17.9985 8.99997 18.1643 8.26211 14.9674 7.94594C14.2764 7.87745 13.4811 7.8335 12.6611 7.80518L6.851 0.206972L5.60722 -5.41705e-07L7.70276 5.64663L8.15624 7.77386C7.0917 7.78979 6.37132 7.81403 6.37132 7.81403C6.37132 7.81403 4.90278 7.84793 2.63059 8.35988L0.778036 5.79016L0.000253424 5.79016L0.554115 8.91458C0.454429 8.94514 0.454429 9.05483 0.554115 9.08539L0.000253144 12.2098L0.778036 12.2098L2.63059 9.64035C4.90278 10.1523 6.37132 10.1857 6.37132 10.1857C6.37132 10.1857 7.0917 10.2102 8.15624 10.2261Z"></path>
-                                                        <path d="M12.0703 11.9318L12.0703 12.7706L8.97041 12.7706L8.97041 11.9318L12.0703 11.9318ZM12.0703 5.23292L12.0703 6.0714L8.97059 6.0714L8.97059 5.23292L12.0703 5.23292ZM9.97892 14.7465L9.97892 15.585L7.11389 15.585L7.11389 14.7465L9.97892 14.7465ZM9.97892 2.41846L9.97892 3.2572L7.11389 3.2572L7.11389 2.41846L9.97892 2.41846Z"></path>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="package-card">
-                                        <div class="package-card-img-wrap">
-                                            <a href="package-details.html" class="card-img"><img src="~/assets/img/home1/package-card-img4.png" alt=""></a>
-                                            <div class="batch">
-                                                <span class="date">8 Days / 9 Night</span>
-                                                <div class="location">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                        <path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
-                                                    </svg>
-                                                    <ul class="location-list">
-                                                        <li><a href="package-grid.html">India</a></li>
-                                                        <li><a href="package-grid.html">Japan Tour</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="package-card-content">
-                                            <div class="card-content-top">
-                                                <h5><a href="package-details.html">Embracing City Lights, Landm, and Iconic Culture.</a></h5>
-                                                <div class="location-area">
-                                                    <ul class="location-list scrollTextAni">
-                                                        <li><a href="package-grid.html">Bangalore</a></li>
-                                                        <li><a href="package-grid.html">Chennai</a></li>
-                                                        <li><a href="package-grid.html">New Delhi</a></li>
-                                                        <li><a href="package-grid.html">Dhaka</a></li>
-                                                        <li><a href="package-grid.html">Rangpur</a></li>
-                                                        <li><a href="package-grid.html">Sylhet</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="card-content-bottom">
-                                                <div class="price-area">
-                                                    <h6>Starting Form:</h6>
-                                                    <span>$3,798</span>
-                                                    <p>TAXES INCL/PERS</p>
-                                                </div>
-                                                <a href="package-details.html" class="primary-btn2">Book a Trip
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                        <path d="M8.15624 10.2261L7.70276 12.3534L5.60722 18L6.85097 17.7928L12.6612 10.1948C13.4812 10.1662 14.2764 10.1222 14.9674 10.054C18.1643 9.73783 17.9985 8.99997 17.9985 8.99997C17.9985 8.99997 18.1643 8.26211 14.9674 7.94594C14.2764 7.87745 13.4811 7.8335 12.6611 7.80518L6.851 0.206972L5.60722 -5.41705e-07L7.70276 5.64663L8.15624 7.77386C7.0917 7.78979 6.37132 7.81403 6.37132 7.81403C6.37132 7.81403 4.90278 7.84793 2.63059 8.35988L0.778036 5.79016L0.000253424 5.79016L0.554115 8.91458C0.454429 8.94514 0.454429 9.05483 0.554115 9.08539L0.000253144 12.2098L0.778036 12.2098L2.63059 9.64035C4.90278 10.1523 6.37132 10.1857 6.37132 10.1857C6.37132 10.1857 7.0917 10.2102 8.15624 10.2261Z"></path>
-                                                        <path d="M12.0703 11.9318L12.0703 12.7706L8.97041 12.7706L8.97041 11.9318L12.0703 11.9318ZM12.0703 5.23292L12.0703 6.0714L8.97059 6.0714L8.97059 5.23292L12.0703 5.23292ZM9.97892 14.7465L9.97892 15.585L7.11389 15.585L7.11389 14.7465L9.97892 14.7465ZM9.97892 2.41846L9.97892 3.2572L7.11389 3.2572L7.11389 2.41846L9.97892 2.41846Z"></path>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="package-card">
-                                        <div class="package-card-img-wrap">
-                                            <a href="package-details.html" class="card-img"><img src="~/assets/img/home1/package-card-img5.png" alt=""></a>
-                                            <div class="batch">
-                                                <span class="date">6 Days / 7 Night</span>
-                                                <div class="location">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                        <path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
-                                                    </svg>
-                                                    <ul class="location-list">
-                                                        <li><a href="package-grid.html">Brazil</a></li>
-                                                        <li><a href="package-grid.html">Hungary Tour</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="package-card-content">
-                                            <div class="card-content-top">
-                                                <h5><a href="package-details.html">A Journey of Tour Beauty and Inspiration.</a></h5>
-                                                <div class="location-area">
-                                                    <ul class="location-list scrollTextAni">
-                                                        <li><a href="package-grid.html">Paris</a></li>
-                                                        <li><a href="package-grid.html">Marseille</a></li>
-                                                        <li><a href="package-grid.html">Bordeaux</a></li>
-                                                        <li><a href="package-grid.html">Madrid</a></li>
-                                                        <li><a href="package-grid.html">Barcelona</a></li>
-                                                        <li><a href="package-grid.html">Valencia</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="card-content-bottom">
-                                                <div class="price-area">
-                                                    <h6>Starting Form:</h6>
-                                                    <span>$4,562 <del>$5,000</del></span>
-                                                    <p>TAXES INCL/PERS</p>
-                                                </div>
-                                                <a href="package-details.html" class="primary-btn2">Book a Trip
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                        <path d="M8.15624 10.2261L7.70276 12.3534L5.60722 18L6.85097 17.7928L12.6612 10.1948C13.4812 10.1662 14.2764 10.1222 14.9674 10.054C18.1643 9.73783 17.9985 8.99997 17.9985 8.99997C17.9985 8.99997 18.1643 8.26211 14.9674 7.94594C14.2764 7.87745 13.4811 7.8335 12.6611 7.80518L6.851 0.206972L5.60722 -5.41705e-07L7.70276 5.64663L8.15624 7.77386C7.0917 7.78979 6.37132 7.81403 6.37132 7.81403C6.37132 7.81403 4.90278 7.84793 2.63059 8.35988L0.778036 5.79016L0.000253424 5.79016L0.554115 8.91458C0.454429 8.94514 0.454429 9.05483 0.554115 9.08539L0.000253144 12.2098L0.778036 12.2098L2.63059 9.64035C4.90278 10.1523 6.37132 10.1857 6.37132 10.1857C6.37132 10.1857 7.0917 10.2102 8.15624 10.2261Z"></path>
-                                                        <path d="M12.0703 11.9318L12.0703 12.7706L8.97041 12.7706L8.97041 11.9318L12.0703 11.9318ZM12.0703 5.23292L12.0703 6.0714L8.97059 6.0714L8.97059 5.23292L12.0703 5.23292ZM9.97892 14.7465L9.97892 15.585L7.11389 15.585L7.11389 14.7465L9.97892 14.7465ZM9.97892 2.41846L9.97892 3.2572L7.11389 3.2572L7.11389 2.41846L9.97892 2.41846Z"></path>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="package-card">
-                                        <div class="package-card-img-wrap">
-                                            <a href="package-details.html" class="card-img"><img src="~/assets/img/home1/package-card-img6.png" alt=""></a>
-                                            <div class="batch">
-                                                <span class="date">4 Days / 5 Night</span>
-                                                <div class="location">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                        <path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
-                                                    </svg>
-                                                    <ul class="location-list">
-                                                        <li><a href="package-grid.html">Nepal</a></li>
-                                                        <li><a href="package-grid.html">Indonesia Tour </a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="package-card-content">
-                                            <div class="card-content-top">
-                                                <h5><a href="package-details.html">Adventure Art, Architecture, and Mediterranean.</a></h5>
-                                                <div class="location-area">
-                                                    <ul class="location-list scrollTextAni">
-                                                        <li><a href="package-grid.html">Kathmandu</a></li>
-                                                        <li><a href="package-grid.html">Pokhara</a></li>
-                                                        <li><a href="package-grid.html">Lalitpur</a></li>
-                                                        <li><a href="package-grid.html">Jakarta</a></li>
-                                                        <li><a href="package-grid.html">Surabaya</a></li>
-                                                        <li><a href="package-grid.html">Bandung</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="card-content-bottom">
-                                                <div class="price-area">
-                                                    <h6>Starting Form:</h6>
-                                                    <span>$5,320 <del>$5,500</del></span>
-                                                    <p>TAXES INCL/PERS</p>
-                                                </div>
-                                                <a href="package-details.html" class="primary-btn2">Book a Trip
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                                                        <path d="M8.15624 10.2261L7.70276 12.3534L5.60722 18L6.85097 17.7928L12.6612 10.1948C13.4812 10.1662 14.2764 10.1222 14.9674 10.054C18.1643 9.73783 17.9985 8.99997 17.9985 8.99997C17.9985 8.99997 18.1643 8.26211 14.9674 7.94594C14.2764 7.87745 13.4811 7.8335 12.6611 7.80518L6.851 0.206972L5.60722 -5.41705e-07L7.70276 5.64663L8.15624 7.77386C7.0917 7.78979 6.37132 7.81403 6.37132 7.81403C6.37132 7.81403 4.90278 7.84793 2.63059 8.35988L0.778036 5.79016L0.000253424 5.79016L0.554115 8.91458C0.454429 8.94514 0.454429 9.05483 0.554115 9.08539L0.000253144 12.2098L0.778036 12.2098L2.63059 9.64035C4.90278 10.1523 6.37132 10.1857 6.37132 10.1857C6.37132 10.1857 7.0917 10.2102 8.15624 10.2261Z"></path>
-                                                        <path d="M12.0703 11.9318L12.0703 12.7706L8.97041 12.7706L8.97041 11.9318L12.0703 11.9318ZM12.0703 5.23292L12.0703 6.0714L8.97059 6.0714L8.97059 5.23292L12.0703 5.23292ZM9.97892 14.7465L9.97892 15.585L7.11389 15.585L7.11389 14.7465L9.97892 14.7465ZM9.97892 2.41846L9.97892 3.2572L7.11389 3.2572L7.11389 2.41846L9.97892 2.41846Z"></path>
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            }
                             </div>
                         </div>
                         <div class="tab-pane fade" id="Hotel" role="tabpanel" aria-labelledby="Hotel-tab">

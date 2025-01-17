@@ -977,6 +977,42 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\image.jpg",
+      "PackagePath": "staticwebassets\\package\\image.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img1.jpg",
+      "PackagePath": "staticwebassets\\package\\img1.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img2.jpg",
+      "PackagePath": "staticwebassets\\package\\img2.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img3.jpg",
+      "PackagePath": "staticwebassets\\package\\img3.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img4.jpg",
+      "PackagePath": "staticwebassets\\package\\img4.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img5.jpg",
+      "PackagePath": "staticwebassets\\package\\img5.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img6.jpg",
+      "PackagePath": "staticwebassets\\package\\img6.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img7.jpg",
+      "PackagePath": "staticwebassets\\package\\img7.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img8.jpg",
+      "PackagePath": "staticwebassets\\package\\img8.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.kernel.props",
       "PackagePath": "build\\kernel.props"
     },

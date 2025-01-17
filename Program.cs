@@ -79,6 +79,11 @@ namespace kernel
             pattern: "signin",
             defaults: new { controller = "Home", action = "signin" });
 
+            app.MapControllerRoute(
+            name: "packagedetails",
+            pattern: "packagedetails",
+            defaults: new { controller = "Home", action = "packagedetails" });
+
             // User Routes end
 
             app.MapControllerRoute(

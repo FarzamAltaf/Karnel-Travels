@@ -13,5 +13,7 @@ namespace kernel.Models
         public DbSet<Users> users { get; set; }
         public DbSet<Contact> contact { get; set; }
         public DbSet<Packages> packages { get; set; }
+        public DbSet<Faqs> faq { get; set; }
+        public DbSet<BookingDates> BookingDates { get; set; }
     }
 }
