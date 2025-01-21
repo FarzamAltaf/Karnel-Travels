@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "p6GnKmhPqvh7tKfim+PMUb33/gXe716LZEdaSYli4XE=",
+  "Hash": "idjYM+saQK1TgNjDsmqDUNjlNSBk3/Q44nAGQBgqc8E=",
   "Source": "kernel",
   "BasePath": "_content/kernel",
   "Mode": "Default",
@@ -3131,6 +3131,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\innerpage\\sajhek.jpg"
+    },
+    {
+      "Identity": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\Karnel.png",
+      "SourceId": "kernel",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\",
+      "BasePath": "_content/kernel",
+      "RelativePath": "assets/img/Karnel.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\Karnel.png"
     },
     {
       "Identity": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\logo.svg",

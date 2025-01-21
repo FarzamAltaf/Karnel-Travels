@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using Microsoft.EntityFrameworkCore;
 
 namespace kernel.Controllers
 {
@@ -26,38 +27,72 @@ namespace kernel.Controllers
             smtp.Send(msg);
         }
 
+        //public IActionResult Index()
+        //{
+        //    var packagesWithServices = (from ps in db.packageServices
+        //                                join p in db.packages on ps.packageId equals p.id
+        //                                join s in db.services on ps.serviceId equals s.id
+        //                                select new
+        //                                {
+        //                                    Package = p,
+        //                                    Service = s
+        //                                }).ToList();
+
+        //    return View(packagesWithServices);
+        //}
+
+
         public IActionResult Index()
         {
-            var data = db.packages.ToList();
-            return View(data);
+            var packages = db.packages.ToList();
+            return View(packages);
         }
 
 
 
         public IActionResult packagedetails(int id)
         {
-            var package = db.packages.Find(id);
-            var bookings = db.BookingDates.Where(b => b.packageId == id).ToList();
-            var faqs = db.faq.ToList();
-            var contact = db.contact.FirstOrDefault();
-
-            var viewModel = new PackageViewModel
+            try
             {
-                packages = package,
-                faq = faqs,
-                BookingDates = bookings,
-            };
+                var bookings = db.BookingDates.Where(b => b.packageId == id).ToList();
 
-            var CookieUser = Request.Cookies["email"];
-            if (!string.IsNullOrEmpty(CookieUser))
-            {
-                return View(viewModel);
+                var packagesWithServices = (from ps in db.packageServices
+                                            join p in db.packages on ps.packageId equals p.id
+                                            join s in db.services on ps.serviceId equals s.id
+                                            where ps.packageId == id
+                                            select new
+                                            {
+                                                Package = p,
+                                                Service = s
+                                            }).ToList();
+
+                var faqs = db.faq.ToList();
+
+                ViewBag.book = bookings;
+                ViewBag.faq = faqs;
+
+                // Assign the first package-service or set ViewBag.packages to null if no data is found
+                ViewBag.packages = packagesWithServices.FirstOrDefault();
+
+                var CookieUser = Request.Cookies["email"];
+                if (!string.IsNullOrEmpty(CookieUser))
+                {
+
+                    return View();
+                }
+                else
+                {
+                    return RedirectToAction("signin");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return RedirectToAction("signin");
+                Console.WriteLine("An error occurred: " + ex.Message);
+                return RedirectToAction("ErrorPage");
             }
         }
+
+
 
         public IActionResult signup()
         {
@@ -207,7 +242,8 @@ namespace kernel.Controllers
 
         public IActionResult hotel()
         {
-            return View();
+            var hotels = db.hotels.ToList();
+            return View(hotels);
         }
 
         public IActionResult visa()

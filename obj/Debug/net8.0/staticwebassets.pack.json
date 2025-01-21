@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\assets\\fonts\\boxicons.woff2"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\Karnel.png",
+      "PackagePath": "staticwebassets\\assets\\img\\Karnel.png"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\footer-bg.png",
       "PackagePath": "staticwebassets\\assets\\img\\footer-bg.png"
     },
