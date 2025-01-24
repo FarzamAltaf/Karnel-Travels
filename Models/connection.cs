@@ -18,5 +18,8 @@ namespace kernel.Models
         public DbSet<Services> services { get; set; }
         public DbSet<Hotel> hotels { get; set; }
         public DbSet<PackageService> packageServices { get; set; }
+        public DbSet<hotelImg> hotelImg { get; set; }
+        public DbSet<hotelRestrictions> hotelRestrictions { get; set; }
+        public DbSet<visa> visa { get; set; }
     }
 }

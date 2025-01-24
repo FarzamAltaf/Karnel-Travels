@@ -1,24 +1,23 @@
 ﻿<!-- Sidebar Menu -->
-<div class="egns-preloader">
-    <div class="preloader-close-btn">
-        <span><i class="bi bi-x-lg"></i> Close</span>
-    </div>
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-6">
-                <div class="circle-border">
-                    <div class="moving-circle"></div>
-                    <div class="moving-circle"></div>
-                    <div class="moving-circle"></div>
-                    <svg width="180px" height="150px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidYMid meet"
-                         style="left: 50%; top: 50%; position: absolute; transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);">
-                        <path stroke="#D90A2C" id="outline" fill="none" stroke-width="4" stroke-linecap="round"
-                              stroke-linejoin="round" stroke-miterlimit="10"
-                              d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-                        <path id="outline-bg" opacity="0.05" fill="none" stroke="#959595" stroke-width="4"
-                              stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
-                              d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
-                    </svg>
+<div class="karnel-preloader">
+    <div class="egns-preloader">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-6">
+                    <div class="circle-border">
+                        <div class="moving-circle"></div>
+                        <div class="moving-circle"></div>
+                        <div class="moving-circle"></div>
+                        <svg width="180px" height="150px" viewBox="0 0 187.3 93.7" preserveAspectRatio="xMidYMid meet"
+                             style="left: 50%; top: 50%; position: absolute; transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);">
+                            <path stroke="#D90A2C" id="outline" fill="none" stroke-width="4" stroke-linecap="round"
+                                  stroke-linejoin="round" stroke-miterlimit="10"
+                                  d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+                            <path id="outline-bg" opacity="0.05" fill="none" stroke="#959595" stroke-width="4"
+                                  stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+                                  d="M93.9,46.4c9.3,9.5,13.8,17.9,23.5,17.9s17.5-7.8,17.5-17.5s-7.8-17.6-17.5-17.5c-9.7,0.1-13.3,7.2-22.1,17.1 c-8.9,8.8-15.7,17.9-25.4,17.9s-17.5-7.8-17.5-17.5s7.8-17.5,17.5-17.5S86.2,38.6,93.9,46.4z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
@@ -357,21 +356,21 @@
             <li>
                 <a asp-controller="Home" asp-action="About">About</a>
             </li>
+            <li>
+                <a asp-controller="Home" asp-action="tour">Packages</a>
+            </li>
+            <li>
+                <a asp-controller="Home" asp-action="hotel">Hotels</a>
+            </li>
+            <li>
+                <a asp-controller="Home" asp-action="visa">Visa</a>
+            </li>
 
-            <li class="menu-item-has-children">
+            @* <li class="menu-item-has-children">
                 <a class="drop-down">Travel Concierge</a><i class="bi bi-plus dropdown-icon"></i>
                 <ul class="sub-menu">
                     <li>
-                        <a asp-controller="Home" asp-action="tour">Tour spots</a>
-                    </li>
-                    <li>
                         <a asp-controller="Home" asp-action="destination">Destinations</a>
-                    </li>
-                    <li>
-                        <a asp-controller="Home" asp-action="hotel">Hotels</a>
-                    </li>
-                    <li>
-                        <a asp-controller="Home" asp-action="visa">Visa</a>
                     </li>
                     <li>
                         <a asp-controller="Home" asp-action="activity">Activities</a>
@@ -380,7 +379,7 @@
                         <a asp-controller="Home" asp-action="transport">Transportation</a>
                     </li>
                 </ul>
-            </li>
+            </li> *@
             <li>
                 <a asp-controller="Home" asp-action="contact">Contact</a>
             </li>
@@ -415,13 +414,15 @@
             <li class="d-lg-flex d-none">
                 @if (Context.Request.Cookies["username"] != null && Context.Request.Cookies["email"] != null)
                 {
-                    <!-- If user is logged in, show dropdown -->
+                    <!-- If user is logged in, show circle with user image -->
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            @Context.Request.Cookies["username"]
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item">Email: @Context.Request.Cookies["email"]</a></li>
+                        <a class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg?semt=ais_incoming" alt="User" class="rounded-circle" width="40" height="40" style="object-fit: cover;">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end px-2" aria-labelledby="userDropdown">
+                            <li><strong>@Context.Request.Cookies["username"]</strong></li>
+                            <li><small>@Context.Request.Cookies["email"]</small></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="@Url.Action("SignOut", "Home")">Logout</a></li>
                         </ul>
                     </div>
@@ -466,12 +467,28 @@
                 <h6><a href="tel:+990737621432">+990-737 621 432</a></h6>
             </div>
         </div>
-        <div class="sidebar-button mobile-menu-btn">
+        @* <div class="sidebar-button mobile-menu-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
                 <path d="M0 4.46439C0 4.70119 0.0940685 4.92829 0.261511 5.09574C0.428955 5.26318 0.656057 5.35725 0.892857 5.35725H24.1071C24.3439 5.35725 24.571 5.26318 24.7385 5.09574C24.9059 4.92829 25 4.70119 25 4.46439C25 4.22759 24.9059 4.00049 24.7385 3.83305C24.571 3.6656 24.3439 3.57153 24.1071 3.57153H0.892857C0.656057 3.57153 0.428955 3.6656 0.261511 3.83305C0.0940685 4.00049 0 4.22759 0 4.46439ZM4.46429 11.6072H24.1071C24.3439 11.6072 24.571 11.7013 24.7385 11.8688C24.9059 12.0362 25 12.2633 25 12.5001C25 12.7369 24.9059 12.964 24.7385 13.1315C24.571 13.2989 24.3439 13.393 24.1071 13.393H4.46429C4.22749 13.393 4.00038 13.2989 3.83294 13.1315C3.6655 12.964 3.57143 12.7369 3.57143 12.5001C3.57143 12.2633 3.6655 12.0362 3.83294 11.8688C4.00038 11.7013 4.22749 11.6072 4.46429 11.6072ZM12.5 19.643H24.1071C24.3439 19.643 24.571 19.737 24.7385 19.9045C24.9059 20.0719 25 20.299 25 20.5358C25 20.7726 24.9059 20.9997 24.7385 21.1672C24.571 21.3346 24.3439 21.4287 24.1071 21.4287H12.5C12.2632 21.4287 12.0361 21.3346 11.8687 21.1672C11.7012 20.9997 11.6071 20.7726 11.6071 20.5358C11.6071 20.299 11.7012 20.0719 11.8687 19.9045C12.0361 19.737 12.2632 19.643 12.5 19.643Z" />
             </svg>
-        </div>
+        </div> *@
     </div>
 </header>
 
 <!-- End header section -->
+
+
+<script>
+    function removePreloader() {
+        setTimeout(function () {
+            const preloader = document.querySelector('.karnel-preloader');
+            if (preloader) {
+                preloader.style.opacity = '0'; // Fade out effect
+                setTimeout(() => {
+                    preloader.style.display = 'none'; // Completely remove it
+                }, 300); // Delay for the fade-out effect
+            }
+        }, 500); // 1-second delay
+    }
+    removePreloader();
+</script>

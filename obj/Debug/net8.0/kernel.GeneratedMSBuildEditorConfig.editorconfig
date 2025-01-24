@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob3RlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Projects/Travel-agency/kernel/Views/Home/hoteldetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob3RlbGRldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Projects/Travel-agency/kernel/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -64,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Projects/Travel-agency/kernel/Views/Home/visa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx2aXNhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Projects/Travel-agency/kernel/Views/Home/visadetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx2aXNhZGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Projects/Travel-agency/kernel/Views/Shared/Error.cshtml]

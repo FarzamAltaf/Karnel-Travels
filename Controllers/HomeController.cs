@@ -6,111 +6,105 @@ using System.Net;
 using System.Net.Mail;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace kernel.Controllers
 {
-    public class HomeController : Controller
-    {
-        connection db = new connection();
+	public class HomeController : Controller
+	{
+		connection db = new connection();
 
 
-        public void sendEmail(string to,string subject, string body)
-        {
-            MailMessage msg = new MailMessage("farzamaltaf888@gmail.com", to, subject, body);
-            msg.IsBodyHtml = true;
+		public void sendEmail(string to, string subject, string body)
+		{
+			MailMessage msg = new MailMessage("farzamaltaf888@gmail.com", to, subject, body);
+			msg.IsBodyHtml = true;
 
-            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587)
-            {
-                Credentials = new NetworkCredential("farzamaltaf888@gmail.com", "epdtxztstqznnsvq"),
-                EnableSsl = true
-            };
-            smtp.Send(msg);
-        }
-
-        //public IActionResult Index()
-        //{
-        //    var packagesWithServices = (from ps in db.packageServices
-        //                                join p in db.packages on ps.packageId equals p.id
-        //                                join s in db.services on ps.serviceId equals s.id
-        //                                select new
-        //                                {
-        //                                    Package = p,
-        //                                    Service = s
-        //                                }).ToList();
-
-        //    return View(packagesWithServices);
-        //}
-
-
-        public IActionResult Index()
-        {
-            var packages = db.packages.ToList();
-            return View(packages);
-        }
+			SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587)
+			{
+				Credentials = new NetworkCredential("farzamaltaf888@gmail.com", "epdtxztstqznnsvq"),
+				EnableSsl = true
+			};
+			smtp.Send(msg);
+		}
 
 
 
-        public IActionResult packagedetails(int id)
-        {
-            try
-            {
-                var bookings = db.BookingDates.Where(b => b.packageId == id).ToList();
-
-                var packagesWithServices = (from ps in db.packageServices
-                                            join p in db.packages on ps.packageId equals p.id
-                                            join s in db.services on ps.serviceId equals s.id
-                                            where ps.packageId == id
-                                            select new
-                                            {
-                                                Package = p,
-                                                Service = s
-                                            }).ToList();
-
-                var faqs = db.faq.ToList();
-
-                ViewBag.book = bookings;
-                ViewBag.faq = faqs;
-
-                // Assign the first package-service or set ViewBag.packages to null if no data is found
-                ViewBag.packages = packagesWithServices.FirstOrDefault();
-
-                var CookieUser = Request.Cookies["email"];
-                if (!string.IsNullOrEmpty(CookieUser))
-                {
-
-                    return View();
-                }
-                else
-                {
-                    return RedirectToAction("signin");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("An error occurred: " + ex.Message);
-                return RedirectToAction("ErrorPage");
-            }
-        }
+		public IActionResult Index()
+		{
+			var packages = db.packages.ToList();
+			return View(packages);
+		}
 
 
 
-        public IActionResult signup()
-        {
-            var CookieUser = Request.Cookies["email"];
-            if (!string.IsNullOrEmpty(CookieUser))
-            {
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
-        [HttpPost]
-        public IActionResult signup(string username, string email, string password)
-        {
-            if (db.users.Any(u => u.email == email))
-            {
+		public IActionResult packagedetails(int id)
+		{
+			try
+			{
+				// Retrieve booking dates
+				var bookings = db.BookingDates.Where(b => b.packageId == id).ToList();
 
-                string subject = "Alert: Account Creation Attempt";
-                string body = $@"
+				// Retrieve package details with related services
+				var packageWithServices = db.packages
+					.Where(p => p.id == id)
+					.Select(p => new
+					{
+						Package = p,
+						Services = db.packageServices
+							.Where(ps => ps.packageId == p.id)
+							.Join(db.services,
+								  ps => ps.serviceId,
+								  s => s.id,
+								  (ps, s) => s) // Select only the services
+							.ToList()
+					}).FirstOrDefault();
+
+				// Retrieve FAQs
+				var faqs = db.faq.ToList();
+
+				// Assign data to ViewBag
+				ViewBag.book = bookings;
+				ViewBag.faq = faqs;
+				ViewBag.packages = packageWithServices;
+
+				var CookieUser = Request.Cookies["email"];
+				if (!string.IsNullOrEmpty(CookieUser))
+				{
+					return View();
+				}
+				else
+				{
+					return RedirectToAction("signin");
+				}
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine("An error occurred: " + ex.Message);
+				return RedirectToAction("ErrorPage");
+			}
+		}
+
+
+
+		public IActionResult signup()
+		{
+			var CookieUser = Request.Cookies["email"];
+			if (!string.IsNullOrEmpty(CookieUser))
+			{
+				return RedirectToAction("Index");
+			}
+			return View();
+		}
+		[HttpPost]
+		public IActionResult signup(string username, string email, string password)
+		{
+			if (db.users.Any(u => u.email == email))
+			{
+
+				string subject = "Alert: Account Creation Attempt";
+				string body = $@"
                         <html>
                             <body>
                                 <h2>Dear {username},</h2>
@@ -123,20 +117,20 @@ namespace kernel.Controllers
                             </body>
                         </html>";
 
-                TempData["userExist"] = "User with this email already exists.";
-                sendEmail(email,subject,body );
-                return RedirectToAction("signup");
-            }
-            else
-            {
-            var role = "user";
-            Users user = new Users(username,email,role,password);
-            db.users.Add(user);
-            db.SaveChanges();
-            TempData["registered"] = "You are successfully registered";
+				TempData["userExist"] = "User with this email already exists.";
+				sendEmail(email, subject, body);
+				return RedirectToAction("signup");
+			}
+			else
+			{
+				var role = "user";
+				Users user = new Users(username, email, role, password);
+				db.users.Add(user);
+				db.SaveChanges();
+				TempData["registered"] = "You are successfully registered";
 
-                string subject = "Registration Confirmation";
-                string body = $@"
+				string subject = "Registration Confirmation";
+				string body = $@"
                 <html>
                     <body>
                         <h2>Dear {username},</h2>
@@ -151,46 +145,46 @@ namespace kernel.Controllers
                     </body>
                 </html>";
 
-                sendEmail(email, subject, body);
+				sendEmail(email, subject, body);
 
 
-                return RedirectToAction("signin");
-            }
-        }
+				return RedirectToAction("signin");
+			}
+		}
 
-        public IActionResult signin()
-        {
-            var CookieUser = Request.Cookies["email"];
-            if (!string.IsNullOrEmpty(CookieUser))
-            {
-                return RedirectToAction("Index");
-            }
-            return View();
-        }
+		public IActionResult signin()
+		{
+			var CookieUser = Request.Cookies["email"];
+			if (!string.IsNullOrEmpty(CookieUser))
+			{
+				return RedirectToAction("Index");
+			}
+			return View();
+		}
 
-        [HttpPost]
-        public IActionResult signin(string email, string password)
-        {
-                var user = db.users.FirstOrDefault(u => u.email == email && u.password == password);
+		[HttpPost]
+		public IActionResult signin(string email, string password)
+		{
+			var user = db.users.FirstOrDefault(u => u.email == email && u.password == password);
 
-            if (user != null)
-            {
-                var option = new CookieOptions
-                {
-                    Expires = DateTime.Now.AddDays(1)
-                };
+			if (user != null)
+			{
+				var option = new CookieOptions
+				{
+					Expires = DateTime.Now.AddDays(1)
+				};
 
-                // Store user data in cookies
-                Response.Cookies.Append("id", user.id.ToString(), option);
-                Response.Cookies.Append("username", user.username, option);
-                Response.Cookies.Append("email", user.email, option);
-                Response.Cookies.Append("role", user.role, option);
+				// Store user data in cookies
+				Response.Cookies.Append("id", user.id.ToString(), option);
+				Response.Cookies.Append("username", user.username, option);
+				Response.Cookies.Append("email", user.email, option);
+				Response.Cookies.Append("role", user.role, option);
 
-                TempData["loggedIn"] = "You are successfully logged in!";
+				TempData["loggedIn"] = "You are successfully logged in!";
 
-                // Send login confirmation email
-                string subject = "Login Successful";
-                string body = $@"
+				// Send login confirmation email
+				string subject = "Login Successful";
+				string body = $@"
                     <html>
                         <body>
                             <h2>Dear {user.username},</h2>
@@ -203,85 +197,144 @@ namespace kernel.Controllers
                         </body>
                     </html>";
 
-                sendEmail(user.email, subject, body);
+				sendEmail(user.email, subject, body);
 
-                    return RedirectToAction("Index");
-            }
-            else
-            {
-                TempData["loginError"] = "Invalid email or password!";
-                return View();
-            }
+				return RedirectToAction("Index");
+			}
+			else
+			{
+				TempData["loginError"] = "Invalid email or password!";
+				return View();
+			}
 
-        }
+		}
 
-        public IActionResult SignOut()
-        {
-            // Deleting cookies
-            Response.Cookies.Delete("username");
-            Response.Cookies.Delete("email");
-            Response.Cookies.Delete("role");
-            return RedirectToAction("signin"); // Redirect to signin page after logout
-        }
+		public IActionResult SignOut()
+		{
+			// Deleting cookies
+			Response.Cookies.Delete("username");
+			Response.Cookies.Delete("email");
+			Response.Cookies.Delete("role");
+			return RedirectToAction("signin"); // Redirect to signin page after logout
+		}
 
 
-        public IActionResult destination()
-        {
-            return View();
-        }
+		public IActionResult destination()
+		{
+			return View();
+		}
 
-        public IActionResult about()
-        {
-            return View();
-        }
+		public IActionResult about()
+		{
+			return View();
+		}
 
-        public IActionResult tour()
-        {
-            return View();
-        }
+		public IActionResult tour()
+		{
+			var packages = db.packages.ToList();
+			return View(packages);
+		}
 
-        public IActionResult hotel()
-        {
-            var hotels = db.hotels.ToList();
-            return View(hotels);
-        }
+		public IActionResult hotel(int? minPrice, int? maxPrice, string searchName, string selectedCountries)
+		{
+			var hotels = db.hotels.AsQueryable();
 
-        public IActionResult visa()
-        {
-            return View();
-        }
+			// Price filter logic
+			if (minPrice.HasValue)
+			{
+				hotels = hotels.Where(h => h.price >= minPrice.Value);
+			}
 
-        public IActionResult activity()
-        {
-            return View();
-        }
+			if (maxPrice.HasValue)
+			{
+				hotels = hotels.Where(h => h.price <= maxPrice.Value);
+			}
 
-        public IActionResult transport()
-        {
-            return View();
-        }
+			// Name search filter
+			if (!string.IsNullOrEmpty(searchName))
+			{
+				hotels = hotels.Where(h => h.name.ToLower().Contains(searchName.ToLower()));
+			}
 
-        public IActionResult contact()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult contact(string name, string phone, string email, string message, int userId)
-        {
-            var id = Request.Cookies["id"];
-            var cookieEmail = Request.Cookies["email"];
+			// Handle selected countries filter
+			if (!string.IsNullOrEmpty(selectedCountries))
+			{
+				var countries = selectedCountries.Split(',').ToList();
+				hotels = hotels.Where(h => countries.Contains(h.country));
+			}
 
-            int uId = 0;
-            if (!string.IsNullOrEmpty(id) && int.TryParse(id, out uId))
-            {
-                // Contact object create karte hain
-                Contact data = new Contact(name, phone, email, message, uId);
-                db.contact.Add(data);
-                db.SaveChanges();
+			// Group by country and get the count of hotels in each country
+			var countryCounts = hotels
+				.GroupBy(h => h.country)
+				.Select(group => new { Country = group.Key, Count = group.Count() })
+				.ToList();
 
-                // Email send karte hain
-                string subject = "Message Received";
-                string body = $@"
+			// Pass country counts to the view
+			ViewBag.CountryCounts = countryCounts;
+
+			return View(hotels.ToList());
+		}
+
+
+
+
+
+		public IActionResult hoteldetails(int id)
+		{
+			var data = db.hotels.Find(id);
+			var images = db.hotelImg.Where(b => b.hotelId == id).ToList();
+			ViewBag.hotel = data;
+			ViewBag.image = images;
+
+
+			return View();
+		}
+
+
+		public IActionResult visa()
+		{
+			var visa = db.visa.ToList();
+			return View(visa);
+		}
+
+
+		public IActionResult visadetails(int id)
+		{
+			var data = db.visa.Find(id);
+			return View(data);
+		}
+
+		public IActionResult activity()
+		{
+			return View();
+		}
+
+		public IActionResult transport()
+		{
+			return View();
+		}
+
+		public IActionResult contact()
+		{
+			return View();
+		}
+		[HttpPost]
+		public IActionResult contact(string name, string phone, string email, string message)
+		{
+			var id = Request.Cookies["id"];
+			var intId = Convert.ToInt32(id);
+			var cookieEmail = Request.Cookies["email"];
+
+
+			if (cookieEmail != null)
+			{
+				// Contact object create karte hain
+				Contact data = new Contact(name, phone, email, message, intId);
+				db.contact.Add(data);
+				db.SaveChanges();
+				// Email send karte hain
+				string subject = "Message Received";
+				string body = $@"
                 <html>
                     <body>
                         <h2>Dear {name},</h2>
@@ -295,25 +348,25 @@ namespace kernel.Controllers
                     </body>
                 </html>";
 
-                sendEmail(email, subject, body);
+				sendEmail(email, subject, body);
 
-                if (!string.IsNullOrEmpty(cookieEmail))
-                {
-                    sendEmail(cookieEmail, subject, body);
-                }
+				if (!string.IsNullOrEmpty(cookieEmail))
+				{
+					sendEmail(cookieEmail, subject, body);
+				}
 
-                ModelState.Clear();
-                TempData["contact"] = "Your message is successfully delivered";
-            }
-            else
-            {
-                // Agar cookies mein userId nahi ho ya invalid ho
-                TempData["contact"] = "Signin to submit your inquiry";
-            }
+				ModelState.Clear();
+				TempData["contact"] = "Your message is successfully delivered";
+			}
+			else
+			{
+				// Agar cookies mein userId nahi ho ya invalid ho
+				TempData["contact"] = "Signin to submit your inquiry";
+			}
 
-            return View();
-        }
+			return View();
+		}
 
 
-    }
+	}
 }

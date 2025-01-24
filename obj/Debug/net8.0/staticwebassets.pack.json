@@ -749,6 +749,34 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\room-img-01.jpg",
+      "PackagePath": "staticwebassets\\hotels\\room-img-01.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\room-img-02.jpg",
+      "PackagePath": "staticwebassets\\hotels\\room-img-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\room-img-03.jpg",
+      "PackagePath": "staticwebassets\\hotels\\room-img-03.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\room-img-04.jpg",
+      "PackagePath": "staticwebassets\\hotels\\room-img-04.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\room-img-05.jpg",
+      "PackagePath": "staticwebassets\\hotels\\room-img-05.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\room-img-06.jpg",
+      "PackagePath": "staticwebassets\\hotels\\room-img-06.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\sajhek.jpg",
+      "PackagePath": "staticwebassets\\hotels\\sajhek.jpg"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -1015,6 +1043,26 @@
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\img8.jpg",
       "PackagePath": "staticwebassets\\package\\img8.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\visa1.jpg",
+      "PackagePath": "staticwebassets\\visa\\visa1.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\visa2.jpg",
+      "PackagePath": "staticwebassets\\visa\\visa2.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\visa3.jpg",
+      "PackagePath": "staticwebassets\\visa\\visa3.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\visa4.jpg",
+      "PackagePath": "staticwebassets\\visa\\visa4.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\visa5.jpg",
+      "PackagePath": "staticwebassets\\visa\\visa5.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.kernel.props",
