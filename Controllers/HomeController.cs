@@ -1,5 +1,4 @@
-﻿
-using kernel.Models;
+﻿using kernel.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Net;
@@ -174,7 +173,6 @@ namespace kernel.Controllers
 					Expires = DateTime.Now.AddDays(1)
 				};
 
-				// Store user data in cookies
 				Response.Cookies.Append("id", user.id.ToString(), option);
 				Response.Cookies.Append("username", user.username, option);
 				Response.Cookies.Append("email", user.email, option);
@@ -182,7 +180,6 @@ namespace kernel.Controllers
 
 				TempData["loggedIn"] = "You are successfully logged in!";
 
-				// Send login confirmation email
 				string subject = "Login Successful";
 				string body = $@"
                     <html>
@@ -211,11 +208,10 @@ namespace kernel.Controllers
 
 		public IActionResult SignOut()
 		{
-			// Deleting cookies
 			Response.Cookies.Delete("username");
 			Response.Cookies.Delete("email");
 			Response.Cookies.Delete("role");
-			return RedirectToAction("signin"); // Redirect to signin page after logout
+			return RedirectToAction("signin");
 		}
 
 
@@ -239,7 +235,6 @@ namespace kernel.Controllers
 		{
 			var hotels = db.hotels.AsQueryable();
 
-			// Price filter logic
 			if (minPrice.HasValue)
 			{
 				hotels = hotels.Where(h => h.price >= minPrice.Value);
@@ -249,27 +244,23 @@ namespace kernel.Controllers
 			{
 				hotels = hotels.Where(h => h.price <= maxPrice.Value);
 			}
-
-			// Name search filter
+			
 			if (!string.IsNullOrEmpty(searchName))
 			{
 				hotels = hotels.Where(h => h.name.ToLower().Contains(searchName.ToLower()));
 			}
 
-			// Handle selected countries filter
 			if (!string.IsNullOrEmpty(selectedCountries))
 			{
 				var countries = selectedCountries.Split(',').ToList();
 				hotels = hotels.Where(h => countries.Contains(h.country));
 			}
 
-			// Group by country and get the count of hotels in each country
 			var countryCounts = hotels
 				.GroupBy(h => h.country)
 				.Select(group => new { Country = group.Key, Count = group.Count() })
 				.ToList();
 
-			// Pass country counts to the view
 			ViewBag.CountryCounts = countryCounts;
 
 			return View(hotels.ToList());
@@ -286,9 +277,16 @@ namespace kernel.Controllers
 			ViewBag.hotel = data;
 			ViewBag.image = images;
 
-
-			return View();
-		}
+            var CookieUser = Request.Cookies["email"];
+            if (!string.IsNullOrEmpty(CookieUser))
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("signin");
+            }
+        }
 
 
 		public IActionResult visa()
@@ -298,13 +296,104 @@ namespace kernel.Controllers
 		}
 
 
-		public IActionResult visadetails(int id)
-		{
-			var data = db.visa.Find(id);
-			return View(data);
-		}
+        public IActionResult VisaDetails(int id)
+        {
+            var visaData = db.visa.Find(id);
+			var name = Request.Cookies["username"];
+			var email = Request.Cookies["email"];
+			var uId = Request.Cookies["id"];
+			var userId = Convert.ToInt32(uId);
+			var visaId = id;
+			var phone = "";
+			var visaType = "";
+			var message = "";
+			var status = "";
+			var image = "";
+			var fee = 0;
 
-		public IActionResult activity()
+
+            var visaBookingModel = new visaBooking(name,email,phone,visaType,message,status,image,fee,visaId,userId);
+            var cookieUser = Request.Cookies["email"];
+            if (!string.IsNullOrEmpty(cookieUser))
+            {
+                var model = new VisaPageModel
+                {
+                    Visa = visaData,
+                };
+
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction("Signin");
+            }
+        }
+
+		[HttpPost]
+
+        public IActionResult VisaDetails(int visaId, int userId, string name, string email, string phone, string visaType,string message, IFormFile image)
+        {
+
+            var id = Request.Cookies["id"];
+
+            var intId = Convert.ToInt32(id);
+
+            var cookieEmail = Request.Cookies["email"];
+
+            var status = "pending";
+			var fee = 0;
+
+			var filename = image.FileName;
+			
+			var guidImage = Guid.NewGuid() + "_" + filename;
+            
+			var imagePath = "~/passportPic/" + guidImage;
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/passportPic", guidImage);
+
+			using(FileStream stream = new FileStream(path, FileMode.Create))
+			{
+				image.CopyTo(stream);
+			}
+
+            var cookieUser = Request.Cookies["email"];
+            if (!string.IsNullOrEmpty(cookieUser))
+            {
+                visaBooking data = new visaBooking(name, email,phone,visaType, message,status,imagePath,fee,visaId, intId);
+                db.visaBooking.Add(data);
+                db.SaveChanges();
+                string subject = "Visa Booking Status Update";
+                string body = $@"
+				<html>
+					<body>
+						<h2>Dear {name},</h2>
+						<p>Thank you for choosing <strong>Karnel Travels</strong> for your visa booking.</p>
+						<p>We would like to inform you that your visa booking is currently <strong>pending</strong>.</p>
+						<p>Once your visa is either approved or denied, we will notify you immediately via email.</p>
+						<br>
+						<p>Thank you for your patience and understanding.</p>
+						<br>
+						<p>Best regards,</p>
+						<p><strong>Karnel Travel Support Team</strong></p>
+					</body>
+				</html>";
+
+                sendEmail(email, subject, body);
+
+                if (!string.IsNullOrEmpty(cookieEmail))
+                {
+                    sendEmail(cookieEmail, subject, body);
+                }
+
+                return RedirectToAction("visaDetails", new { visaId = visaId });
+            }
+            else
+            {
+                return RedirectToAction("Signin");
+            }
+        }
+
+        public IActionResult activity()
 		{
 			return View();
 		}
@@ -360,7 +449,6 @@ namespace kernel.Controllers
 			}
 			else
 			{
-				// Agar cookies mein userId nahi ho ya invalid ho
 				TempData["contact"] = "Signin to submit your inquiry";
 			}
 

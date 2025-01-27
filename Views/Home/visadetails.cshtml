@@ -1,4 +1,8 @@
-﻿@model visa
+﻿@model VisaPageModel
+
+
+
+@Html.Partial("navbar")
 
 
 
@@ -8,7 +12,7 @@
         <div class="row">
             <div class="col-lg-12 d-flex justify-content-center">
                 <div class="banner-content">
-                    <h1>@Model.title</h1>
+                    <h1>@Model.Visa.title</h1>
                     <ul class="breadcrumb-list">
                         <li><a href="index.html">Home</a></li>
                         <li>Visa Details</li>
@@ -26,16 +30,16 @@
         <div class="row g-lg-4 gy-5">
             <div class="col-lg-8">
                 <div class="visa-thumb">
-                    <img src="~/visa/@Model.image" alt="">
+                    <img src="~/visa/@Model.Visa.image" alt="">
                 </div>
                 <div class="visa-title">
-                    <h3>@Model.title</h3>
+                    <h3>@Model.Visa.title</h3>
                 </div>
                 <ul class="visa-meta">
-                    <li><span>Country :</span> @Model.country</li>
-                    <li><span>Maximum Stay :</span> @Model.maxStay</li>
-                    <li><span>Processing Time :</span> @Model.maxTime</li>
-                    <li><span>Validity :</span> @Model.validity</li>
+                    <li><span>Country :</span> @Model.Visa.country</li>
+                    <li><span>Maximum Stay :</span> @Model.Visa.maxStay</li>
+                    <li><span>Processing Time :</span> @Model.Visa.maxTime</li>
+                    <li><span>Validity :</span> @Model.Visa.validity</li>
                     <li><span>Visa Mode :</span> Electronic</li>
                 </ul>
                 <div class="visa-required-document mb-50">
@@ -225,10 +229,10 @@
                 <div class="visa-sidebar mb-30">
                     <div class="sidebar-top text-center">
                         <h4>Cost Summary</h4>
-                        <h6>$7836/ <span>per person</span></h6>
+                        <h6>$@Model.Visa.price/ <span>per person</span></h6>
                         <p>Arrange your trip in advance - book this room now!</p>
                     </div>
-                    <div class="inquery-form">
+                    <div class="inquery-form mb-5 pb-5">
                         <div class="form-title">
                             <h4>Inquiry Form</h4>
                             <p>
@@ -236,69 +240,48 @@
                                 phone/email.
                             </p>
                         </div>
-                        <form>
+                        <form id="inquiryForm" method="post" enctype="multipart/form-data" class="mb-50">
                             <div class="form-inner mb-20">
                                 <label>Full Name <span>*</span></label>
-                                <input type="text" placeholder="Enter your full name">
+                                <input type="text" id="name" placeholder="Enter your full name" name="name">
                             </div>
+
                             <div class="form-inner mb-20">
                                 <label>Email Address <span>*</span></label>
-                                <input type="email" placeholder="Enter your email address">
+                                <input type="email" id="email" placeholder="Enter your email address" name="email">
                             </div>
+
                             <div class="form-inner mb-20">
                                 <label>Phone Number <span>*</span></label>
-                                <input type="text" placeholder="Enter your phone number">
+                                <input type="tel" id="phone" placeholder="Enter your phone number" name="phone">
                             </div>
+
+                            <div class="form-inner mb-20">
+                                <label>Passport size image <span>*</span></label>
+                                <input type="file" id="image" name="image">
+                            </div>
+
                             <div class="form-inner mb-70">
                                 <label>Visa Type <span>*</span></label>
-                                <select>
-                                    <option value="1">Tourist</option>
-                                    <option value="2">Business visa</option>
-                                    <option value="3">Student visa</option>
+                                <select id="visaType" name="visaType" class="form-control">
+                                    <option value="">Select Visa Type</option>
+                                    <option value="Tourist">Tourist</option>
+                                    <option value="Business visa">Business visa</option>
+                                    <option value="Student visa">Student visa</option>
                                 </select>
                             </div>
-                            <div class="form-inner mb-70">
-                                <label>Country <span>*</span></label>
-                                <select>
-                                    <option value="1">Australia</option>
-                                    <option value="2">Brazil</option>
-                                    <option value="3">Bangladesh</option>
-                                    <option value="3">France</option>
-                                    <option value="3">Spain</option>
-                                </select>
-                            </div>
+
                             <div class="form-inner mb-30">
-                                <label>Write Your Massage <span>*</span></label>
-                                <textarea placeholder="Write your quiry"></textarea>
+                                <label>Write Your Message <span>*</span></label>
+                                <textarea id="message" placeholder="Write your query" name="message"></textarea>
                             </div>
-                            <div class="form-inner">
-                                <button type="submit" class="primary-btn1 two">Submit Now</button>
-                            </div>
+
+                            <input type="hidden" name="visaId" value="@Model.Visa.id" />
+
+                            <button id="submitBtn" class="primary-btn1 btn-hover" type="submit" disabled>
+                                Submit Now
+                            </button>
                         </form>
-                    </div>
-                </div>
-                <div class="banner2-card">
-                    <img src="assets/user-img/innerpage/support-img.jpg" alt="">
-                    <div class="banner2-content-wrap">
-                        <div class="banner2-content">
-                            <div class="hotline-area">
-                                <div class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                         viewBox="0 0 28 28">
-                                        <path d="M27.2653 21.5995L21.598 17.8201C20.8788 17.3443 19.9147 17.5009 19.383 18.1798L17.7322 20.3024C17.6296 20.4377 17.4816 20.5314 17.3154 20.5664C17.1492 20.6014 16.9759 20.5752 16.8275 20.4928L16.5134 20.3196C15.4725 19.7522 14.1772 19.0458 11.5675 16.4352C8.95784 13.8246 8.25001 12.5284 7.6826 11.4893L7.51042 11.1753C7.42683 11.0269 7.39968 10.8532 7.43398 10.6864C7.46827 10.5195 7.56169 10.3707 7.69704 10.2673L9.81816 8.61693C10.4968 8.08517 10.6536 7.1214 10.1784 6.40198L6.39895 0.734676C5.91192 0.00208106 4.9348 -0.21784 4.18082 0.235398L1.81096 1.65898C1.06634 2.09672 0.520053 2.80571 0.286612 3.63733C-0.56677 6.74673 0.0752209 12.1131 7.98033 20.0191C14.2687 26.307 18.9501 27.9979 22.1677 27.9979C22.9083 28.0011 23.6459 27.9048 24.3608 27.7115C25.1925 27.4783 25.9016 26.932 26.3391 26.1871L27.7641 23.8187C28.218 23.0645 27.9982 22.0868 27.2653 21.5995ZM26.9601 23.3399L25.5384 25.7098C25.2242 26.2474 24.7142 26.6427 24.1152 26.8128C21.2447 27.6009 16.2298 26.9482 8.64053 19.3589C1.0513 11.7697 0.398595 6.75515 1.18669 3.88421C1.35709 3.28446 1.75283 2.77385 2.2911 2.45921L4.66096 1.03749C4.98811 0.840645 5.41221 0.93606 5.62354 1.25397L7.67659 4.3363L9.39976 6.92078C9.60612 7.23283 9.53831 7.65108 9.24392 7.88199L7.1223 9.53232C6.47665 10.026 6.29227 10.9193 6.68979 11.6283L6.85826 11.9344C7.45459 13.0281 8.19599 14.3887 10.9027 17.095C13.6095 19.8012 14.9696 20.5427 16.0628 21.139L16.3694 21.3079C17.0783 21.7053 17.9716 21.521 18.4653 20.8753L20.1157 18.7537C20.3466 18.4595 20.7647 18.3918 21.0769 18.5979L26.7437 22.3773C27.0618 22.5885 27.1572 23.0128 26.9601 23.3399ZM15.8658 4.66809C20.2446 4.67296 23.7931 8.22149 23.798 12.6003C23.798 12.858 24.0069 13.0669 24.2646 13.0669C24.5223 13.0669 24.7312 12.858 24.7312 12.6003C24.7257 7.7063 20.7598 3.74029 15.8658 3.73494C15.6081 3.73494 15.3992 3.94381 15.3992 4.20151C15.3992 4.45922 15.6081 4.66809 15.8658 4.66809Z">
-                                        </path>
-                                        <path d="M15.865 7.46746C18.6983 7.4708 20.9943 9.76678 20.9976 12.6001C20.9976 12.7238 21.0468 12.8425 21.1343 12.93C21.2218 13.0175 21.3404 13.0666 21.4642 13.0666C21.5879 13.0666 21.7066 13.0175 21.7941 12.93C21.8816 12.8425 21.9308 12.7238 21.9308 12.6001C21.9269 9.2516 19.2134 6.53813 15.865 6.5343C15.6073 6.5343 15.3984 6.74318 15.3984 7.00088C15.3984 7.25859 15.6073 7.46746 15.865 7.46746Z">
-                                        </path>
-                                        <path d="M15.865 10.267C17.1528 10.2686 18.1964 11.3122 18.198 12.6C18.198 12.7238 18.2472 12.8424 18.3347 12.9299C18.4222 13.0174 18.5409 13.0666 18.6646 13.0666C18.7883 13.0666 18.907 13.0174 18.9945 12.9299C19.082 12.8424 19.1312 12.7238 19.1312 12.6C19.1291 10.797 17.668 9.33589 15.865 9.33386C15.6073 9.33386 15.3984 9.54274 15.3984 9.80044C15.3984 10.0581 15.6073 10.267 15.865 10.267Z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <div class="content">
-                                    <span>To More Inquiry</span>
-                                    <h6><a href="tel:+990737621432">+990-737 621 432</a></h6>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -306,3 +289,42 @@
     </div>
 </div>
 <!-- End visa Details section -->
+
+@Html.Partial("footer")
+
+
+<style>
+    /* Disabled button style */
+    #submitBtn:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+    }
+</style>
+
+<script>
+    // Function to validate form
+    function validateForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const image = document.getElementById("image").value.trim();
+        const visaType = document.getElementById("visaType").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Check if all fields are filled
+        return name && email && phone && image && visaType && message;
+    }
+
+    // Get form and button
+    const form = document.getElementById("inquiryForm");
+    const submitBtn = document.getElementById("submitBtn");
+
+    // Add event listeners to inputs
+    form.addEventListener("input", () => {
+        if (validateForm()) {
+            submitBtn.disabled = false;
+        } else {
+            submitBtn.disabled = true;
+        }
+    });
+</script>

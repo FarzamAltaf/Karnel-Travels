@@ -1,3 +1,5 @@
+using Stripe;
+
 namespace kernel
 {
     public class Program
@@ -24,6 +26,7 @@ namespace kernel
 
             app.UseRouting();
 
+            StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
             app.UseAuthorization();
 
 

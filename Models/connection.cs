@@ -21,5 +21,6 @@ namespace kernel.Models
         public DbSet<hotelImg> hotelImg { get; set; }
         public DbSet<hotelRestrictions> hotelRestrictions { get; set; }
         public DbSet<visa> visa { get; set; }
+        public DbSet<visaBooking> visaBooking { get; set; }
     }
 }
