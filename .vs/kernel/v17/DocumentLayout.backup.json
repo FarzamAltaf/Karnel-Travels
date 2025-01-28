@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "F:\\Projects\\Travel-agency\\kernel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\admin\\all_packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\admin\\all_packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\home\\visadetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\home\\visadetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\models\\visabooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:models\\visabooking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 466,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,91 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Contact.cs",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Models\\Contact.cs",
-              "RelativeDocumentMoniker": "Models\\Contact.cs",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Models\\Contact.cs",
-              "RelativeToolTip": "Models\\Contact.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T06:56:07.056Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "visaBooking.cs",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Models\\visaBooking.cs",
-              "RelativeDocumentMoniker": "Models\\visaBooking.cs",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Models\\visaBooking.cs",
-              "RelativeToolTip": "Models\\visaBooking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T06:55:12.436Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-28T20:26:12.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAD0BAAAAAAAAAAAQwE4BAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T10:10:51.221Z",
+              "Title": "all_packages.cshtml",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\all_packages.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\all_packages.cshtml",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\all_packages.cshtml",
+              "RelativeToolTip": "Views\\Admin\\all_packages.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAkwF0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-28T20:17:11.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "visadetails.cshtml",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Home\\visadetails.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\visadetails.cshtml",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Home\\visadetails.cshtml",
-              "RelativeToolTip": "Views\\Home\\visadetails.cshtml",
-              "ViewState": "AgIAAP8AAAAAAAAAAAAkwB4BAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-24T11:13:04.553Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "connection.cs",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Models\\connection.cs",
-              "RelativeDocumentMoniker": "Models\\connection.cs",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Models\\connection.cs",
-              "RelativeToolTip": "Models\\connection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA9AAAAAAAAAA==",
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAowNoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T06:55:19.569Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-26T19:39:27.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T19:43:45.459Z",
+              "WhenOpened": "2025-01-28T15:42:26.483Z",
               "EditorCaption": ""
             }
           ]

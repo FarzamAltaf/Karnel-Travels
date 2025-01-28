@@ -1,0 +1,64 @@
+﻿@model Packages
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewData["Title"] = "Update Packages";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="main-content-title-profile mb-50">
+            <div class="main-content-title">
+                <h3>Add New Tour Package</h3>
+            </div>
+        </div>
+        <div class="dashboard-profile-wrapper two">
+            <div class="dashboard-profile-tab-content">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Title</label>
+                                <input type="text" name="title" value="@Model.title" placeholder="Title here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Duration</label>
+                                <input type="text" name="duration" value="@Model.duration" placeholder="5 Jan, 2024" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Location</label>
+                                <input type="text" name="location" value="@Model.location" placeholder="Location here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Price</label>
+                                <input type="number" name="price" value="@Model.price" placeholder="Price here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Max People</label>
+                                <input type="number" name="maxPeople" value="@Model.maxPeople" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Map Link</label>
+                                <input type="text" name="mapLink" value="@Model.mapLink" placeholder="Map link here...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-inner">
+                        <button type="submit" class="primary-btn3">Add Package</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+@model Packages
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewData["Title"] = "Manage Tours";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="main-content-title-profile mb-50">
+            <div class="main-content-title">
+                <h3>Add New Tour Package</h3>
+            </div>
+        </div>
+        <div class="dashboard-profile-wrapper two">
+            <div class="dashboard-profile-tab-content">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Title</label>
+                                <input type="text" name="title" placeholder="Title here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Duration</label>
+                                <input type="text" name="duration" placeholder="5 Jan, 2024" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Location</label>
+                                <input type="text" name="location" placeholder="Location here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Price</label>
+                                <input type="number" name="price" placeholder="Price here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Main Image</label>
+                                <input type="file" name="mainImage" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Image 1</label>
+                                <input type="file" name="image1" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Image 2</label>
+                                <input type="file" name="image2" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Image 3</label>
+                                <input type="file" name="image3" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Image 4</label>
+                                <input type="file" name="image4" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Max People</label>
+                                <input type="number" name="maxPeople" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Map Link</label>
+                                <input type="text" name="mapLink"  required placeholder="Map link here...">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-30">
+                            <div class="form-inner">
+                                <label>Description</label>
+                                <textarea name="description" placeholder="Description here"  required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-inner">
+                        <button type="submit" class="primary-btn3">Add Package</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

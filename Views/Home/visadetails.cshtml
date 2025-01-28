@@ -4,6 +4,12 @@
 
 @Html.Partial("navbar")
 
+@if (TempData.ContainsKey("visaBooked"))
+{
+    <div class="alert alert-success alert-dismissible" id="visaAlert">
+        @TempData["visaBooked"]
+    </div>
+}
 
 
 <div class="breadcrumb-section"
@@ -327,4 +333,14 @@
             submitBtn.disabled = true;
         }
     });
+</script>
+
+<script>
+    setTimeout(function () {
+        var visaAlert = document.getElementById("visaAlert");
+
+        if (visaAlert) {
+            visaAlert.style.display = "none";
+        }
+    }, 5000);
 </script>

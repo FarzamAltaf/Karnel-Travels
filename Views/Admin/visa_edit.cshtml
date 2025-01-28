@@ -1,0 +1,73 @@
+﻿@model visa
+
+@{
+
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewData["Title"] = "Edit Visa";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="main-content-title-profile mb-50">
+            <div class="main-content-title">
+                <h3>Edit Visa</h3>
+            </div>
+        </div>
+        <div class="dashboard-profile-wrapper two">
+            <div class="dashboard-profile-tab-content">
+                <form method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="@Model.id" />
+                    <div class="row">
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Title</label>
+                                <input type="text" name="title" value="@Model.title" placeholder="Title here..." required />
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Country</label>
+                                <input type="text" name="country" value="@Model.country" placeholder="Country here..." required />
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Max Stay (in days)</label>
+                                <input type="number" name="maxStay" value="@Model.maxStay" placeholder="Max stay in days..." required />
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Max Time (in months)</label>
+                                <input type="text" name="maxTime" value="@Model.maxTime" placeholder="Max time in months..." />
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Validity</label>
+                                <input type="text" name="validity" value="@Model.validity" placeholder="Validity here..." required />
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Price</label>
+                                <input type="number" name="price" value="@Model.price" step="0.01" placeholder="Price here..." required />
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-30">
+                            <div class="form-inner">
+                                <label>Image</label>
+                                <input type="file" name="image" />
+                                <p>Leave blank if you do not want to change the image.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-inner">
+                        <button type="submit" class="primary-btn3">Update Visa</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -32,7 +32,12 @@ namespace kernel.Controllers
 
 		public IActionResult Index()
 		{
-			var packages = db.packages.ToList();
+            var role = Request.Cookies["role"];
+            if (role == "admin")
+            {
+                return RedirectToAction("Index", "Admin");
+            }
+            var packages = db.packages.ToList();
 			return View(packages);
 		}
 
@@ -231,6 +236,7 @@ namespace kernel.Controllers
 			return View(packages);
 		}
 
+        //hotel start
 		public IActionResult hotel(int? minPrice, int? maxPrice, string searchName, string selectedCountries)
 		{
 			var hotels = db.hotels.AsQueryable();
@@ -287,7 +293,10 @@ namespace kernel.Controllers
                 return RedirectToAction("signin");
             }
         }
+        //hotel end
 
+
+        //Visa start
 
 		public IActionResult visa()
 		{
@@ -295,8 +304,7 @@ namespace kernel.Controllers
 			return View(visa);
 		}
 
-
-        public IActionResult VisaDetails(int id)
+		public IActionResult VisaDetails(int id)
         {
             var visaData = db.visa.Find(id);
 			var name = Request.Cookies["username"];
@@ -347,7 +355,6 @@ namespace kernel.Controllers
 			
 			var guidImage = Guid.NewGuid() + "_" + filename;
             
-			var imagePath = "~/passportPic/" + guidImage;
 
             var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/passportPic", guidImage);
 
@@ -359,7 +366,7 @@ namespace kernel.Controllers
             var cookieUser = Request.Cookies["email"];
             if (!string.IsNullOrEmpty(cookieUser))
             {
-                visaBooking data = new visaBooking(name, email,phone,visaType, message,status,imagePath,fee,visaId, intId);
+                visaBooking data = new visaBooking(name, email,phone,visaType, message,status,guidImage,fee,visaId, intId);
                 db.visaBooking.Add(data);
                 db.SaveChanges();
                 string subject = "Visa Booking Status Update";
@@ -384,7 +391,7 @@ namespace kernel.Controllers
                 {
                     sendEmail(cookieEmail, subject, body);
                 }
-
+                TempData["visaBooked"] = "Your request for booking visa is successfully delivered";
                 return RedirectToAction("visaDetails", new { visaId = visaId });
             }
             else
@@ -392,22 +399,21 @@ namespace kernel.Controllers
                 return RedirectToAction("Signin");
             }
         }
+        //Visa end
 
-        public IActionResult activity()
+
+
+
+
+
+        //Contact form start
+        public IActionResult contact()
 		{
 			return View();
 		}
 
-		public IActionResult transport()
-		{
-			return View();
-		}
-
-		public IActionResult contact()
-		{
-			return View();
-		}
 		[HttpPost]
+		
 		public IActionResult contact(string name, string phone, string email, string message)
 		{
 			var id = Request.Cookies["id"];
@@ -417,11 +423,9 @@ namespace kernel.Controllers
 
 			if (cookieEmail != null)
 			{
-				// Contact object create karte hain
 				Contact data = new Contact(name, phone, email, message, intId);
 				db.contact.Add(data);
 				db.SaveChanges();
-				// Email send karte hain
 				string subject = "Message Received";
 				string body = $@"
                 <html>
@@ -454,6 +458,7 @@ namespace kernel.Controllers
 
 			return View();
 		}
+		//Contact form end
 
 
 	}

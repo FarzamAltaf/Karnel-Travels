@@ -86,6 +86,16 @@ namespace kernel
             name: "packagedetails",
             pattern: "packagedetails",
             defaults: new { controller = "Home", action = "packagedetails" });
+            
+            app.MapControllerRoute(
+            name: "visadetails",
+            pattern: "visadetails",
+            defaults: new { controller = "Home", action = "visadetails" });
+            
+            app.MapControllerRoute(
+            name: "hoteldetails",
+            pattern: "hoteldetails",
+            defaults: new { controller = "Home", action = "hoteldetails" });
 
             // User Routes end
 

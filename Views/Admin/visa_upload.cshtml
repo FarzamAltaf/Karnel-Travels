@@ -1,0 +1,74 @@
+@model visa
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewData["Title"] = "Visa Upload";
+}
+
+
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="main-content-title-profile mb-50">
+            <div class="main-content-title">
+                <h3>Add New Visa</h3>
+            </div>
+        </div>
+        <div class="dashboard-profile-wrapper two">
+            <div class="dashboard-profile-tab-content">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Title</label>
+                                <input type="text" name="title" placeholder="Title here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Country</label>
+                                <input type="text" name="country" placeholder="Country here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Max Stay (in days)</label>
+                                <input type="number" name="maxStay" placeholder="Max stay in days..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Max Time (in months)</label>
+                                <input type="text" name="maxTime" placeholder="Max time in months...">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Validity</label>
+                                <input type="text" name="validity" placeholder="Validity here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Price</label>
+                                <input type="number" name="price" step="0.01" placeholder="Price here..." required>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <div class="form-inner mb-50">
+                        <label class="containerss">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="text">Update details in all properties included in this site.</span>
+                        </label>
+                    </div>
+                    <div class="form-inner">
+                        <button type="submit" class="primary-btn3">Add Visa</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

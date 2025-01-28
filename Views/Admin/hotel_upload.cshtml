@@ -1,0 +1,135 @@
+@model Hotel  
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewData["Title"] = "Upload Hotel";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="main-content-title-profile mb-50">
+            <div class="main-content-title">
+                <h3>Add New Hotel</h3>
+            </div>
+        </div>
+        <div class="dashboard-profile-wrapper two">
+            <div class="dashboard-profile-tab-content">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Name</label>
+                                <input type="text" name="name" placeholder="Hotel name here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-30">
+                            <div class="form-inner">
+                                <label>Country</label>
+                                <input type="text" name="country" placeholder="Country here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>City</label>
+                                <input type="text" name="city" placeholder="City here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Address</label>
+                                <input type="text" name="address" placeholder="Address here..." required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Map Link</label>
+                                <input type="text" name="maplink" placeholder="Map link here...">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Description</label>
+                                <textarea placeholder="Description here" name="description"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Status</label>
+                                <input type="text" name="status" placeholder="Status here...">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Room Type</label>
+                                <select name="roomType">
+                                    <option>Deluxe King Room</option>
+                                    <option>Single Room</option>
+                                    <option>Executive Suite</option>
+                                    <option>Classic Room</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Price</label>
+                                <input type="number" name="price" placeholder="Price here...">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Discount Price</label>
+                                <input type="number" name="discountPrice" placeholder="Discount price here">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Facilities</label>
+                                <input type="text" name="facilities" placeholder="Facilities here...">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-inner mb-30">
+                                <label>Number Of People (max)</label>
+                                <input type="number" name="maxNumberOfPeople" placeholder="Number of people here....">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-inner mb-30">
+                                <label>Location</label>
+                                <input type="text" name="location" placeholder="Location here...">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="location-map mb-30">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5647631857846!2d90.36311167605992!3d23.83407118555764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c8682a473%3A0xa6c74743d52adb88!2sEgens%20Lab!5e0!3m2!1sen!2sbd!4v1694943917248!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upload-img-area">
+                        <div class="upload-img-wrapper">
+                            <div class="drag-area">
+                                <button type="button" class="upload-btn"><i class="bi bi-plus-lg"></i></button>
+                                <input type="file" name="image" hidden="">
+                            </div>
+                        </div>
+                        <div class="upload-img-area-content">
+                            <h6>Upload Your Image</h6>
+                            <p>Image required size 300*300, JPGE or PNG format.</p>
+                        </div>
+                    </div>
+                    <div class="form-inner mb-50">
+                        <label class="containerss">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="text">Update details in all properties included in this site.</span>
+                        </label>
+                    </div>
+                    <div class="form-inner">
+                        <button type="submit" class="primary-btn3">Publish Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
