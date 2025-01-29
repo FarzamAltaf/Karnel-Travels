@@ -6,8 +6,6 @@
     ViewData["Title"] = "Visa Upload";
 }
 
-
-
 <div class="row">
     <div class="col-xl-12">
         <div class="main-content-title-profile mb-50">
@@ -17,7 +15,7 @@
         </div>
         <div class="dashboard-profile-wrapper two">
             <div class="dashboard-profile-tab-content">
-                <form method="post" enctype="multipart/form-data">
+                <form id="visaForm" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6 mb-30">
                             <div class="form-inner">
@@ -39,8 +37,15 @@
                         </div>
                         <div class="col-md-6 mb-30">
                             <div class="form-inner">
-                                <label>Max Time (in months)</label>
-                                <input type="text" name="maxTime" placeholder="Max time in months...">
+                                <label>Max Time (Processing Time)</label>
+                                <select name="maxTime" class="form-control">
+                                    <option value="3-5 Business Days">3-5 Business Days</option>
+                                    <option value="5-7 Working Days">5-7 Working Days</option>
+                                    <option value="7-10 Business Days">7-10 Business Days</option>
+                                    <option value="10-15 Working Days">10-15 Working Days</option>
+                                    <option value="15-20 Business Days">15-20 Business Days</option>
+                                    <option value="20-30 Working Days">20-30 Working Days</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-6 mb-30">
@@ -55,20 +60,86 @@
                                 <input type="number" name="price" step="0.01" placeholder="Price here..." required>
                             </div>
                         </div>
-            
-                    </div>
-                    <div class="form-inner mb-50">
-                        <label class="containerss">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="text">Update details in all properties included in this site.</span>
-                        </label>
+
+                        <div class="upload-img-area">
+                            <div class="upload-img-wrapper">
+                                <div class="drag-area">
+                                    <button type="button" class="upload-btn" id="uploadButton">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                    <input type="file" name="image" id="imageInput" hidden="true" />
+                                </div>
+                            </div>
+                            <div class="upload-img-area-content">
+                                <h6>Upload Image</h6>
+                                <p>Image required size 300*300, JPEG or PNG format.</p>
+                            </div>
+                        </div>
+
+                        <div id="imageNameArea" style="display: none;">
+                            <p id="imageName"></p>
+                        </div>
+
+                        <div id="imagePreviewArea" style="display: none;">
+                            <img id="imagePreview" src="" alt="Image Preview" style="max-width: 200px; max-height: 200px;" class="border border-primary rounded-sm p-3" />
+                        </div>
+
                     </div>
                     <div class="form-inner">
-                        <button type="submit" class="primary-btn3">Add Visa</button>
+                        <button type="submit" id="submitButton" class="primary-btn3 my-2" disabled> Add Visa </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function checkForm() {
+        let isFormValid = true;
+        const formFields = document.querySelectorAll('input[required]');
+
+        formFields.forEach(field => {
+            if (field.value.trim() === "") {
+                isFormValid = false;
+            }
+        });
+        document.getElementById('submitButton').disabled = !isFormValid;
+        document.getElementById('submitButton').style.backgroundColor = isFormValid ? '' : '#d3d3d3';
+    }
+
+    document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('input', checkForm);
+    });
+
+    document.getElementById('uploadButton').addEventListener('click', function () {
+        document.getElementById('imageInput').click();
+    });
+
+    document.getElementById('imageInput').addEventListener('change', function (e) {
+        var file = e.target.files[0];
+
+        if (file) {
+            document.getElementById('imageNameArea').style.display = 'block';
+            document.getElementById('imageName').textContent = "Selected File: " + file.name;
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('imagePreviewArea').style.display = 'block';
+                document.getElementById('imagePreview').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        checkForm();
+    });
+
+    checkForm();
+</script>
+
+<style>
+    #submitButton:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+</style>

@@ -1029,6 +1029,54 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\0f1322ce-52da-403e-9828-33bd51ed37b0.jpg",
+      "PackagePath": "staticwebassets\\hotels\\0f1322ce-52da-403e-9828-33bd51ed37b0.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\12d6ef44-80e8-4d29-b587-d58d531d4ab9.jpg",
+      "PackagePath": "staticwebassets\\hotels\\12d6ef44-80e8-4d29-b587-d58d531d4ab9.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\132b8bed-94d7-42ad-9557-282621103490.jpg",
+      "PackagePath": "staticwebassets\\hotels\\132b8bed-94d7-42ad-9557-282621103490.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\1ac34456-77af-44c8-b433-5ffc2d0519b6.jpg",
+      "PackagePath": "staticwebassets\\hotels\\1ac34456-77af-44c8-b433-5ffc2d0519b6.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\3268bf27-88e0-4f79-a3b4-dc9a9556c936.jpg",
+      "PackagePath": "staticwebassets\\hotels\\3268bf27-88e0-4f79-a3b4-dc9a9556c936.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\4b1be4f4-1dd6-46bf-93b8-1e7127b02c53.jpg",
+      "PackagePath": "staticwebassets\\hotels\\4b1be4f4-1dd6-46bf-93b8-1e7127b02c53.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\570ae59c-3c55-4a11-a64b-c6b18e10eb00.jpg",
+      "PackagePath": "staticwebassets\\hotels\\570ae59c-3c55-4a11-a64b-c6b18e10eb00.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\706ab2cd-d482-46aa-8845-2e7fc44870ea.jpg",
+      "PackagePath": "staticwebassets\\hotels\\706ab2cd-d482-46aa-8845-2e7fc44870ea.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\d792b850-98c5-48df-8ffe-4c3ac61c47aa.jpg",
+      "PackagePath": "staticwebassets\\hotels\\d792b850-98c5-48df-8ffe-4c3ac61c47aa.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\e645babe-d34c-4ab0-983e-694ab394824d.jpg",
+      "PackagePath": "staticwebassets\\hotels\\e645babe-d34c-4ab0-983e-694ab394824d.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\f79b0953-1a16-401a-8f61-42d1c1158815.jpg",
+      "PackagePath": "staticwebassets\\hotels\\f79b0953-1a16-401a-8f61-42d1c1158815.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\fc538912-066a-42b1-a07a-5d3569131e8f.jpg",
+      "PackagePath": "staticwebassets\\hotels\\fc538912-066a-42b1-a07a-5d3569131e8f.jpg"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\hotels\\room-img-01.jpg",
       "PackagePath": "staticwebassets\\hotels\\room-img-01.jpg"
     },
@@ -1479,6 +1527,14 @@
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\f6eeb133-da77-498e-9094-a71fd78b2dfd_logoblack-center.jpg",
       "PackagePath": "staticwebassets\\passportPic\\f6eeb133-da77-498e-9094-a71fd78b2dfd_logoblack-center.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\34c09abd-1ca2-41ea-80bf-ead788cae914.png",
+      "PackagePath": "staticwebassets\\visa\\34c09abd-1ca2-41ea-80bf-ead788cae914.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\da791232-fad2-49a8-a0c2-7d902332523a.png",
+      "PackagePath": "staticwebassets\\visa\\da791232-fad2-49a8-a0c2-7d902332523a.png"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\visa1.jpg",

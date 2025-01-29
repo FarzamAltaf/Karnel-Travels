@@ -10,6 +10,8 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Net.Mime.MediaTypeNames;
 using System.IO.Pipelines;
 using System.Security.Cryptography.Xml;
+using System.IO;
+using System;
 
 
 
@@ -20,7 +22,23 @@ namespace pract_eProject.Controllers
         connection db = new connection();
 
 
-        public IActionResult Index(int page = 1)
+		public void sendEmail(string to, string subject, string body)
+		{
+			MailMessage msg = new MailMessage("farzamaltaf888@gmail.com", to, subject, body);
+			msg.IsBodyHtml = true;
+
+			SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587)
+			{
+				Credentials = new NetworkCredential("farzamaltaf888@gmail.com", "epdtxztstqznnsvq"),
+				EnableSsl = true
+			};
+			smtp.Send(msg);
+		}
+
+
+
+
+		public IActionResult Index(int page = 1)
         {
             ViewBag.Title = "Kernel Travel Dashboard";
 
@@ -35,6 +53,7 @@ namespace pract_eProject.Controllers
                                    Booking = booking,
                                    Country = visa.country
                                })
+                               .OrderByDescending(b => b.Booking.id)
                                .Skip((page - 1) * pageSize)
                                .Take(pageSize)
                                .ToList();
@@ -82,20 +101,89 @@ namespace pract_eProject.Controllers
             return RedirectToAction("all_hotel");
         }
 
-     
-        public IActionResult all_hotel()
+
+        public IActionResult all_hotel(int page = 1)
+        {
+            try
+            {
+                int pageSize = 3;
+                int totalRecords = db.hotels.Count();
+                int totalPages = totalRecords > 0 ? (int)Math.Ceiling((double)totalRecords / pageSize) : 1;
+
+                var role = Request.Cookies["role"];
+                if (role != "admin")
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+
+                var hotelData = db.hotels
+                                         .OrderByDescending(b => b.id)
+                                         .Skip((page - 1) * pageSize)
+                                         .Take(pageSize)
+                                         .ToList();
+
+                ViewBag.CurrentPage = page;
+                ViewBag.TotalPages = totalPages;
+                return View(hotelData);
+            }
+            catch (Exception ex)
+            {
+                return Content($"Error: {ex.Message}");
+            }
+        }
+
+
+        public IActionResult hotel_image(int id)
         {
             var role = Request.Cookies["role"];
             if (role != "admin")
             {
                 return RedirectToAction("Index", "Home");
             }
-            var hotelData = db.hotels.ToList();
-            return View(hotelData);
 
+            var hotel = db.hotels.Find(id);
+            if (hotel == null)
+            {
+                return NotFound();
+            }
+            return View(hotel);
         }
 
-       
+        [HttpPost]
+        public IActionResult hotel_image(int hotelId, IFormFile image)
+        {
+            if (image != null && image.Length > 0)
+            {
+                var fileExtension = Path.GetExtension(image.FileName);
+                var fileName = Guid.NewGuid() + fileExtension;
+
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "hotels", fileName);
+
+                var directory = Path.GetDirectoryName(path);
+                if (!Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+
+                using (FileStream stream = new FileStream(path, FileMode.Create))
+                {
+                    image.CopyTo(stream);
+                }
+
+                hotelImg hotel = new hotelImg(fileName, hotelId);
+                db.hotelImg.Add(hotel);
+                db.SaveChanges();
+
+                TempData["message"] = "Hotel Image added successfully!";
+                return RedirectToAction("all_hotel");
+            }
+
+            TempData["error"] = "No image selected or invalid image file!";
+            return RedirectToAction("all_hotel");
+        }
+
+
+
         public IActionResult hotel_edit(int id)
         {
             var role = Request.Cookies["role"];
@@ -113,7 +201,7 @@ namespace pract_eProject.Controllers
         }
 
         [HttpPost]
-        public IActionResult hotel_edit(int id, string name, string country, string city, string address, string maplink, string description, string status,int price,int maxRoom)
+        public IActionResult hotel_edit(int id, string name, string address, string maplink, string status,int price,int maxRoom)
         {
             var hotel = db.hotels.Find(id);
             if (hotel == null)
@@ -121,11 +209,8 @@ namespace pract_eProject.Controllers
                 return NotFound();
             }
             hotel.name = name;
-            hotel.country = country;
-            hotel.city = city;
             hotel.address = address;
             hotel.maplink = maplink;
-            hotel.description = description;
             hotel.status = status;
             hotel.price = price;
             hotel.maxRoom = maxRoom;
@@ -228,7 +313,7 @@ namespace pract_eProject.Controllers
             var totalPackages = db.packages.ToList();
             var totalPages = (int)Math.Ceiling((double)totalPackages.Count / pageSize);
 
-            var packages = totalPackages.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var packages = totalPackages.OrderByDescending(b => b.id).Skip((page - 1) * pageSize).Take(pageSize).ToList();
 
             ViewData["TotalPages"] = totalPages;
             ViewData["CurrentPage"] = page;
@@ -302,17 +387,34 @@ namespace pract_eProject.Controllers
 
     
         [HttpPost]
-        public IActionResult visa_upload(string title, string country, int maxStay, string maxTime, string validity, int price, string image)
+        public IActionResult visa_upload(string title, string country, int maxStay, string maxTime, string validity, int price, IFormFile image)
         {
-            visa visa = new visa(title, country, maxStay, maxTime, validity, price, image);
+
+            var fileExtension = Path.GetExtension(image.FileName);
+            var fileName = Guid.NewGuid() + fileExtension;
+
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "visa", fileName);
+
+            var directory = Path.GetDirectoryName(path);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            using (FileStream stream = new FileStream(path, FileMode.Create))
+            {
+                image.CopyTo(stream);
+            }
+
+            visa visa = new visa(title, country, maxStay, maxTime, validity, price, fileName);
             db.Add(visa);
             db.SaveChanges();
             TempData["message"] = "Visa added successfully!";
             return RedirectToAction("all_visa");
         }
 
-        
-        public IActionResult all_visa()
+
+        public IActionResult all_visa(int page = 1)
         {
             var role = Request.Cookies["role"];
             if (role != "admin")
@@ -320,11 +422,19 @@ namespace pract_eProject.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-            var visaData = db.visa.ToList();
+            int pageSize = 3;
+            var totalRecords = db.visa.Count();
+            var totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+
+            var visaData = db.visa.OrderByDescending(b => b.id).Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
             return View(visaData);
         }
 
-      
+
         public IActionResult visa_edit(int id)
         {
             var role = Request.Cookies["role"];
@@ -343,7 +453,7 @@ namespace pract_eProject.Controllers
 
   
         [HttpPost]
-        public IActionResult visa_edit(int id, string title, string country, int maxStay, string maxTime, string validity, int price, string image)
+        public IActionResult visa_edit(int id, string title, string country, int maxStay, string maxTime, string validity, int price)
         {
             var visa = db.visa.Find(id);
             if (visa == null)
@@ -357,7 +467,6 @@ namespace pract_eProject.Controllers
             visa.maxTime = maxTime;
             visa.validity = validity;
             visa.price = price;
-            visa.image = image;
 
             db.SaveChanges();
             TempData["message"] = "Visa updated successfully!";
@@ -365,7 +474,70 @@ namespace pract_eProject.Controllers
         }
 
 
-        public IActionResult visa_delete(int id)
+		public IActionResult visa_approve(int id)
+		{
+			var visa = db.visaBooking.Find(id);
+			if (visa == null)
+			{
+				return NotFound();
+			}
+
+			visa.status = "Approved";
+			db.SaveChanges();
+
+			string subject = "Visa Approved: Congratulations!";
+			string body = $@"
+                <html>
+                    <body>
+                        <h2>Dear {visa.name},</h2>
+                        <p>We are pleased to inform you that your visa application has been approved! Congratulations!</p>
+                        <p>We understand this is an exciting step, and we're here to support you in your journey. Your visa is now officially approved, and we hope you have a wonderful experience ahead.</p>
+                        <p>If you have any questions or need further assistance, please do not hesitate to contact us.</p>
+                        <br>
+                        <p>Best regards,</p>
+                        <p><strong>Karnel Travels Support Team</strong></p>
+                    </body>
+                </html>";
+
+			sendEmail(visa.email, subject, body);
+			return RedirectToAction("booking_list");
+		}
+
+		public IActionResult visa_cancel(int id)
+		{
+			var visa = db.visaBooking.Find(id);
+			if (visa == null)
+			{
+				return NotFound();
+			}
+
+			visa.status = "Cancelled";
+			db.SaveChanges();
+
+			string subject = "Visa Application Cancellation Notification";
+			string body = $@"
+         <html>
+             <body>
+                 <h2>Dear {visa.name},</h2>
+                 <p>We regret to inform you that your visa application has been cancelled. Unfortunately, we are unable to proceed with the approval at this time.</p>
+                 <p>If you have any questions or require further assistance regarding your application, please feel free to contact us. We are here to help you in any way we can.</p>
+                 <br>
+                 <p>We understand this may be disappointing, but we hope you will consider reapplying in the future.</p>
+                 <br>
+                 <p>Best regards,</p>
+                 <p><strong>Karnel Travels Support Team</strong></p>
+             </body>
+         </html>";
+
+			sendEmail(visa.email, subject, body);
+			return RedirectToAction("booking_list");
+		}
+
+
+
+
+
+		public IActionResult visa_delete(int id)
         {
             var visa = db.visa.Find(id);
             if (visa != null)
@@ -376,8 +548,6 @@ namespace pract_eProject.Controllers
             }
             return RedirectToAction("all_visa");
         }
-
-        //dashboard profile
 
         public IActionResult dashboard_profile()
         {
@@ -390,19 +560,50 @@ namespace pract_eProject.Controllers
             return View(adminProfile); 
         }
 
-        //BookingDates list
-
-        public IActionResult booking_list()
-        {
-            var role = Request.Cookies["role"];
-            if (role != "admin")
-            {
-                return RedirectToAction("Index", "Home");
-            }
-            var bookingData = db.visaBooking.ToList();
-            return View(bookingData);
-        }
 
 
-    }
+		public IActionResult booking_list(int page = 1, string status = "All")
+		{
+			int pageSize = 7;
+			int totalRecords;
+			IQueryable<VisaBookingViewModel> bookingDataQuery;
+
+			bookingDataQuery = (from booking in db.visaBooking
+								join visa in db.visa on booking.visaId equals visa.id
+								select new VisaBookingViewModel
+								{
+									Booking = booking,
+									Country = visa.country
+								})
+								.OrderByDescending(b => b.Booking.id);
+
+			if (status != "All")
+			{
+				bookingDataQuery = bookingDataQuery.Where(b => b.Booking.status == status);
+			}
+
+			totalRecords = bookingDataQuery.Count();
+			int totalPages = (int)Math.Ceiling((double)totalRecords / pageSize);
+
+			var bookingData = bookingDataQuery
+								.Skip((page - 1) * pageSize)
+								.Take(pageSize)
+								.ToList();
+
+			ViewBag.CurrentPage = page;
+			ViewBag.TotalPages = totalPages;
+			ViewBag.Status = status;
+
+			var role = Request.Cookies["role"];
+			if (role != "admin")
+			{
+				return RedirectToAction("Index", "Home");
+			}
+
+			return View(bookingData);
+		}
+
+
+
+	}
 }

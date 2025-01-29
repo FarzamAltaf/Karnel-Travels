@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfZWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Projects/Travel-agency/kernel/Views/Admin/hotel_image.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfaW1hZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Projects/Travel-agency/kernel/Views/Admin/hotel_upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfdXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

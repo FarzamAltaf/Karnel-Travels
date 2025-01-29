@@ -12,6 +12,12 @@
         width: 100%;
         height: auto;
     }
+
+    .disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
 </style>
 
 
@@ -206,7 +212,8 @@
                     </ul>
                     <ul class="paginations-buttons">
                         <li>
-                            <a href="?page=@(ViewBag.CurrentPage - 1)" @(ViewBag.CurrentPage == 1 ? "class=disabled" : "")>
+                            <a href="@(ViewBag.CurrentPage == 1 ? "#" : "?page=" + (ViewBag.CurrentPage - 1))"
+                               class="@(ViewBag.CurrentPage == 1 ? "disabled" : "")">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14">
                                     <path d="M0 7.00008L7 0L2.54545 7.00008L7 14L0 7.00008Z" />
                                 </svg>

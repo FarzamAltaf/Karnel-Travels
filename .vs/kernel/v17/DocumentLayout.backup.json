@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "F:\\Projects\\Travel-agency\\kernel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\admin\\all_packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\admin\\all_packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\admin\\booking_list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\admin\\booking_list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\admin\\all_packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\admin\\all_packages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 466,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +42,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-28T20:26:12.674Z",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T13:06:37.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "all_packages.cshtml",
               "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\all_packages.cshtml",
               "RelativeDocumentMoniker": "Views\\Admin\\all_packages.cshtml",
               "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\all_packages.cshtml",
               "RelativeToolTip": "Views\\Admin\\all_packages.cshtml",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAkwF0AAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-28T20:17:11.79Z",
+              "WhenOpened": "2025-01-29T12:50:33.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Index.cshtml",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAMcAAAAAAAAAAAAqwO0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-29T11:42:40.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAANEBAAAAAAAAAAAwwMcBAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-29T11:28:15.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "booking_list.cshtml",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\booking_list.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\booking_list.cshtml",
+              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\booking_list.cshtml",
+              "RelativeToolTip": "Views\\Admin\\booking_list.cshtml",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAowKUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-29T11:27:03.481Z",
               "EditorCaption": ""
             },
             {
@@ -62,7 +113,7 @@
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
               "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAowNoAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAPIBAAAAAAAAAAAqwBYCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-28T15:42:26.483Z",
               "EditorCaption": ""

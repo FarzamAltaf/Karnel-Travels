@@ -37,10 +37,17 @@
                                 <input type="number" name="maxStay" value="@Model.maxStay" placeholder="Max stay in days..." required />
                             </div>
                         </div>
-                        <div class="col-md-6 mb-30">
+                       <div class="col-md-6 mb-30">
                             <div class="form-inner">
-                                <label>Max Time (in months)</label>
-                                <input type="text" name="maxTime" value="@Model.maxTime" placeholder="Max time in months..." />
+                                <label>Max Time (Processing Time)</label>
+                                <select name="maxTime" class="form-control">
+                                    <option value="3-5 Business Days">3-5 Business Days</option>
+                                    <option value="5-7 Working Days">5-7 Working Days</option>
+                                    <option value="7-10 Business Days">7-10 Business Days</option>
+                                    <option value="10-15 Working Days">10-15 Working Days</option>
+                                    <option value="15-20 Business Days">15-20 Business Days</option>
+                                    <option value="20-30 Working Days">20-30 Working Days</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-md-6 mb-30">
@@ -53,13 +60,6 @@
                             <div class="form-inner">
                                 <label>Price</label>
                                 <input type="number" name="price" value="@Model.price" step="0.01" placeholder="Price here..." required />
-                            </div>
-                        </div>
-                        <div class="col-md-12 mb-30">
-                            <div class="form-inner">
-                                <label>Image</label>
-                                <input type="file" name="image" />
-                                <p>Leave blank if you do not want to change the image.</p>
                             </div>
                         </div>
                     </div>

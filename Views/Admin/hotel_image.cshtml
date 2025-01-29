@@ -1,0 +1,84 @@
+﻿@model Hotel
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+    ViewData["Title"] = "Upload Hotel";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="main-content-title-profile mb-50">
+            <div class="main-content-title">
+                <h3>Add @Model.name Images</h3>
+            </div>
+        </div>
+        <div class="dashboard-profile-wrapper two">
+            <div class="dashboard-profile-tab-content">
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <input type="hidden" name="hotelId" value="@Model.id" />
+
+                        <div class="upload-img-area">
+                            <div class="upload-img-wrapper">
+                                <div class="drag-area">
+                                    <button type="button" class="upload-btn" id="uploadButton">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                    <input type="file" name="image" id="imageInput" hidden="true" />
+                                </div>
+                            </div>
+                            <div class="upload-img-area-content">
+                                <h6>Upload @Model.name Image</h6>
+                                <p>Image required size 300*300, JPEG or PNG format.</p>
+                            </div>
+                        </div>
+
+                        <div id="imageNameArea" style="display: none;">
+                            <p id="imageName"></p>
+                        </div>
+
+                        <div id="imagePreviewArea" style="display: none;">
+                            <img id="imagePreview" src="" alt="Image Preview" style="max-width: 200px; max-height: 200px;" class="border border-primary rounded-sm p-3" />
+                        </div>
+
+                        <div class="form-inner my-2">
+                            <button type="submit" class="primary-btn3" id="submitButton" disabled="true" style="background-color: grey;">Publish Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('uploadButton').addEventListener('click', function () {
+        document.getElementById('imageInput').click();
+    });
+
+    document.getElementById('imageInput').addEventListener('change', function (e) {
+        var file = e.target.files[0];
+
+        if (file) {
+            document.getElementById('submitButton').disabled = false;
+            document.getElementById('submitButton').style.backgroundColor = '';
+
+            document.getElementById('imageNameArea').style.display = 'block';
+            document.getElementById('imageName').textContent = "Selected File: " + file.name;
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('imagePreviewArea').style.display = 'block';
+                document.getElementById('imagePreview').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+<style>
+    #submitButton:disabled {
+        cursor: not-allowed;
+        opacity: 0.5
+    }
+</style>

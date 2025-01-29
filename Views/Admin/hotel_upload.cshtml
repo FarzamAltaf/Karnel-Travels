@@ -56,17 +56,9 @@
                         <div class="col-md-6">
                             <div class="form-inner mb-30">
                                 <label>Status</label>
-                                <input type="text" name="status" placeholder="Status here...">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-inner mb-30">
-                                <label>Room Type</label>
-                                <select name="roomType">
-                                    <option>Deluxe King Room</option>
-                                    <option>Single Room</option>
-                                    <option>Executive Suite</option>
-                                    <option>Classic Room</option>
+                                <select name="status" class="form-control">
+                                    <option value="Available">Available</option>
+                                    <option value="Not Available">Not Available</option>
                                 </select>
                             </div>
                         </div>
@@ -78,35 +70,12 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-inner mb-30">
-                                <label>Discount Price</label>
-                                <input type="number" name="discountPrice" placeholder="Discount price here">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-inner mb-30">
-                                <label>Facilities</label>
-                                <input type="text" name="facilities" placeholder="Facilities here...">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-inner mb-30">
-                                <label>Number Of People (max)</label>
-                                <input type="number" name="maxNumberOfPeople" placeholder="Number of people here....">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-inner mb-30">
-                                <label>Location</label>
-                                <input type="text" name="location" placeholder="Location here...">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="location-map mb-30">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5647631857846!2d90.36311167605992!3d23.83407118555764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c8682a473%3A0xa6c74743d52adb88!2sEgens%20Lab!5e0!3m2!1sen!2sbd!4v1694943917248!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                <label>Number Of Rooms (max)</label>
+                                <input type="number" name="maxRoom" placeholder="Number of room here....">
                             </div>
                         </div>
                     </div>
-                    <div class="upload-img-area">
+                    @* <div class="upload-img-area">
                         <div class="upload-img-wrapper">
                             <div class="drag-area">
                                 <button type="button" class="upload-btn"><i class="bi bi-plus-lg"></i></button>
@@ -117,14 +86,7 @@
                             <h6>Upload Your Image</h6>
                             <p>Image required size 300*300, JPGE or PNG format.</p>
                         </div>
-                    </div>
-                    <div class="form-inner mb-50">
-                        <label class="containerss">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            <span class="text">Update details in all properties included in this site.</span>
-                        </label>
-                    </div>
+                    </div> *@
                     <div class="form-inner">
                         <button type="submit" class="primary-btn3">Publish Now</button>
                     </div>
