@@ -1,0 +1,281 @@
+﻿@model kernel.Models.Profile
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .profile-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 30px;
+    }
+
+    .profile-header {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 5px solid white;
+        margin-bottom: 15px;
+    }
+
+    .profile-name {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .profile-role {
+        font-size: 16px;
+        opacity: 0.8;
+    }
+
+    .profile-body {
+        padding: 20px;
+    }
+
+    .profile-info {
+        margin-bottom: 15px;
+    }
+
+    .profile-info-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .profile-info-value {
+        color: #666;
+    }
+
+    .visa-card {
+        width: 500px;
+        height: 300px;
+        background: linear-gradient(135deg, #f6f8fa 0%, #e5ebee 100%);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        padding: 15px;
+        margin-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        font-family: 'Courier New', monospace;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .visa-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .visa-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1a5f7a;
+        text-transform: uppercase;
+    }
+
+    .visa-image {
+        width: 60px;
+        height: 75px;
+        object-fit: cover;
+        border: 1px solid #999;
+    }
+
+    .visa-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        font-size: 10px;
+        flex-grow: 1;
+    }
+
+    .visa-field {
+        margin-bottom: 1px;
+    }
+
+    .visa-label {
+        font-size: 8px;
+        font-weight: bold;
+        color: #666;
+        text-transform: uppercase;
+    }
+
+    .visa-value {
+        color: #333;
+        font-size: 11px;
+    }
+
+    .visa-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+        font-size: 12px;
+    }
+
+    .visa-type {
+        font-weight: bold;
+        color: #1a5f7a;
+    }
+
+    .visa-status {
+        font-weight: bold;
+        color: #28a745;
+        text-transform: uppercase;
+    }
+
+    .visa-watermark {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        font-size: 40px;
+        font-weight: bold;
+        color: rgba(26, 95, 122, 0.1);
+        transform: rotate(-30deg);
+    }
+
+    .chip {
+        display: inline-block;
+        padding: 5px 20px;
+        margin: 5px;
+        background-color: #e0e0e0;
+        color: #333;
+        border-radius: 40px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+        .chip.selected {
+            background-color: limegreen;
+            color: white;
+        }
+
+        .chip:hover {
+            background-color: lightgreen;
+            color: white;
+        }
+</style>
+
+@Html.Partial("navbar")
+
+<div class="container">
+    <div class="visa-section">
+        <h2 class="text-center mb-4">My E-Visas</h2>
+        <div class="filter-container text-center mb-4">
+            <div class="chip" data-status="All">All</div>
+            <div class="chip" data-status="Pending">Pending</div>
+            <div class="chip" data-status="Approved">Approved</div>
+            <div class="chip" data-status="Cancelled">Cancelled</div>
+        </div>
+
+        <div class="row justify-content-center">
+            @foreach (var visa in Model.VisaBookings)
+            {
+                <div class="col-md-6 mb-4 d-flex justify-content-center">
+                    <div class="visa-card">
+                        <div class="visa-header">
+                            <div class="visa-title">E-Visa</div>
+                            <img src="~/passportPic/@visa.image" alt="Passport Photo" class="visa-image">
+                        </div>
+                        <div class="visa-content">
+                            <div class="visa-field">
+                                <div class="visa-label">Name</div>
+                                <div class="visa-value">@visa.name</div>
+                            </div>
+                            <div class="visa-field">
+                                <div class="visa-label">Country</div>
+                                <div class="visa-value">
+                                    @foreach (var country in Model.Visa)
+
+
+
+                                    {
+                                        @if (country.id == visa.visaId)
+
+
+
+                                        {
+                                            @country.country
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <div class="visa-field">
+                                <div class="visa-label">Issue Date</div>
+                                <div class="visa-value">@visa.checkIn</div>
+                            </div>
+                            <div class="visa-field">
+                                <div class="visa-label">Status</div>
+                                <div class="visa-value">@visa.status</div>
+                            </div>
+                            <div class="visa-field">
+                                <div class="visa-label">Visa Type</div>
+                                <div class="visa-value">@visa.visaType</div>
+                            </div>
+                            <div class="visa-field">
+                                <div class="visa-label">Expiry Date</div>
+                                <div class="visa-value">@visa.checkOut</div>
+                            </div>
+                        </div>
+                        <div class="visa-footer">
+                            <div class="visa-type">@visa.visaType</div>
+                            <div class="visa-status">@visa.status</div>
+                        </div>
+                        <div class="visa-watermark">VISA</div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@Html.Partial("footer")
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const chips = document.querySelectorAll('.chip');
+        const visaCards = document.querySelectorAll('.visa-card');
+
+        chips.forEach(chip => {
+            chip.addEventListener('click', function () {
+                const selectedStatus = this.getAttribute('data-status');
+                chips.forEach(chip => chip.classList.remove('selected'));
+                this.classList.add('selected');
+
+                visaCards.forEach(visaCard => {
+                    const visaStatus = visaCard.querySelector('.visa-status').textContent.trim();
+
+                    // Show only matching visas, keep others hidden
+                    if (selectedStatus === 'All' || visaStatus === selectedStatus) {
+                        visaCard.style.display = 'block';
+                    } else {
+                        visaCard.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+
+</script>

@@ -1,0 +1,63 @@
+﻿@model Packages
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Upload Hotel";
+}
+
+<div class="row">
+    <div class="col-xl-12">
+        <div class="main-content-title-profile mb-50">
+            <div class="main-content-title">
+                <h3>Add CheckIn and CheckOut Dates for @Model.title </h3>
+            </div>
+        </div>
+        <div class="dashboard-profile-wrapper two">
+            <div class="dashboard-profile-tab-content">
+                <form method="post">
+                    <div class="row">
+                        <input type="hidden" name="packageId" value="@Model.id" />
+
+                        <!-- Check-In Date -->
+                        <div class="form-inner my-2">
+                            <label for="checkIn">Check-In Date:</label>
+                            <input type="date" id="checkIn" name="checkIn" class="form-control" required />
+                        </div>
+
+                        <!-- Check-Out Date -->
+                        <div class="form-inner my-2">
+                            <label for="checkOut">Check-Out Date:</label>
+                            <input type="date" id="checkOut" name="checkOut" class="form-control" required />
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-inner my-2">
+                            <button type="submit" class="primary-btn3" id="submitButton" disabled="true" style="background-color: grey;">Publish Now</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Enable or disable the Submit button based on input fields' values
+        document.getElementById("checkIn").addEventListener("change", toggleSubmitButton);
+        document.getElementById("checkOut").addEventListener("change", toggleSubmitButton);
+
+        function toggleSubmitButton() {
+            var checkIn = document.getElementById("checkIn").value;
+            var checkOut = document.getElementById("checkOut").value;
+            var submitButton = document.getElementById("submitButton");
+
+            // Enable button if both check-in and check-out dates are selected
+            if (checkIn && checkOut) {
+                submitButton.disabled = false;
+                submitButton.style.backgroundColor = "#4CAF50"; // Green color
+            } else {
+                submitButton.disabled = true;
+                submitButton.style.backgroundColor = "grey"; // Grey color
+            }
+        }
+    </script>

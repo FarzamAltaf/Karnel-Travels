@@ -1,141 +1,148 @@
 @model IEnumerable<kernel.Models.Packages>
 
 @{
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    ViewData["Title"] = "All Packages";
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	ViewData["Title"] = "All Packages";
 }
 
 @if (TempData.ContainsKey("message"))
 {
-    <div class="alert alert-success alert-dismissible" id="messageAlert">
-        @TempData["message"]
-    </div>
+	<div class="alert alert-success alert-dismissible" id="messageAlert">
+		@TempData["message"]
+	</div>
 }
 
 
 
 <style>
-    .disabled {
-        pointer-events: none;
-        opacity: 0.5;
-    }
+	.disabled {
+		pointer-events: none;
+		opacity: 0.5;
+	}
 </style>
 
 
 
 <div class="row">
-    <div class="col-xl-12">
-        <div class="main-content-title-profile mb-50">
-            <div class="main-content-title">
-                <h3>All Tour Package</h3>
-            </div>
-        </div>
+	<div class="col-xl-12">
+		<div class="main-content-title-profile mb-50">
+			<div class="main-content-title">
+				<h3>All Tour Package</h3>
+			</div>
+		</div>
 
-        <div class="recent-listing-area">
-            <div class="title-and-tab">
-                <h6>Tour Package Info</h6>
-            </div>
-            <div class="recent-listing-table">
-                <table class="eg-table2">
-                    <thead>
-                        <tr>
-                            <th>Title</th>
-                            <th>Duration</th>
-                            <th>Location</th>
-                            <th>Price</th>
-                            <th>Max People</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var package in Model)
-                        {
-                                <tr>
-                                    <td data-label="Tour Package">
-                                        <div class="product-name">
-                                            <div class="product-content">
-                                                <h6><a href="package-details.html">@package.title</a></h6>
-                                                <p>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                                                        <path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
-                                                    </svg> <span>@package.location</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td data-label="Duration">
-                                    @package.duration
-                                    </td>
-                                    <td data-label="Location">
-                                    @package.location
-                                    </td>
-                                    <td data-label="Price">
-                                    $ @package.price
-                                    </td>
-                                    <td data-label="Max People">
-                                    @package.maxPeople peoples
-                                    </td>
-                                    <td data-label="Action">
-                                    <a href="@Url.Action("package_edit", new { id = package.id })" class="primary-btn2 btn-hover">
-                                            <span class="text-nowrap">
-                                                <i class="bi bi-pencil-square pe-1"></i>Edit
-                                            </span>
-                                        </a>
-                                    <a href="@Url.Action("package_delete", new { id = package.id })" class="primary-btn2 btn-hover">
-                                            <span class="text-nowrap">
-                                                <i class="bi bi-trash pe-1"></i>Delete
-                                            </span>
-                                        </a>
-                                    </td>
-                                </tr>
-                        }
-                    </tbody>
-                </table>
+		<div class="recent-listing-area">
+			<div class="title-and-tab">
+				<h6>Tour Package Info</h6>
+			</div>
+			<div class="recent-listing-table">
+				<table class="eg-table2">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Duration</th>
+							<th>Location</th>
+							<th>Price</th>
+							<th>Max People</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var package in Model)
+						{
+							<tr>
+								<td data-label="Tour Package">
+									<div class="product-name">
+										<div class="product-content">
+											<h6><a>@package.title</a></h6>
+											<p>
+												<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+													<path d="M8.99939 0C5.40484 0 2.48047 2.92437 2.48047 6.51888C2.48047 10.9798 8.31426 17.5287 8.56264 17.8053C8.79594 18.0651 9.20326 18.0646 9.43613 17.8053C9.68451 17.5287 15.5183 10.9798 15.5183 6.51888C15.5182 2.92437 12.5939 0 8.99939 0ZM8.99939 9.79871C7.19088 9.79871 5.71959 8.32739 5.71959 6.51888C5.71959 4.71037 7.19091 3.23909 8.99939 3.23909C10.8079 3.23909 12.2791 4.71041 12.2791 6.51892C12.2791 8.32743 10.8079 9.79871 8.99939 9.79871Z"></path>
+												</svg> <span>@package.location</span>
+											</p>
+										</div>
+									</div>
+								</td>
+								<td data-label="Duration">
+									@package.duration
+								</td>
+								<td data-label="Location">
+									@package.location
+								</td>
+								<td data-label="Price">
+									$ @package.price
+								</td>
+								<td data-label="Max People">
+									@package.maxPeople peoples
+								</td>
+								<td data-label="Action">
+									<a href="@Url.Action("package_edit", new { id = package.id })" class="primary-btn2 btn-hover">
+										<span class="text-nowrap">
+											<i class="bi bi-pencil-square pe-1"></i>Edit
+										</span>
+									</a>
+									<a href="@Url.Action("package_delete", new { id = package.id })" class="primary-btn2 btn-hover">
+										<span class="text-nowrap">
+											<i class="bi bi-trash pe-1"></i>Delete
+										</span>
+									</a>
+									<div class="my-2">
+										<a href="@Url.Action("checkIn", new { id = package.id })" class="primary-btn2 btn-hover">
+											<span class="text-nowrap">
+												<i class="bi bi-calendar2-plus-fill pe-1"></i>Add Dates
+											</span>
+										</a>
+									</div>
+								</td>
+							</tr>
+						}
+					</tbody>
+				</table>
 
-                <div class="pagination-area">
-                    <ul class="paginations">
-                        @for (int i = 1; i <= (int)ViewData["TotalPages"]; i++)
-                        {
-                            <li class="page-item @(i == (int)ViewData["CurrentPage"] ? "active" : "")">
-                                <a href="@Url.Action("all_packages", new { page = i })">@i</a>
-                            </li>
-                        }
-                    </ul>
+				<div class="pagination-area">
+					<ul class="paginations">
+						@for (int i = 1; i <= (int)ViewData["TotalPages"]; i++)
+						{
+							<li class="page-item @(i == (int)ViewData["CurrentPage"] ? "active" : "")">
+								<a href="@Url.Action("all_packages", new { page = i })">@i</a>
+							</li>
+						}
+					</ul>
 
-                    <ul class="paginations-buttons">
-                        <li>
-                            <a href="@( (int)ViewData["CurrentPage"] == 1 ? "#" : Url.Action("all_packages", new { page = (int)ViewData["CurrentPage"] - 1 }) )"
-                               class="@( (int)ViewData["CurrentPage"] == 1 ? "disabled" : "")">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14">
-                                    <path d="M0 7.00008L7 0L2.54545 7.00008L7 14L0 7.00008Z"></path>
-                                </svg>
-                                Prev
-                            </a>
-                        </li>
-                        <li>
-                            <a href="@( (int)ViewData["CurrentPage"] == (int)ViewData["TotalPages"] ? "#" : Url.Action("all_packages", new { page = (int)ViewData["CurrentPage"] + 1 }) )"
-                               class="@( (int)ViewData["CurrentPage"] == (int)ViewData["TotalPages"] ? "disabled" : "")">
-                                Next
-                                <svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
-                                    <path d="M7 7.00008L0 0L4.45455 7.00008L0 14L7 7.00008Z"></path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+					<ul class="paginations-buttons">
+						<li>
+							<a href="@( (int)ViewData["CurrentPage"] == 1 ? "#" : Url.Action("all_packages", new { page = (int)ViewData["CurrentPage"] - 1 }) )"
+							   class="@( (int)ViewData["CurrentPage"] == 1 ? "disabled" : "")">
+								<svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14">
+									<path d="M0 7.00008L7 0L2.54545 7.00008L7 14L0 7.00008Z"></path>
+								</svg>
+								Prev
+							</a>
+						</li>
+						<li>
+							<a href="@( (int)ViewData["CurrentPage"] == (int)ViewData["TotalPages"] ? "#" : Url.Action("all_packages", new { page = (int)ViewData["CurrentPage"] + 1 }) )"
+							   class="@( (int)ViewData["CurrentPage"] == (int)ViewData["TotalPages"] ? "disabled" : "")">
+								Next
+								<svg xmlns="http://www.w3.org/2000/svg" width="7" height="14" viewBox="0 0 7 14" fill="none">
+									<path d="M7 7.00008L0 0L4.45455 7.00008L0 14L7 7.00008Z"></path>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 
 
 <script>
-    setTimeout(function () {
-        var messageAlert = document.getElementById("messageAlert");
+	setTimeout(function () {
+		var messageAlert = document.getElementById("messageAlert");
 
-        if (messageAlert) {
-            messageAlert.style.display = "none";
-        }
-    }, 3000);
+		if (messageAlert) {
+			messageAlert.style.display = "none";
+		}
+	}, 3000);
 </script>

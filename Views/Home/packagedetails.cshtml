@@ -1,4 +1,4 @@
-﻿@using kernel.Helpers
+﻿﻿@using kernel.Helpers
 @using kernel.Models
 @* @model kernel.Models.PackageViewModel *@
 
@@ -15,6 +15,13 @@
 		@Html.Partial("navbar")
 
 
+
+		@if (TempData.ContainsKey("pBooked"))
+		{
+			<div class="alert alert-success alert-dismissible" id="packageAlert">
+				@TempData["pBooked"]
+			</div>
+		}
 
 
 		<div class="breadcrumb-section"
@@ -186,83 +193,49 @@
 								<div class="tab-pane fade active show" id="v-pills-booking" role="tabpanel"
 									 aria-labelledby="v-pills-booking-tab">
 									<div class="sidebar-booking-form" style="margin-bottom:100px">
-										<form>
+										<form method="post" enctype="multipart/form-data" id="booking-form">
 											<div class="tour-date-wrap mb-50">
 												<h6>Select Your Booking Date:</h6>
-												@foreach (var item in book)
-												{
-													<div class="form-check mb-25">
-														<input class="form-check-input" type="radio" name="tourDate"
-															   id="checkIn_@item.id" value="@item.id">
-														<label class="form-check-label" for="checkIn_@item.id">
-															<span class="tour-date">
-																<span class="start-date">
-																	<span>Check In</span>
-																	<span>@item.checkIn</span>
-																</span>
-																<i class="bi bi-arrow-right"></i>
-																<span class="end-date text-end">
-																	<span>Check Out</span>
-																	<span>@item.checkOut</span>
-																</span>
-															</span>
-														</label>
+												<div class="form-group">
+													<select class="form-control required-field" name="checkInId" id="tourDate">
+														<option value="" disabled selected>Select your booking date</option>
+														@foreach (var item in book)
+														{
+															<option value="@item.id">
+																@item.checkIn - @item.checkOut
+															</option>
+														}
+													</select>
+												</div>
+												<input type="hidden" name="packageId" value="@package.Package?.id" />
+												<input type="hidden" name="price" value="@package.Package?.price" />
+
+												<div class="form-group my-3">
+													<h6>Upload visa of @package.Package?.location:</h6>
+													<input type="file" name="image" class="required-field" id="visaUpload" />
+												</div>
+
+												<div class="form-group my-3">
+													<h6>Number of people:</h6>
+													<select name="maxPeople" class="form-control required-field" id="maxPeople">
+														@for (int i = 1; i <= @package.Package?.maxPeople; i++)
+														{
+															<option value="@i">@i</option>
+														}
+													</select>
+												</div>
+
+												<div class="form-group my-3">
+													<h6>Enter card details:</h6>
+													<div class="form-inner mb-30">
+														<div id="card-element"></div>
 													</div>
-												}
-											</div>
-											<div class="booking-form-item-type">
-												<div class="number-input-item adults">
-													<label class="number-input-lable">
-														People: <span class="total-price-display">$@package.Package?.price</span>
-													</label>
-													<div class="quantity-counter" style="display: flex; justify-content: space-between; align-items: center;">
-														<a href="#" class="quantity__minus" style="font-size: 20px;"><i class="bi bi-dash"></i></a>
-														<input name="quantity" type="number" disabled class="quantity__input" value="1" id="quantity-input" min="1" max="@package.Package?.maxPeople" style="width: 70px; font-size: 14px; text-align: center; padding-right: 5px;">
-														<a href="#" class="quantity__plus" style="font-size: 20px;"><i class="bi bi-plus"></i></a>
-													</div>
 												</div>
 											</div>
 
-											<input type="hidden" id="unit-price" value="@package.Package?.price">
-											<input type="hidden" id="max-people" value="@package.Package?.maxPeople">
-
-											<div class="booking-form-item-type">
-												<h5>Other Extra Services</h5>
-												<div class="checkbox-container">
-												@foreach (var service in ViewBag.packages.Services)
-													{													
-													<label class="check-container">
-														@service.serviceTitle
-														<input type="checkbox" class="services_check" name="services_list[]"
-															   value="0" data-cost="@service.serviceCost">
-														<span class="checkmark"></span>
-														<span class="price">$@service.serviceCost</span>
-													</label>
-													}
-												</div>
-											</div>
-
-
-											<div class="booking-form-item-type">
-												<div class="single-total mb-30">
-													<span>Total</span>
-													<ul>
-														<li><strong>$@package.Package?.price</strong> PRICE</li>
-														<li><i class="bi bi-x-lg"></i></li>
-														<li><strong class="quantity-display">@package.Package?.price</strong> QTY</li>
-													</ul>
-													<svg xmlns="http://www.w3.org/2000/svg" width="27" height="15" viewBox="0 0 27 15">
-														<path fill-rule="evenodd" clip-rule="evenodd" d="M23.999 5.44668L25.6991 7.4978L23.9991 9.54878H0V10.5743H23.1491L20.0135 14.3575L20.7834 14.9956L26.7334 7.81687L26.9979 7.4978L26.7334 7.17873L20.7834 0L20.0135 0.638141L23.149 4.42114H0V5.44668H23.999Z" />
-													</svg>
-													<div class="total total-price-display ps-1">$@package.Package?.price</div>
-												</div>
-											</div>
-
-											<div class="total-price"><span>Total Price:</span> $<span id="total-price-display">@package.Package?.price</span></div>
-											<button type="submit" class="primary-btn1 two">Book Now</button>
+											<button type="submit" class="primary-btn1 two disabled-button" id="submit-button" disabled>Book Now</button>
 										</form>
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -297,13 +270,75 @@
 		<!-- End Room Details section -->
 		@Html.Partial("footer")
 
+		<script src="https://js.stripe.com/v3/"></script>
+
+		<script>
+			const stripe = Stripe('pk_test_51QkomzP2q3wYk77YJ7EvhcfXGg7txNF0DbgTbq0YbWtKFYRzR5AoTjVvCD1Iin2vr4U0aNXOsbMe8hybmvdn5W6Y00yp8bCUpj');
+			const elements = stripe.elements();
+			const cardElement = elements.create('card', { style: { base: { fontSize: '16px' } } });
+			cardElement.mount('#card-element');
+
+			// Function to check if all required fields are filled
+			function checkFormCompletion() {
+				let allFilled = true;
+				document.querySelectorAll('.required-field').forEach(input => {
+					if (!input.value) {
+						allFilled = false;
+					}
+				});
+
+				// Check if Stripe card has been entered
+				stripe.createToken(cardElement).then(({ error }) => {
+					if (error) {
+						allFilled = false;
+					}
+					toggleSubmitButton(allFilled);
+				});
+			}
+
+			// Enable or disable the submit button based on validation
+			function toggleSubmitButton(isValid) {
+				const submitButton = document.getElementById('submit-button');
+				if (isValid) {
+					submitButton.removeAttribute('disabled');
+					submitButton.classList.remove('disabled-button');
+					submitButton.classList.add('enabled-button');
+				} else {
+					submitButton.setAttribute('disabled', 'true');
+					submitButton.classList.remove('enabled-button');
+					submitButton.classList.add('disabled-button');
+				}
+			}
+
+			// Add event listeners to all required fields
+			document.querySelectorAll('.required-field').forEach(input => {
+				input.addEventListener('input', checkFormCompletion);
+			});
+
+			// Check Stripe card validation in real-time
+			cardElement.on('change', checkFormCompletion);
+		</script>
+
+		<style>
+			.disabled-button {
+				background-color: grey !important;
+				cursor: not-allowed;
+			}
+
+			.enabled-button {
+				background-color: blue !important; /* Change this color as needed */
+				cursor: pointer;
+			}
+		</style>
+
+
 
 		<script>
 			setTimeout(function () {
-				var contactAlert = document.getElementById("contactAlert");
+				var packageAlert = document.getElementById("packageAlert");
 
-				if (contactAlert) {
-					contactAlert.style.display = "none";
+				if (packageAlert) {
+					packageAlert.style.display = "none";
 				}
 			}, 5000);
 		</script>
@@ -379,4 +414,4 @@
 
 		</script>
 	}
-}
+}}

@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYm9va2luZ19saXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Projects/Travel-agency/kernel/Views/Admin/checkIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY2hlY2tJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Projects/Travel-agency/kernel/Views/Admin/customer_list.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY3VzdG9tZXJfbGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -50,6 +54,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfaW1hZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Projects/Travel-agency/kernel/Views/Admin/hotel_list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfbGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Projects/Travel-agency/kernel/Views/Admin/hotel_upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfdXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -60,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Projects/Travel-agency/kernel/Views/Admin/package_edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGFja2FnZV9lZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Projects/Travel-agency/kernel/Views/Admin/package_list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGFja2FnZV9saXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Projects/Travel-agency/kernel/Views/Admin/package_upload.cshtml]
@@ -100,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/Projects/Travel-agency/kernel/Views/Home/packagedetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwYWNrYWdlZGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Projects/Travel-agency/kernel/Views/Home/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Projects/Travel-agency/kernel/Views/Home/signin.cshtml]

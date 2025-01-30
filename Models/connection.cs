@@ -22,5 +22,7 @@ namespace kernel.Models
         public DbSet<hotelRestrictions> hotelRestrictions { get; set; }
         public DbSet<visa> visa { get; set; }
         public DbSet<visaBooking> visaBooking { get; set; }
+        public DbSet<hotelBooking> hotelBooking { get; set; }
+        public DbSet<packageBooking> packageBooking { get; set; }
     }
 }

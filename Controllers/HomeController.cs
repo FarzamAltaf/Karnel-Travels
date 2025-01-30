@@ -7,11 +7,17 @@ using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Stripe;
 
 namespace kernel.Controllers
 {
 	public class HomeController : Controller
 	{
+
+		private readonly IConfiguration _configuration;
+
+
+
 		connection db = new connection();
 
 
@@ -32,14 +38,59 @@ namespace kernel.Controllers
 
 		public IActionResult Index()
 		{
-            var role = Request.Cookies["role"];
-            if (role == "admin")
-            {
-                return RedirectToAction("Index", "Admin");
-            }
-            var packages = db.packages.ToList();
-			return View(packages);
+			var role = Request.Cookies["role"];
+			if (role == "admin")
+			{
+				return RedirectToAction("Index", "Admin");
+			}
+
+
+            var packages = db.packages
+                     .OrderByDescending(p => p.id) 
+                     .Take(3) 
+                     .ToList();
+            return View(packages);
 		}
+
+
+		[HttpPost]
+		public IActionResult ProcessPayment(string stripeToken)
+		{
+			try
+			{
+				// Get the SecretKey from appsettings.json
+				var secretKey = _configuration["Stripe:SecretKey"];
+				StripeConfiguration.ApiKey = secretKey;
+
+				var options = new ChargeCreateOptions
+				{
+					Amount = 1000,
+					Currency = "usd",
+					Description = "Test Payment",
+					Source = stripeToken,
+				};
+
+				var service = new ChargeService();
+				Charge charge = service.Create(options);
+
+				// Handle the result of the charge
+				if (charge.Status == "succeeded")
+				{
+					TempData["PaymentSuccess"] = "Payment was successful!";
+				}
+				else
+				{
+					TempData["PaymentError"] = "Payment failed!";
+				}
+			}
+			catch (Exception ex)
+			{
+				TempData["PaymentError"] = "An error occurred while processing your payment: " + ex.Message;
+			}
+
+			return RedirectToAction("Index");
+		}
+
 
 
 
@@ -88,6 +139,68 @@ namespace kernel.Controllers
 				Console.WriteLine("An error occurred: " + ex.Message);
 				return RedirectToAction("ErrorPage");
 			}
+		}
+
+
+
+		[HttpPost]
+		public IActionResult PackageDetails(int packageId, int checkInId, int maxPeople, int price, IFormFile image)
+		{
+			var id = Request.Cookies["id"];
+			var name = Request.Cookies["username"];
+			var email = Request.Cookies["email"];
+
+			var intId = Convert.ToInt32(id);
+			var package = db.packages.Find(packageId);
+			var packageName = package.title;
+
+			var filename = image.FileName;
+
+			var guidImage = Guid.NewGuid() + "_" + filename;
+
+
+			var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uservisa", guidImage);
+
+			using (FileStream stream = new FileStream(path, FileMode.Create))
+			{
+				image.CopyTo(stream);
+			}
+			var packageBookingDetails = new packageBooking(
+				checkInId,
+				intId,
+				packageId,
+				maxPeople,
+				price,
+				"pending", 
+				0,
+				guidImage
+			);
+
+			db.packageBooking.Add(packageBookingDetails);
+			db.SaveChanges();
+			TempData["pBooked"] = "Your package is successfully booked";
+
+			string subject = "Tour Package Booking - Pending Approval";
+			string body = $@"
+			<html>
+				<body>
+					<h2>Dear {name},</h2>
+					<p>We have received your tour package booking request.</p>
+					<p><strong>Package Name:</strong> {packageName}</p>
+					<p><strong>Booking Status:</strong> <span style='color: orange; font-weight: bold;'>Pending</span></p>
+					<p>Your booking is currently under review. We will notify you as soon as it is approved or denied.</p>
+					<p>If you have any questions, feel free to reach out to our support team.</p>
+					<br>
+					<p>Thank you for choosing <strong>Karnel Travels</strong>!</p>
+					<p>Best regards,</p>
+					<p><strong>Karnel Travel Support Team</strong></p>
+				</body>
+			</html>";
+
+			sendEmail(email, subject, body);
+
+
+			return RedirectToAction("PackageDetails", new { id = packageId });
 		}
 
 
@@ -236,10 +349,14 @@ namespace kernel.Controllers
 			return View(packages);
 		}
 
-        //hotel start
-		public IActionResult hotel(int? minPrice, int? maxPrice, string searchName, string selectedCountries)
+		public IActionResult hotel(int? minPrice, int? maxPrice, string searchName, string selectedCountries, int pageNumber = 1, int pageSize = 3)
 		{
-			var hotels = db.hotels.AsQueryable();
+			if (pageNumber < 1)
+			{
+				pageNumber = 1; // Negative ya zero page number na allow karo
+			}
+
+			var hotels = db.hotels.Where(h => h.status.ToLower() == "available").AsQueryable();
 
 			if (minPrice.HasValue)
 			{
@@ -250,7 +367,7 @@ namespace kernel.Controllers
 			{
 				hotels = hotels.Where(h => h.price <= maxPrice.Value);
 			}
-			
+
 			if (!string.IsNullOrEmpty(searchName))
 			{
 				hotels = hotels.Where(h => h.name.ToLower().Contains(searchName.ToLower()));
@@ -269,10 +386,20 @@ namespace kernel.Controllers
 
 			ViewBag.CountryCounts = countryCounts;
 
-			return View(hotels.ToList());
+			var totalHotels = hotels.Count();
+
+			// Correct calculation for Skip, ensuring no negative offset
+			var paginatedHotels = hotels
+				.Skip((pageNumber - 1) * pageSize) // Page number 1 will start from 0 offset
+				.Take(pageSize)
+				.ToList();
+
+			ViewBag.TotalHotels = totalHotels;
+			ViewBag.PageNumber = pageNumber;
+			ViewBag.PageSize = pageSize;
+
+			return View(paginatedHotels);
 		}
-
-
 
 
 
@@ -283,20 +410,49 @@ namespace kernel.Controllers
 			ViewBag.hotel = data;
 			ViewBag.image = images;
 
-            var CookieUser = Request.Cookies["email"];
-            if (!string.IsNullOrEmpty(CookieUser))
-            {
-                return View();
-            }
-            else
-            {
-                return RedirectToAction("signin");
-            }
-        }
-        //hotel end
+			var CookieUser = Request.Cookies["email"];
+			if (!string.IsNullOrEmpty(CookieUser))
+			{
+				return View();
+			}
+			else
+			{
+				return RedirectToAction("signin");
+			}
+		}
+		//hotel end
 
 
-        //Visa start
+		//hotelbooking start
+		[HttpPost]
+		public IActionResult hoteldetails(int hotelId, DateTime checkIn, DateTime checkOut, int rooms, int costPerRoom, int days)
+		{
+			var id = Request.Cookies["id"];
+			var intId = Convert.ToInt32(id);
+			var total = rooms * costPerRoom * days;
+			var booking = new hotelBooking(
+				 userId: intId,
+				 hotelId: hotelId,
+				 checkIn: checkIn,
+				 checkOut: checkOut,
+				 rooms: rooms,
+				 days: days,
+				 costPerRoom: costPerRoom,
+				 total: total,
+				 status: "Pending",
+				 fee: 0
+			 );
+
+			db.hotelBooking.Add(booking);
+			db.SaveChanges();
+
+			return RedirectToAction("hoteldetails", new { id = hotelId });
+		}
+		//hotelbooking end  
+
+
+
+		//Visa start
 
 		public IActionResult visa()
 		{
@@ -305,8 +461,8 @@ namespace kernel.Controllers
 		}
 
 		public IActionResult VisaDetails(int id)
-        {
-            var visaData = db.visa.Find(id);
+		{
+			var visaData = db.visa.Find(id);
 			var name = Request.Cookies["username"];
 			var email = Request.Cookies["email"];
 			var uId = Request.Cookies["id"];
@@ -319,58 +475,63 @@ namespace kernel.Controllers
 			var image = "";
 			var fee = 0;
 
+			var checkIn = "";
+			var checkOut = "";
 
-            var visaBookingModel = new visaBooking(name,email,phone,visaType,message,status,image,fee,visaId,userId);
-            var cookieUser = Request.Cookies["email"];
-            if (!string.IsNullOrEmpty(cookieUser))
-            {
-                var model = new VisaPageModel
-                {
-                    Visa = visaData,
-                };
+			var visaBookingModel = new visaBooking(name, email, phone, visaType, message, status, image, fee, visaId, userId, checkIn, checkOut);
+			var cookieUser = Request.Cookies["email"];
+			if (!string.IsNullOrEmpty(cookieUser))
+			{
+				var model = new VisaPageModel
+				{
+					Visa = visaData,
+				};
 
-                return View(model);
-            }
-            else
-            {
-                return RedirectToAction("Signin");
-            }
-        }
+				return View(model);
+			}
+			else
+			{
+				return RedirectToAction("Signin");
+			}
+		}
 
 		[HttpPost]
 
-        public IActionResult VisaDetails(int visaId, int userId, string name, string email, string phone, string visaType,string message, IFormFile image)
-        {
+		public IActionResult VisaDetails(int visaId, int userId, string name, string email, string phone, string visaType, string message, IFormFile image)
+		{
 
-            var id = Request.Cookies["id"];
+			var id = Request.Cookies["id"];
 
-            var intId = Convert.ToInt32(id);
+			var intId = Convert.ToInt32(id);
 
-            var cookieEmail = Request.Cookies["email"];
+			var cookieEmail = Request.Cookies["email"];
 
-            var status = "pending";
+			var status = "pending";
 			var fee = 0;
 
 			var filename = image.FileName;
-			
+
 			var guidImage = Guid.NewGuid() + "_" + filename;
-            
 
-            var path = Path.Combine(Directory.GetCurrentDirectory(),"wwwroot/passportPic", guidImage);
 
-			using(FileStream stream = new FileStream(path, FileMode.Create))
+			var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/passportPic", guidImage);
+
+			using (FileStream stream = new FileStream(path, FileMode.Create))
 			{
 				image.CopyTo(stream);
 			}
 
-            var cookieUser = Request.Cookies["email"];
-            if (!string.IsNullOrEmpty(cookieUser))
-            {
-                visaBooking data = new visaBooking(name, email,phone,visaType, message,status,guidImage,fee,visaId, intId);
-                db.visaBooking.Add(data);
-                db.SaveChanges();
-                string subject = "Visa Booking Status Update";
-                string body = $@"
+			var cookieUser = Request.Cookies["email"];
+			if (!string.IsNullOrEmpty(cookieUser))
+			{
+
+				var checkIn = "";
+				var checkOut = "";
+				visaBooking data = new visaBooking(name, email, phone, visaType, message, status, guidImage, fee, visaId, intId, checkIn, checkOut);
+				db.visaBooking.Add(data);
+				db.SaveChanges();
+				string subject = "Visa Booking Status Update";
+				string body = $@"
 				<html>
 					<body>
 						<h2>Dear {name},</h2>
@@ -385,35 +546,35 @@ namespace kernel.Controllers
 					</body>
 				</html>";
 
-                sendEmail(email, subject, body);
+				sendEmail(email, subject, body);
 
-                if (!string.IsNullOrEmpty(cookieEmail))
-                {
-                    sendEmail(cookieEmail, subject, body);
-                }
-                TempData["visaBooked"] = "Your request for booking visa is successfully delivered";
-                return RedirectToAction("visaDetails", new { visaId = visaId });
-            }
-            else
-            {
-                return RedirectToAction("Signin");
-            }
-        }
-        //Visa end
-
-
+				if (!string.IsNullOrEmpty(cookieEmail))
+				{
+					sendEmail(cookieEmail, subject, body);
+				}
+				TempData["visaBooked"] = "Your request for booking visa is successfully delivered";
+				return RedirectToAction("visaDetails", new { id = visaId });
+			}
+			else
+			{
+				return RedirectToAction("Signin");
+			}
+		}
+		//Visa end
 
 
 
 
-        //Contact form start
-        public IActionResult contact()
+
+
+		//Contact form start
+		public IActionResult contact()
 		{
 			return View();
 		}
 
 		[HttpPost]
-		
+
 		public IActionResult contact(string name, string phone, string email, string message)
 		{
 			var id = Request.Cookies["id"];
@@ -458,7 +619,55 @@ namespace kernel.Controllers
 
 			return View();
 		}
-		//Contact form end
+
+
+		public IActionResult Profile()
+		{
+			var userIdString = HttpContext.Request.Cookies["id"];
+
+			if (string.IsNullOrEmpty(userIdString))
+			{
+				return BadRequest("User ID not found in cookies.");
+			}
+
+			if (int.TryParse(userIdString, out int userId))
+			{
+				// Fetch VisaBookings where userId matches
+				var visaBookings = db.visaBooking
+									  .Where(v => v.userId == userId)
+									  .ToList();
+
+				// Fetch HotelBookings where userId matches
+				var hotelBookings = db.hotelBooking
+									   .Where(h => h.userId == userId)
+									   .ToList();
+
+				// Fetch Visa details using visaId from visaBookings
+				var visas = db.visa
+							  .Where(v => visaBookings.Select(vb => vb.visaId).Contains(v.id))
+							  .ToList(); // This will return a list of visa details
+
+				// Fetch Hotel details using hotelId from hotelBookings
+				var hotels = db.hotels
+							   .Where(h => hotelBookings.Select(hb => hb.hotelId).Contains(h.id))
+							   .ToList(); // This will return a list of hotel details
+
+				// Create ViewModel and assign values
+				var viewModel = new Profile
+				{
+					VisaBookings = visaBookings,
+					HotelBookings = hotelBookings,
+					Visa = visas,  // Now this will be a List<visa>
+					Hotel = hotels  // Now this will be a List<Hotel>
+				};
+
+				return View(viewModel);
+			}
+			else
+			{
+				return BadRequest("Invalid User ID format.");
+			}
+		}
 
 
 	}

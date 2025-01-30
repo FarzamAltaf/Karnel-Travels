@@ -937,12 +937,40 @@
       "PackagePath": "staticwebassets\\assets\\img\\innerpage\\sajhek.jpg"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\karnel-footer.png",
+      "PackagePath": "staticwebassets\\assets\\img\\karnel-footer.png"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\logo.svg",
       "PackagePath": "staticwebassets\\assets\\img\\logo.svg"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\logo2.svg",
       "PackagePath": "staticwebassets\\assets\\img\\logo2.svg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\passport\\img1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\passport\\img1.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\passport\\img2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\passport\\img2.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\passport\\img3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\passport\\img3.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\passport\\img4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\passport\\img4.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\passport\\img5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\passport\\img5.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\passport\\img6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\passport\\img6.jpg"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\assets\\img\\sidebar-bg.png",
@@ -1377,6 +1405,10 @@
       "PackagePath": "staticwebassets\\package\\5a352748-1bda-4033-affe-59181ac6dfb7_package-card-img7.png"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\61fbbaa9-8c2f-4ce8-9f85-d6526172c96a_turkeyFlag.jpg",
+      "PackagePath": "staticwebassets\\package\\61fbbaa9-8c2f-4ce8-9f85-d6526172c96a_turkeyFlag.jpg"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\6400a896-ca17-4cbe-8b59-94cb5e196f02_package-card-img8.png",
       "PackagePath": "staticwebassets\\package\\6400a896-ca17-4cbe-8b59-94cb5e196f02_package-card-img8.png"
     },
@@ -1397,12 +1429,28 @@
       "PackagePath": "staticwebassets\\package\\9479aee5-677b-4b19-bc06-c8faa8851492_surfing-02.jpg"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\97563921-a9c1-448b-9abb-e40b77bc7cff_turkeyFlag.jpg",
+      "PackagePath": "staticwebassets\\package\\97563921-a9c1-448b-9abb-e40b77bc7cff_turkeyFlag.jpg"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\9ab56de1-311f-4e4c-acae-b89813d20c8e_package-card-img8.png",
       "PackagePath": "staticwebassets\\package\\9ab56de1-311f-4e4c-acae-b89813d20c8e_package-card-img8.png"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\9f450920-342e-4584-94c4-7722b0fbd087_surfing-02.jpg",
       "PackagePath": "staticwebassets\\package\\9f450920-342e-4584-94c4-7722b0fbd087_surfing-02.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\b336426d-fbed-4087-8205-6260b8579c93_turkeyFlag.jpg",
+      "PackagePath": "staticwebassets\\package\\b336426d-fbed-4087-8205-6260b8579c93_turkeyFlag.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\b64ce595-dfef-4475-a773-d86eab41f55d_turkeyFlag.jpg",
+      "PackagePath": "staticwebassets\\package\\b64ce595-dfef-4475-a773-d86eab41f55d_turkeyFlag.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\b6e8be5a-8315-4105-9755-755d5c628ad3_turkeyFlag.jpg",
+      "PackagePath": "staticwebassets\\package\\b6e8be5a-8315-4105-9755-755d5c628ad3_turkeyFlag.jpg"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\package\\b8625a6b-369c-46aa-bf8c-676d32fecf24_surfing-02.jpg",
@@ -1493,6 +1541,10 @@
       "PackagePath": "staticwebassets\\passportPic\\66562bee-a1f0-4224-88f1-4161ca2080cc_logoblack_f.jpg"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\67c08581-0c3c-482c-93ff-733eeae16e25_testi-author-img1.png",
+      "PackagePath": "staticwebassets\\passportPic\\67c08581-0c3c-482c-93ff-733eeae16e25_testi-author-img1.png"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\7ba47cf9-ad3e-4b37-a046-7872f8abbf63_logoblack_slogan1.jpg",
       "PackagePath": "staticwebassets\\passportPic\\7ba47cf9-ad3e-4b37-a046-7872f8abbf63_logoblack_slogan1.jpg"
     },
@@ -1501,8 +1553,16 @@
       "PackagePath": "staticwebassets\\passportPic\\83477f91-7129-4bc9-871b-41c8f6bc0cb6_logoblack-center.jpg"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\89fc7b3c-f642-4087-abc5-f68c7715a067_testi-author-img3.png",
+      "PackagePath": "staticwebassets\\passportPic\\89fc7b3c-f642-4087-abc5-f68c7715a067_testi-author-img3.png"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\b766dc1f-1440-408f-bbe5-f2fe27bf0ae2_logoblack-center.jpg",
       "PackagePath": "staticwebassets\\passportPic\\b766dc1f-1440-408f-bbe5-f2fe27bf0ae2_logoblack-center.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\ba4529a3-61e5-407b-8fd3-ad1f44cf05de_testi-author-img2.png",
+      "PackagePath": "staticwebassets\\passportPic\\ba4529a3-61e5-407b-8fd3-ad1f44cf05de_testi-author-img2.png"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\becb3237-8dce-41b0-8b9d-416bee45bfd3_logowhite-center.jpg",
@@ -1511,6 +1571,10 @@
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\ce4d4f39-4f5d-43a4-9b4d-414ced342fe2_logoblack_slogan1.jpg",
       "PackagePath": "staticwebassets\\passportPic\\ce4d4f39-4f5d-43a4-9b4d-414ced342fe2_logoblack_slogan1.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\d7838eda-8faf-49a8-83a0-0460e7b6ddef_testi-author-img1.png",
+      "PackagePath": "staticwebassets\\passportPic\\d7838eda-8faf-49a8-83a0-0460e7b6ddef_testi-author-img1.png"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\dd081d26-a937-4ee2-abe2-20ff3fa67810_logoblack-center.jpg",
@@ -1525,8 +1589,20 @@
       "PackagePath": "staticwebassets\\passportPic\\e4a426aa-5692-49c4-a497-faa94e783149_logoFullbg.png"
     },
     {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\e7d957cd-5269-4311-bef9-e23182813d71_blog-card-img2.png",
+      "PackagePath": "staticwebassets\\passportPic\\e7d957cd-5269-4311-bef9-e23182813d71_blog-card-img2.png"
+    },
+    {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\passportPic\\f6eeb133-da77-498e-9094-a71fd78b2dfd_logoblack-center.jpg",
       "PackagePath": "staticwebassets\\passportPic\\f6eeb133-da77-498e-9094-a71fd78b2dfd_logoblack-center.jpg"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\uservisa\\2c93284c-6d49-4601-82b3-fcbfcb6b322b_blog-card-img3.png",
+      "PackagePath": "staticwebassets\\uservisa\\2c93284c-6d49-4601-82b3-fcbfcb6b322b_blog-card-img3.png"
+    },
+    {
+      "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\uservisa\\610f3077-c9eb-4c27-9eea-824549beeb46_blog-card-img2.png",
+      "PackagePath": "staticwebassets\\uservisa\\610f3077-c9eb-4c27-9eea-824549beeb46_blog-card-img2.png"
     },
     {
       "Id": "F:\\Projects\\Travel-agency\\kernel\\wwwroot\\visa\\34c09abd-1ca2-41ea-80bf-ead788cae914.png",

@@ -34,19 +34,23 @@ namespace kernel.Models
         public int visaId { get; set; }
 
         public int userId { get; set; }
+        public string? checkIn { get; set; }
+        public string? checkOut { get; set; }
 
-        public visaBooking(string name, string email, string phone, string visaType, string message, string status, string image, int fee, int visaId, int userId)
-        {
-            this.name = name;
-            this.email = email;
-            this.phone = phone;
-            this.visaType = visaType;
-            this.message = message;
-            this.status = status;
-            this.image = image;
-            this.fee = fee;
-            this.visaId = visaId;
-            this.userId = userId;
-        }
-    }
+		public visaBooking(string name, string email, string phone, string visaType, string message, string image, string status, int fee, int visaId, int userId, string? checkIn, string? checkOut)
+		{
+			this.name = name;
+			this.email = email;
+			this.phone = phone;
+			this.visaType = visaType;
+			this.message = message;
+			this.image = image;
+			this.status = status;
+			this.fee = fee;
+			this.visaId = visaId;
+			this.userId = userId;
+			this.checkIn = checkIn;
+			this.checkOut = checkOut;
+		}
+	}
 }

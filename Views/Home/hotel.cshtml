@@ -158,7 +158,7 @@
 							<div class="col-md-8">
 								<div class="room-content">
 									<div class="content-top">
-										<div class="reviews">
+										@* <div class="reviews">
 											<ul>
 												<li><i class="bi bi-star-fill"></i></li>
 												<li><i class="bi bi-star-fill"></i></li>
@@ -167,7 +167,7 @@
 												<li><i class="bi bi-star-half"></i></li>
 											</ul>
 											<span>4.5 reviews</span>
-										</div>
+										</div> *@
 										<h5><a href="hotel-details.html">@data.name</a></h5>
 										<ul class="loaction-area">
 											<li><i class="bi bi-geo-alt"></i>@data.city, @data.country</li>
@@ -257,31 +257,35 @@
 						</div>
 					</div>
 				}
+				<!-- Pagination -->
 				<div class="row mt-70">
 					<div class="col-lg-12">
 						<nav class="inner-pagination-area">
 							<ul class="pagination-list">
-								<li>
-									<a href="#" class="shop-pagi-btn"><i class="bi bi-chevron-left"></i></a>
-								</li>
-								<li>
-									<a href="#">1</a>
-								</li>
-								<li>
-									<a href="#" class="active">2</a>
-								</li>
-								<li>
-									<a href="#">3</a>
-								</li>
-								<li>
-									<a href="#"><i class="bi bi-three-dots"></i></a>
-								</li>
-								<li>
-									<a href="#">6</a>
-								</li>
-								<li>
-									<a href="#" class="shop-pagi-btn"><i class="bi bi-chevron-right"></i></a>
-								</li>
+								@if (ViewBag.PageNumber > 1)
+								{
+									<li>
+										<a href="@Url.Action("hotel", new { pageNumber = ViewBag.PageNumber - 1, pageSize = ViewBag.PageSize })" class="shop-pagi-btn">
+											<i class="bi bi-chevron-left"></i>
+										</a>
+									</li>
+								}
+
+								@for (int i = 1; i <= Math.Ceiling((double)ViewBag.TotalHotels / ViewBag.PageSize); i++)
+								{
+									<li>
+										<a href="@Url.Action("hotel", new { pageNumber = i, pageSize = ViewBag.PageSize })" class="@(i == ViewBag.PageNumber ? "active" : "")">@i</a>
+									</li>
+								}
+
+								@if (ViewBag.PageNumber < Math.Ceiling((double)ViewBag.TotalHotels / ViewBag.PageSize))
+								{
+									<li>
+										<a href="@Url.Action("hotel", new { pageNumber = ViewBag.PageNumber + 1, pageSize = ViewBag.PageSize })" class="shop-pagi-btn">
+											<i class="bi bi-chevron-right"></i>
+										</a>
+									</li>
+								}
 							</ul>
 						</nav>
 					</div>
