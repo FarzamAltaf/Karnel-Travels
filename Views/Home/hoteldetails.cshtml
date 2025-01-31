@@ -10,225 +10,226 @@
 	{
 
 
-		@Html.Partial("navbar")
+	@Html.Partial("navbar")
 
 
 
-		<div class="breadcrumb-section"
-			 style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url('@Url.Content("~/assets/img/innerpage/inner-banner-bg.png")');">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 d-flex justify-content-center">
-						<div class="banner-content">
-							<h1>@hotel.name</h1>
-							<ul class="breadcrumb-list">
-								<li><a href="index.html">Home</a></li>
-								<li>Room Details </li>
-							</ul>
+			<div class="breadcrumb-section"
+			 	style="background-image: linear-gradient(270deg, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.3) 101.02%), url('@Url.Content("~/assets/img/innerpage/inner-banner-bg.png")');">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 d-flex justify-content-center">
+							<div class="banner-content">
+								<h1>@hotel.name</h1>
+								<ul class="breadcrumb-list">
+									<li><a href="index.html">Home</a></li>
+									<li>Room Details </li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
 
-		<!-- Start Room Details section -->
-		<div class="room-details-area pt-120 mb-120">
-			<div class="container">
-				<div class="row">
-					<div class="co-lg-12">
-						<div class="room-img-group mb-50">
-							<div class="row g-3">
-								<div class="col-lg-6">
-									<div class="gallery-img-wrap">
-										<img src="~/hotels/@imagesList[0].image" alt="">
-										<a data-fancybox="gallery-01" href="~/hotels/@imagesList[0].image">
-											<i class="bi bi-eye"></i> View Room
-										</a>
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="row g-3">
-										<div class="col-6">
-											<div class="gallery-img-wrap">
-												<img src="~/hotels/@imagesList[1].image" alt="">
-												<a data-fancybox="gallery-01"
-												   href="~/hotels/@imagesList[1].image">
-													<i class="bi bi-eye"></i>
-													View Room
-												</a>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="gallery-img-wrap">
-												<img src="~/hotels/@imagesList[2].image" alt="">
-												<a data-fancybox="gallery-01"
-												   href="~/hotels/@imagesList[2].image">
-													<i class="bi bi-eye"></i>
-													View Room
-												</a>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="gallery-img-wrap">
-												<img src="~/hotels/@imagesList[3].image" alt="">
-												<button class="StartSlideShowFirstImage">
-													<i class="bi bi-plus-lg"></i>
-												</button>
-											</div>
-										</div>
-										<div class="col-6">
-											<div class="gallery-img-wrap">
-												<img src="~/hotels/@imagesList[4].image" alt="">
-												<button class="StartSlideShowFirstImage">
-													<i class="bi bi-plus-lg"></i>
-												</button>
-											</div>
+	<!-- Start Room Details section -->
+			<div class="room-details-area pt-120 mb-120">
+				<div class="container">
+					<div class="row">
+						<div class="co-lg-12">
+							<div class="room-img-group mb-50">
+								<div class="row g-3">
+									<div class="col-lg-6">
+										<div class="gallery-img-wrap">
+											<img src="~/hotels/@imagesList[0].image" alt="">
+											<a data-fancybox="gallery-01" href="~/hotels/@imagesList[0].image">
+												<i class="bi bi-eye"></i> View Room
+											</a>
 										</div>
 									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="others-image-wrap d-none">
-					<a href="~/hotels/@imagesList[0].image" data-fancybox="images">
-						<img src="~/hotels/@imagesList[0].image" alt="">
-					</a>
-					<a href="~/hotels/@imagesList[1].image" data-fancybox="images">
-						<img src="~/hotels/@imagesList[1].image" alt="">
-					</a>
-					<a href="~/hotels/@imagesList[2].image" data-fancybox="images">
-						<img src="~/hotels/@imagesList[2].image" alt="">
-					</a>
-					<a href="~/hotels/@imagesList[3].image" data-fancybox="images">
-						<img src="~/hotels/@imagesList[3].image" alt="">
-					</a>
-					<a href="~/hotels/@imagesList[4].image" data-fancybox="images">
-						<img src="~/hotels/@imagesList[4].image" alt="">
-					</a>
-				</div>
-				<div class="row g-xl-4 gy-5">
-					<div class="col-xl-8">
-						<div class="location-and-review">
-							<div class="location">
-								<p>
-									<i class="bi bi-geo-alt"></i> @hotel.address, @hotel.city, @hotel.country - <a href="@hotel.maplink" target="_blank">See Map</a>
-								</p>
-							</div>
-						</div>
-						<h2>@hotel.name</h2>
-						<div class="price-area">
-							<h6>$@hotel.price/<span>per day</span></h6>
-						</div>
-						<p>
-							@hotel.description
-						</p>
-
-						<h4>Pets.</h4>
-						<p>Pets not allowed</p>
-
-						<h4>Children and extra beds.</h4>
-						<p>
-							Children are welcome Kids stay free! Children stay free when using existing bedding; children may
-							not be eligible for complimentary breakfast Rollaway/extra beds are available for $ 10 per day.
-						</p>
-
-						<div class="tour-location">
-							<h4>Location Map</h4>
-							<div class="map-area mb-30">
-								<iframe src="@hotel.maplink"
-										width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-										referrerpolicy="no-referrer-when-downgrade"></iframe>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4">
-						<div class="booking-form-wrap mb-30">
-							<h4>Book Your Room</h4>
-							<div class="tab-content my-2" id="v-pills-tabContent2">
-								<div class="tab-pane fade active show" id="v-pills-booking" role="tabpanel"
-									 aria-labelledby="v-pills-booking-tab">
-									<div class="sidebar-booking-form mb-5 pb-5">
-										<form id="booking-form" method="post">
-											<div class="tour-date-wrap mb-50">
-												<div id="card-errors" role="alert"></div>
-												<h6>Select Your Booking Date:</h6>
-												<div class="form-check customdate">
-													<span class="form-group">
-														<input type="text" readonly name="daterange" placeholder="5 Jan, 2024">
-														<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-															<!-- SVG Path -->
-														</svg>
-													</span>
+									<div class="col-lg-6">
+										<div class="row g-3">
+											<div class="col-6">
+												<div class="gallery-img-wrap">
+													<img src="~/hotels/@imagesList[1].image" alt="">
+													<a data-fancybox="gallery-01"
+												   	href="~/hotels/@imagesList[1].image">
+														<i class="bi bi-eye"></i>
+														View Room
+													</a>
 												</div>
 											</div>
-											<div class="booking-form-item-type mb-45">
-												<h6>@hotel.maxRoom rooms available</h6>
-												<div class="number-input-item adults">
-													Rooms: <span>$@hotel.price/room</span>
-													<div class="quantity-counter">
-														<a href="#" class="quantity__minus"><i class="bi bi-dash"></i></a>
-														<input name="rooms" type="text" class="quantity__input" value="1" readonly>
-														<a href="#" class="quantity__plus"><i class="bi bi-plus"></i></a>
+											<div class="col-6">
+												<div class="gallery-img-wrap">
+													<img src="~/hotels/@imagesList[2].image" alt="">
+													<a data-fancybox="gallery-01"
+												   	href="~/hotels/@imagesList[2].image">
+														<i class="bi bi-eye"></i>
+														View Room
+													</a>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="gallery-img-wrap">
+													<img src="~/hotels/@imagesList[3].image" alt="">
+													<button class="StartSlideShowFirstImage">
+														<i class="bi bi-plus-lg"></i>
+													</button>
+												</div>
+											</div>
+											<div class="col-6">
+												<div class="gallery-img-wrap">
+													<img src="~/hotels/@imagesList[4].image" alt="">
+													<button class="StartSlideShowFirstImage">
+														<i class="bi bi-plus-lg"></i>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="others-image-wrap d-none">
+						<a href="~/hotels/@imagesList[0].image" data-fancybox="images">
+							<img src="~/hotels/@imagesList[0].image" alt="">
+						</a>
+						<a href="~/hotels/@imagesList[1].image" data-fancybox="images">
+							<img src="~/hotels/@imagesList[1].image" alt="">
+						</a>
+						<a href="~/hotels/@imagesList[2].image" data-fancybox="images">
+							<img src="~/hotels/@imagesList[2].image" alt="">
+						</a>
+						<a href="~/hotels/@imagesList[3].image" data-fancybox="images">
+							<img src="~/hotels/@imagesList[3].image" alt="">
+						</a>
+						<a href="~/hotels/@imagesList[4].image" data-fancybox="images">
+							<img src="~/hotels/@imagesList[4].image" alt="">
+						</a>
+					</div>
+					<div class="row g-xl-4 gy-5">
+						<div class="col-xl-8">
+							<div class="location-and-review">
+								<div class="location">
+									<p>
+										<i class="bi bi-geo-alt"></i> @hotel.address, @hotel.city, @hotel.country - <a href="@hotel.maplink" target="_blank">See Map</a>
+									</p>
+								</div>
+							</div>
+							<h2>@hotel.name</h2>
+							<div class="price-area">
+								<h6>$@hotel.price/<span>per day</span></h6>
+							</div>
+							<p>
+								@hotel.description
+							</p>
+
+							<h4>Pets.</h4>
+							<p>Pets not allowed</p>
+
+							<h4>Children and extra beds.</h4>
+							<p>
+								Children are welcome Kids stay free! Children stay free when using existing bedding; children may
+								not be eligible for complimentary breakfast Rollaway/extra beds are available for $ 10 per day.
+							</p>
+
+							<div class="tour-location">
+								<h4>Location Map</h4>
+								<div class="map-area mb-30">
+									<iframe src="@hotel.maplink"
+											width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+											referrerpolicy="no-referrer-when-downgrade"></iframe>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-4">
+							<div class="booking-form-wrap mb-30">
+								<h4>Book Your Room</h4>
+								<div class="tab-content my-2" id="v-pills-tabContent2">
+									<div class="tab-pane fade active show" id="v-pills-booking" role="tabpanel"
+									 	aria-labelledby="v-pills-booking-tab">
+										<div class="sidebar-booking-form mb-5 pb-5">
+											<form id="booking-form" method="post">
+												<div class="tour-date-wrap mb-50">
+													<div id="card-errors" role="alert"></div>
+													<h6>Select Your Booking Date:</h6>
+													<div class="form-check customdate">
+														<span class="form-group">
+															<input type="text" readonly name="daterange" placeholder="5 Jan, 2024">
+															<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+																<!-- SVG Path -->
+															</svg>
+														</span>
 													</div>
 												</div>
-											</div>
-											<div class="form-inner mb-30">
-												<div id="card-element">
-
-													<!-- A Stripe Element will be inserted here. -->
+												<div class="booking-form-item-type mb-45">
+													<h6>@hotel.maxRoom rooms available</h6>
+													<div class="number-input-item adults">
+														Rooms: <span>$@hotel.price/room</span>
+														<div class="quantity-counter">
+															<a href="#" class="quantity__minus"><i class="bi bi-dash"></i></a>
+															<input name="rooms" type="text" class="quantity__input" value="1" readonly>
+															<a href="#" class="quantity__plus"><i class="bi bi-plus"></i></a>
+														</div>
+													</div>
 												</div>
-											</div>
-											<div class="booking-form-item-type">
-												<div class="single-total mb-30">
-													<span>Rooms</span>
-													<ul>
-														<li><strong>$@hotel.price</strong> PRICE</li>
-														<li><i class="bi bi-x-lg"></i></li>
-														<li><strong id="room-qty">01</strong> ROOMS</li>
-														<li><i class="bi bi-x-lg"></i></li>
-														<li><strong class="days-count">00</strong> DAYS</li>
-													</ul>
-													<svg xmlns="http://www.w3.org/2000/svg" width="27" height="15" viewBox="0 0 27 15">
-														<!-- SVG Path -->
-													</svg>
-													<div class="total">$390</div> <!-- Display total here -->
+												<div class="form-inner mb-30">
+													<div id="card-element">
+
+														<!-- A Stripe Element will be inserted here. -->
+													</div>
 												</div>
-											</div>
-											<input type="hidden" name="hotelId" value="@hotel.id" />
-											<input type="hidden" name="checkIn" id="checkIn" />
-											<input type="hidden" name="checkOut" id="checkOut" />
-											<input type="hidden" name="costPerRoom" value="@hotel.price" />
-											<input type="hidden" name="days" id="days" />
-											<input type="hidden" name="total" id="total" />
+												<div class="booking-form-item-type">
+													<div class="single-total mb-30">
+														<span>Rooms</span>
+														<ul>
+															<li><strong>$@hotel.price</strong> PRICE</li>
+															<li><i class="bi bi-x-lg"></i></li>
+															<li><strong id="room-qty">01</strong> ROOMS</li>
+															<li><i class="bi bi-x-lg"></i></li>
+															<li><strong class="days-count">00</strong> DAYS</li>
+														</ul>
+														<svg xmlns="http://www.w3.org/2000/svg" width="27" height="15" viewBox="0 0 27 15">
+															<!-- SVG Path -->
+														</svg>
+														<div class="total">$390</div> <!-- Display total here -->
+													</div>
+												</div>
+												<input type="hidden" name="hotelId" value="@hotel.id" />
+												<input type="hidden" name="checkIn" id="checkIn" />
+												<input type="hidden" name="checkOut" id="checkOut" />
+												<input type="hidden" name="costPerRoom" value="@hotel.price" />
+												<input type="hidden" name="days" id="days" />
+												<input type="hidden" name="total" id="total" />
 
 
-											<button type="submit" id="submitBooking" class="primary-btn1 two">Book Now</button>
-										</form>
+												<button type="submit" id="submitBooking" class="primary-btn1 two">Book Now</button>
+											</form>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="banner2-card">
-							<img src="assets/user-img/innerpage/support-img.jpg" alt="">
-							<div class="banner2-content-wrap">
-								<div class="banner2-content">
-									<div class="hotline-area">
-										<div class="icon">
-											<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-												 viewBox="0 0 28 28">
-												<path d="M27.2653 21.5995L21.598 17.8201C20.8788 17.3443 19.9147 17.5009 19.383 18.1798L17.7322 20.3024C17.6296 20.4377 17.4816 20.5314 17.3154 20.5664C17.1492 20.6014 16.9759 20.5752 16.8275 20.4928L16.5134 20.3196C15.4725 19.7522 14.1772 19.0458 11.5675 16.4352C8.95784 13.8246 8.25001 12.5284 7.6826 11.4893L7.51042 11.1753C7.42683 11.0269 7.39968 10.8532 7.43398 10.6864C7.46827 10.5195 7.56169 10.3707 7.69704 10.2673L9.81816 8.61693C10.4968 8.08517 10.6536 7.1214 10.1784 6.40198L6.39895 0.734676C5.91192 0.00208106 4.9348 -0.21784 4.18082 0.235398L1.81096 1.65898C1.06634 2.09672 0.520053 2.80571 0.286612 3.63733C-0.56677 6.74673 0.0752209 12.1131 7.98033 20.0191C14.2687 26.307 18.9501 27.9979 22.1677 27.9979C22.9083 28.0011 23.6459 27.9048 24.3608 27.7115C25.1925 27.4783 25.9016 26.932 26.3391 26.1871L27.7641 23.8187C28.218 23.0645 27.9982 22.0868 27.2653 21.5995ZM26.9601 23.3399L25.5384 25.7098C25.2242 26.2474 24.7142 26.6427 24.1152 26.8128C21.2447 27.6009 16.2298 26.9482 8.64053 19.3589C1.0513 11.7697 0.398595 6.75515 1.18669 3.88421C1.35709 3.28446 1.75283 2.77385 2.2911 2.45921L4.66096 1.03749C4.98811 0.840645 5.41221 0.93606 5.62354 1.25397L7.67659 4.3363L9.39976 6.92078C9.60612 7.23283 9.53831 7.65108 9.24392 7.88199L7.1223 9.53232C6.47665 10.026 6.29227 10.9193 6.68979 11.6283L6.85826 11.9344C7.45459 13.0281 8.19599 14.3887 10.9027 17.095C13.6095 19.8012 14.9696 20.5427 16.0628 21.139L16.3694 21.3079C17.0783 21.7053 17.9716 21.521 18.4653 20.8753L20.1157 18.7537C20.3466 18.4595 20.7647 18.3918 21.0769 18.5979L26.7437 22.3773C27.0618 22.5885 27.1572 23.0128 26.9601 23.3399ZM15.8658 4.66809C20.2446 4.67296 23.7931 8.22149 23.798 12.6003C23.798 12.858 24.0069 13.0669 24.2646 13.0669C24.5223 13.0669 24.7312 12.858 24.7312 12.6003C24.7257 7.7063 20.7598 3.74029 15.8658 3.73494C15.6081 3.73494 15.3992 3.94381 15.3992 4.20151C15.3992 4.45922 15.6081 4.66809 15.8658 4.66809Z">
-												</path>
-												<path d="M15.865 7.46746C18.6983 7.4708 20.9943 9.76678 20.9976 12.6001C20.9976 12.7238 21.0468 12.8425 21.1343 12.93C21.2218 13.0175 21.3404 13.0666 21.4642 13.0666C21.5879 13.0666 21.7066 13.0175 21.7941 12.93C21.8816 12.8425 21.9308 12.7238 21.9308 12.6001C21.9269 9.2516 19.2134 6.53813 15.865 6.5343C15.6073 6.5343 15.3984 6.74318 15.3984 7.00088C15.3984 7.25859 15.6073 7.46746 15.865 7.46746Z">
-												</path>
-												<path d="M15.865 10.267C17.1528 10.2686 18.1964 11.3122 18.198 12.6C18.198 12.7238 18.2472 12.8424 18.3347 12.9299C18.4222 13.0174 18.5409 13.0666 18.6646 13.0666C18.7883 13.0666 18.907 13.0174 18.9945 12.9299C19.082 12.8424 19.1312 12.7238 19.1312 12.6C19.1291 10.797 17.668 9.33589 15.865 9.33386C15.6073 9.33386 15.3984 9.54274 15.3984 9.80044C15.3984 10.0581 15.6073 10.267 15.865 10.267Z">
-												</path>
-											</svg>
-										</div>
-										<div class="content">
-											<span>To More Inquiry</span>
-											<h6><a href="tel:+990737621432">+990-737 621 432</a></h6>
+							<div class="banner2-card">
+								<img src="assets/user-img/innerpage/support-img.jpg" alt="">
+								<div class="banner2-content-wrap">
+									<div class="banner2-content">
+										<div class="hotline-area">
+											<div class="icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
+												 	viewBox="0 0 28 28">
+													<path d="M27.2653 21.5995L21.598 17.8201C20.8788 17.3443 19.9147 17.5009 19.383 18.1798L17.7322 20.3024C17.6296 20.4377 17.4816 20.5314 17.3154 20.5664C17.1492 20.6014 16.9759 20.5752 16.8275 20.4928L16.5134 20.3196C15.4725 19.7522 14.1772 19.0458 11.5675 16.4352C8.95784 13.8246 8.25001 12.5284 7.6826 11.4893L7.51042 11.1753C7.42683 11.0269 7.39968 10.8532 7.43398 10.6864C7.46827 10.5195 7.56169 10.3707 7.69704 10.2673L9.81816 8.61693C10.4968 8.08517 10.6536 7.1214 10.1784 6.40198L6.39895 0.734676C5.91192 0.00208106 4.9348 -0.21784 4.18082 0.235398L1.81096 1.65898C1.06634 2.09672 0.520053 2.80571 0.286612 3.63733C-0.56677 6.74673 0.0752209 12.1131 7.98033 20.0191C14.2687 26.307 18.9501 27.9979 22.1677 27.9979C22.9083 28.0011 23.6459 27.9048 24.3608 27.7115C25.1925 27.4783 25.9016 26.932 26.3391 26.1871L27.7641 23.8187C28.218 23.0645 27.9982 22.0868 27.2653 21.5995ZM26.9601 23.3399L25.5384 25.7098C25.2242 26.2474 24.7142 26.6427 24.1152 26.8128C21.2447 27.6009 16.2298 26.9482 8.64053 19.3589C1.0513 11.7697 0.398595 6.75515 1.18669 3.88421C1.35709 3.28446 1.75283 2.77385 2.2911 2.45921L4.66096 1.03749C4.98811 0.840645 5.41221 0.93606 5.62354 1.25397L7.67659 4.3363L9.39976 6.92078C9.60612 7.23283 9.53831 7.65108 9.24392 7.88199L7.1223 9.53232C6.47665 10.026 6.29227 10.9193 6.68979 11.6283L6.85826 11.9344C7.45459 13.0281 8.19599 14.3887 10.9027 17.095C13.6095 19.8012 14.9696 20.5427 16.0628 21.139L16.3694 21.3079C17.0783 21.7053 17.9716 21.521 18.4653 20.8753L20.1157 18.7537C20.3466 18.4595 20.7647 18.3918 21.0769 18.5979L26.7437 22.3773C27.0618 22.5885 27.1572 23.0128 26.9601 23.3399ZM15.8658 4.66809C20.2446 4.67296 23.7931 8.22149 23.798 12.6003C23.798 12.858 24.0069 13.0669 24.2646 13.0669C24.5223 13.0669 24.7312 12.858 24.7312 12.6003C24.7257 7.7063 20.7598 3.74029 15.8658 3.73494C15.6081 3.73494 15.3992 3.94381 15.3992 4.20151C15.3992 4.45922 15.6081 4.66809 15.8658 4.66809Z">
+													</path>
+													<path d="M15.865 7.46746C18.6983 7.4708 20.9943 9.76678 20.9976 12.6001C20.9976 12.7238 21.0468 12.8425 21.1343 12.93C21.2218 13.0175 21.3404 13.0666 21.4642 13.0666C21.5879 13.0666 21.7066 13.0175 21.7941 12.93C21.8816 12.8425 21.9308 12.7238 21.9308 12.6001C21.9269 9.2516 19.2134 6.53813 15.865 6.5343C15.6073 6.5343 15.3984 6.74318 15.3984 7.00088C15.3984 7.25859 15.6073 7.46746 15.865 7.46746Z">
+													</path>
+													<path d="M15.865 10.267C17.1528 10.2686 18.1964 11.3122 18.198 12.6C18.198 12.7238 18.2472 12.8424 18.3347 12.9299C18.4222 13.0174 18.5409 13.0666 18.6646 13.0666C18.7883 13.0666 18.907 13.0174 18.9945 12.9299C19.082 12.8424 19.1312 12.7238 19.1312 12.6C19.1291 10.797 17.668 9.33589 15.865 9.33386C15.6073 9.33386 15.3984 9.54274 15.3984 9.80044C15.3984 10.0581 15.6073 10.267 15.865 10.267Z">
+													</path>
+												</svg>
+											</div>
+											<div class="content">
+												<span>To More Inquiry</span>
+												<h6><a href="tel:+990737621432">+990-737 621 432</a></h6>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -237,9 +238,8 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<!-- End Room Details section -->
-		@Html.Partial("footer")
+	<!-- End Room Details section -->
+	@Html.Partial("footer")
 
 	}
 
@@ -283,18 +283,23 @@
 		const maxRooms = parseInt("@hotel.maxRoom", 10); // Max rooms from DB
 		let daysCount = 0; // To store the number of days selected
 
-		// Initialize Flatpickr for date range
 		flatpickr(dateInput, {
 			mode: "range",
-			dateFormat: "d M, Y",
+			dateFormat: "Y-m-d",
 			minDate: "today",
 			onChange: function (selectedDates) {
 				if (selectedDates.length === 2) {
 					const startDate = selectedDates[0];
 					const endDate = selectedDates[1];
-					const timeDiff = endDate - startDate;
-					daysCount = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // Convert milliseconds to days
+					const timeDiff = endDate.getTime() - startDate.getTime();
+					daysCount = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
 					daysElement.textContent = daysCount;
+					console.log("dayscount =>", daysCount);
+					// Set the hidden fields
+					document.getElementById('checkIn').value = startDate.toISOString().split('T')[0];
+					document.getElementById('checkOut').value = endDate.toISOString().split('T')[0];
+					document.getElementById('days').value = daysCount;
+					console.log("days =>", document.getElementById('days').value);
 					updateTotalPrice();
 				} else {
 					daysElement.textContent = "00";
@@ -304,11 +309,15 @@
 			}
 		});
 
-		// Update total price (quantity * price * days)
 		function updateTotalPrice() {
 			const quantity = parseInt(quantityInput.value, 10);
-			const totalPrice = quantity * hotelPrice * daysCount;
-			totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+			if (daysCount > 0 && quantity > 0) {
+				const totalPrice = quantity * hotelPrice * daysCount;
+				totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+			} else {
+				totalPriceElement.textContent = "$0.00";
+				document.getElementById('days').value = 0; // Ensure days is set to 0 if not valid
+			}
 		}
 
 		// Update room quantity display on increase or decrease
@@ -402,18 +411,32 @@
 		// Handle form submission
 		submitButton.on("click", function (e) {
 			e.preventDefault();
-			stripe.createToken(cardElement).then(function (result) {
-				if (result.error) {
-					alert(result.error.message);
-				} else {
-					const form = $("#booking-form");
-					form.append('<input type="hidden" name="stripeToken" value="' + result.token.id + '">');
-					form.submit();
+			if (!$("#booking-form").valid()) {
+				return;
+			}
+
+			Swal.fire({
+				icon: 'success',
+				title: 'Booking Successful',
+				text: 'Your booking has been confirmed. We will send a confirmation email shortly.',
+				confirmButtonText: 'OK'
+			}).then((result) => {
+				if (result.isConfirmed) {
+					stripe.createToken(cardElement).then(function (result) {
+						if (result.error) {
+							alert(result.error.message);
+						} else {
+							const form = $("#booking-form");
+							form.append('<input type="hidden" name="stripeToken" value="' + result.token.id + '">');
+							form.submit();
+						}
+					});
 				}
 			});
 		});
 
 	});
+
 </script>
 
 	

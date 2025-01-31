@@ -527,7 +527,7 @@ namespace kernel.Controllers
 
 				var checkIn = "";
 				var checkOut = "";
-				visaBooking data = new visaBooking(name, email, phone, visaType, message, status, guidImage, fee, visaId, intId, checkIn, checkOut);
+				visaBooking data = new visaBooking(name, email, phone, visaType, message, guidImage, status, fee, visaId, intId, checkIn, checkOut);
 				db.visaBooking.Add(data);
 				db.SaveChanges();
 				string subject = "Visa Booking Status Update";

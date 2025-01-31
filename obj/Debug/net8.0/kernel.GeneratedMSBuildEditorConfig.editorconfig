@@ -9,163 +9,163 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = kernel
 build_property.RootNamespace = kernel
-build_property.ProjectDir = F:\Projects\Travel-agency\kernel\
+build_property.ProjectDir = F:\Projects\Travel-agency\Karnel-Travels\kernel\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\Projects\Travel-agency\kernel
+build_property.MSBuildProjectDirectory = F:\Projects\Travel-agency\Karnel-Travels\kernel
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/all_hotel.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/all_hotel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYWxsX2hvdGVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/all_packages.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/all_packages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYWxsX3BhY2thZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/all_visa.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/all_visa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYWxsX3Zpc2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/booking_list.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/booking_list.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cYm9va2luZ19saXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/checkIn.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/checkIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY2hlY2tJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/customer_list.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/customer_list.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cY3VzdG9tZXJfbGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/dashboard_profile.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/dashboard_profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cZGFzaGJvYXJkX3Byb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/hotel_edit.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/hotel_edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfZWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/hotel_image.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/hotel_image.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfaW1hZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/hotel_list.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/hotel_list.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfbGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/hotel_upload.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/hotel_upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5caG90ZWxfdXBsb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/Index.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/package_edit.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/package_edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGFja2FnZV9lZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/package_list.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/package_list.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGFja2FnZV9saXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/package_upload.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/package_upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5ccGFja2FnZV91cGxvYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/update_tour.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/update_tour.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdXBkYXRlX3RvdXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/visa_edit.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/visa_edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdmlzYV9lZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Admin/visa_upload.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Admin/visa_upload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cdmlzYV91cGxvYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/about.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/about.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxhYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/contact.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/hotel.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/hotel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob3RlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/hoteldetails.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/hoteldetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob3RlbGRldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/Index.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/packagedetails.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/packagedetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwYWNrYWdlZGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/profile.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/signin.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/signin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzaWduaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/signup.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/signup.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzaWdudXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/tour.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/tour.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx0b3VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/visa.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/visa.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx2aXNhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Home/visadetails.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Home/visadetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVx2aXNhZGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Shared/Error.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Shared/footer.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Shared/footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGZvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Shared/navbar.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Shared/navbar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG5hdmJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Shared/_AdminLayout.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/_ViewImports.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/_ViewStart.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Projects/Travel-agency/kernel/Views/Shared/_Layout.cshtml]
+[F:/Projects/Travel-agency/Karnel-Travels/kernel/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9mjge7p3rf

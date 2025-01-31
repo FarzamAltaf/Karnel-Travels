@@ -5,12 +5,12 @@ namespace kernel.Models
 {
     public class connection : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=DESKTOP-GQ8EFUN\\SQLEXPRESS;Database=Karnel-Travel;Integrated Security=True;TrustServerCertificate=True;");
-        }
-        public DbSet<Users> users { get; set; }
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		{
+			base.OnConfiguring(optionsBuilder);
+			optionsBuilder.UseSqlServer("Server=karnel-travels.c3yagyuqcr3b.eu-north-1.rds.amazonaws.com;Database=Karnel-Travel;User Id=admin;Password=Karnel-Travel01;TrustServerCertificate=True;");
+		}
+		public DbSet<Users> users { get; set; }
         public DbSet<Contact> contact { get; set; }
         public DbSet<Packages> packages { get; set; }
         public DbSet<Faqs> faq { get; set; }

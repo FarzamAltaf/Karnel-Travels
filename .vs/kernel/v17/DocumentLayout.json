@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Projects\\Travel-agency\\kernel\\",
+  "WorkspaceRootPath": "F:\\Projects\\Travel-agency\\Karnel-Travels\\kernel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\kernel\\views\\admin\\package_list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\admin\\package_list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\karnel-travels\\kernel\\views\\home\\hoteldetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:views\\home\\hoteldetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|f:\\projects\\travel-agency\\karnel-travels\\kernel\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78545D76-0C44-4CFB-8418-176E34EA06A4}|kernel.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "package_list.cshtml",
-              "DocumentMoniker": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\package_list.cshtml",
-              "RelativeDocumentMoniker": "Views\\Admin\\package_list.cshtml",
-              "ToolTip": "F:\\Projects\\Travel-agency\\kernel\\Views\\Admin\\package_list.cshtml",
-              "RelativeToolTip": "Views\\Admin\\package_list.cshtml",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIkAAAAaAAAAAAAAAA==",
+              "Title": "hoteldetails.cshtml",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\Karnel-Travels\\kernel\\Views\\Home\\hoteldetails.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\hoteldetails.cshtml",
+              "ToolTip": "F:\\Projects\\Travel-agency\\Karnel-Travels\\kernel\\Views\\Home\\hoteldetails.cshtml",
+              "RelativeToolTip": "Views\\Home\\hoteldetails.cshtml",
+              "ViewState": "AgIAALwAAAAAAAAAAAAswMwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-30T22:18:06.096Z",
+              "WhenOpened": "2025-01-31T11:28:21.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\Projects\\Travel-agency\\Karnel-Travels\\kernel\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "F:\\Projects\\Travel-agency\\Karnel-Travels\\kernel\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAswC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T10:58:13.132Z",
               "EditorCaption": ""
             }
           ]
